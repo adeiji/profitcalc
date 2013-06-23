@@ -12,5 +12,9 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lblDetailDescription;
+- (IBAction)numberButtonPressed:(UIButton *)button;
+- (IBAction)copyToClipboard:(id)sender;
+- (IBAction)btnClearPressed:(id)sender;
+
 @end

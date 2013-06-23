@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
+		CE9981DD1776705400442FB3 /* negativepositive.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DC1776705400442FB3 /* negativepositive.png */; };
+		CE9981DF1776743C00442FB3 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DE1776743C00442FB3 /* title.png */; };
 		CE9DD9BB17661EF10073C460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BA17661EF10073C460 /* UIKit.framework */; };
 		CE9DD9BD17661EF20073C460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BC17661EF10073C460 /* Foundation.framework */; };
 		CE9DD9BF17661EF20073C460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BE17661EF20073C460 /* CoreGraphics.framework */; };
@@ -28,6 +31,13 @@
 		CE9DD9ED17661EF20073C460 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9C017661EF20073C460 /* CoreData.framework */; };
 		CE9DD9F517661EF20073C460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9F317661EF20073C460 /* InfoPlist.strings */; };
 		CE9DD9F817661EF20073C460 /* Project_Management_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9F717661EF20073C460 /* Project_Management_CalculatorTests.m */; };
+		CE9DDA0317661F6C0073C460 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DDA0217661F6C0073C460 /* GradientView.m */; };
+		CE9DDA0617662B280073C460 /* NumberButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DDA0517662B280073C460 /* NumberButtons.m */; };
+		CE9DDA0917663F650073C460 /* FTWLeftButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DDA0817663F650073C460 /* FTWLeftButtons.m */; };
+		CE9DDA0B1766439F0073C460 /* actext.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0A1766439F0073C460 /* actext.png */; };
+		CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0E17664C5E0073C460 /* sqrt.png */; };
+		CE9DDA1117664ECB0073C460 /* ce.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA1017664ECB0073C460 /* ce.png */; };
+		CE9DDA171767E0FD0073C460 /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA161767E0FC0073C460 /* divide.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE9981DC1776705400442FB3 /* negativepositive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negativepositive.png; sourceTree = SOURCE_ROOT; };
+		CE9981DE1776743C00442FB3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = SOURCE_ROOT; };
 		CE9DD9B717661EF10073C460 /* Project Management Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Management Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9BA17661EF10073C460 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE9DD9BC17661EF10073C460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +81,16 @@
 		CE9DD9F417661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9DD9F617661EF20073C460 /* Project_Management_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_Management_CalculatorTests.h; sourceTree = "<group>"; };
 		CE9DD9F717661EF20073C460 /* Project_Management_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Management_CalculatorTests.m; sourceTree = "<group>"; };
+		CE9DDA0117661F6C0073C460 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		CE9DDA0217661F6C0073C460 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		CE9DDA0417662B280073C460 /* NumberButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberButtons.h; sourceTree = "<group>"; };
+		CE9DDA0517662B280073C460 /* NumberButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberButtons.m; sourceTree = "<group>"; };
+		CE9DDA0717663F650073C460 /* FTWLeftButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWLeftButtons.h; sourceTree = "<group>"; };
+		CE9DDA0817663F650073C460 /* FTWLeftButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWLeftButtons.m; sourceTree = "<group>"; };
+		CE9DDA0A1766439F0073C460 /* actext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actext.png; sourceTree = "<group>"; };
+		CE9DDA0E17664C5E0073C460 /* sqrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sqrt.png; sourceTree = "<group>"; };
+		CE9DDA1017664ECB0073C460 /* ce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ce.png; sourceTree = "<group>"; };
+		CE9DDA161767E0FC0073C460 /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divide.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */,
 				CE9DD9BB17661EF10073C460 /* UIKit.framework in Frameworks */,
 				CE9DD9BD17661EF20073C460 /* Foundation.framework in Frameworks */,
 				CE9DD9BF17661EF20073C460 /* CoreGraphics.framework in Frameworks */,
@@ -99,6 +123,9 @@
 		CE9DD9AE17661EF10073C460 = {
 			isa = PBXGroup;
 			children = (
+				CE9554021768E9650068A3DE /* MobileCoreServices.framework */,
+				CE9DDA161767E0FC0073C460 /* divide.png */,
+				CE9DDA0E17664C5E0073C460 /* sqrt.png */,
 				CE9DD9C217661EF20073C460 /* Project Management Calculator */,
 				CE9DD9F017661EF20073C460 /* Project Management CalculatorTests */,
 				CE9DD9B917661EF10073C460 /* Frameworks */,
@@ -130,10 +157,20 @@
 		CE9DD9C217661EF20073C460 /* Project Management Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CE9DDA0A1766439F0073C460 /* actext.png */,
 				CE9DD9CB17661EF20073C460 /* FTWAppDelegate.h */,
 				CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */,
 				CE9DD9D417661EF20073C460 /* MainStoryboard_iPhone.storyboard */,
 				CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */,
+				CE9981DE1776743C00442FB3 /* title.png */,
+				CE9981DC1776705400442FB3 /* negativepositive.png */,
+				CE9DDA1017664ECB0073C460 /* ce.png */,
+				CE9DDA0717663F650073C460 /* FTWLeftButtons.h */,
+				CE9DDA0817663F650073C460 /* FTWLeftButtons.m */,
+				CE9DDA0417662B280073C460 /* NumberButtons.h */,
+				CE9DDA0517662B280073C460 /* NumberButtons.m */,
+				CE9DDA0117661F6C0073C460 /* GradientView.h */,
+				CE9DDA0217661F6C0073C460 /* GradientView.m */,
 				CE9DD9DD17661EF20073C460 /* FTWMasterViewController.h */,
 				CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */,
 				CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */,
@@ -255,6 +292,12 @@
 				CE9DD9D317661EF20073C460 /* Default-568h@2x.png in Resources */,
 				CE9DD9D617661EF20073C460 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */,
+				CE9DDA0B1766439F0073C460 /* actext.png in Resources */,
+				CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */,
+				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
+				CE9DDA171767E0FD0073C460 /* divide.png in Resources */,
+				CE9981DD1776705400442FB3 /* negativepositive.png in Resources */,
+				CE9981DF1776743C00442FB3 /* title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +337,9 @@
 				CE9DD9DC17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld in Sources */,
 				CE9DD9DF17661EF20073C460 /* FTWMasterViewController.m in Sources */,
 				CE9DD9E217661EF20073C460 /* FTWDetailViewController.m in Sources */,
+				CE9DDA0317661F6C0073C460 /* GradientView.m in Sources */,
+				CE9DDA0617662B280073C460 /* NumberButtons.m in Sources */,
+				CE9DDA0917663F650073C460 /* FTWLeftButtons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +530,7 @@
 				CE9DD9FD17661EF20073C460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Project Management CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +539,7 @@
 				CE9DDA0017661EF20073C460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
