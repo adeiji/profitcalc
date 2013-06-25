@@ -192,8 +192,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="memoryButtonPressed:" destination="4" eventType="touchUpInside" id="DfA-2c-RWr"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oh3-8k-lxs" customClass="NumberButtons">
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oh3-8k-lxs" customClass="NumberButtons">
                                         <rect key="frame" x="414" y="80" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -204,8 +207,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="costButtonPressed:" destination="4" eventType="touchUpInside" id="0gB-Xm-rJu"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fLX-8Q-6I7" customClass="NumberButtons">
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fLX-8Q-6I7" customClass="NumberButtons">
                                         <rect key="frame" x="499" y="80" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -216,8 +222,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="salebuttonPressed:" destination="4" eventType="touchUpInside" id="pyw-Cz-eMY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JLM-lJ-3Zs" customClass="NumberButtons">
+                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JLM-lJ-3Zs" customClass="NumberButtons">
                                         <rect key="frame" x="584" y="80" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -228,8 +237,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="marginButtonPressed:" destination="4" eventType="touchUpInside" id="nZ1-Ra-qg6"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Te4-b7-oCj" customClass="NumberButtons">
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Te4-b7-oCj" customClass="NumberButtons">
                                         <rect key="frame" x="414" y="140" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -240,8 +252,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="costButtonPressed:" destination="4" eventType="touchUpInside" id="cF7-qF-4kj"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KfG-8j-7Zt" customClass="NumberButtons">
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KfG-8j-7Zt" customClass="NumberButtons">
                                         <rect key="frame" x="499" y="140" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -252,8 +267,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="salebuttonPressed:" destination="4" eventType="touchUpInside" id="eDJ-co-lws"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s4H-pL-dVU" customClass="NumberButtons">
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s4H-pL-dVU" customClass="NumberButtons">
                                         <rect key="frame" x="584" y="140" width="77" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -264,6 +282,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="marginButtonPressed:" destination="4" eventType="touchUpInside" id="jJR-v1-C7l"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fKd-E9-IYU" customClass="NumberButtons">
                                         <rect key="frame" x="584" y="354" width="77" height="48"/>
@@ -581,6 +602,30 @@
         <image name="sqrt.png" width="50" height="50"/>
         <image name="title.png" width="691" height="37"/>
     </resources>
+    <classes>
+        <class className="FTWDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FTWDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnClearPressed:"/>
+                <relationship kind="action" name="copyToClipboard:"/>
+                <relationship kind="action" name="costButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="marginButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="memoryButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="numberButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="salebuttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblDetailDescription" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FTWMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FTWMasterViewController.h"/>
+        </class>
+        <class className="GradientView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GradientView.h"/>
+        </class>
+        <class className="NumberButtons" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NumberButtons.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

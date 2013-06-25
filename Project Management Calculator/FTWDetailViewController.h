@@ -16,5 +16,9 @@
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
 - (IBAction)btnClearPressed:(id)sender;
+- (IBAction)costButtonPressed:(UIButton*)button;
+- (IBAction)salebuttonPressed:(UIButton*)button;
+- (IBAction)marginButtonPressed:(UIButton *)button;
+- (IBAction)memoryButtonPressed:(UIButton *)button;
 
 @end
