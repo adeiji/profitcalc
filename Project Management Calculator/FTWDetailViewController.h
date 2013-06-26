@@ -12,6 +12,20 @@
 
 @property (strong, nonatomic) id detailItem;
 
+/*
+typedef enum
+{
+    MULTIPLICATION,
+    ADDITION,
+    SUBTRACTION,
+    DIVISION,
+    SQUARE,
+    SQUAREROOT,
+    EQUALS,
+    OPPOSITE,
+    PERCENTAGE
+} OperandType;
+*/
 @property (weak, nonatomic) IBOutlet UILabel *lblDetailDescription;
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;

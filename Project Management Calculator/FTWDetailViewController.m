@@ -12,17 +12,19 @@
 
 @interface FTWDetailViewController ( )
 {
-
+    NSMutableArray *numberList;
+    NSMutableArray *operatorList;
+    NSInteger *previousNumber;
+    NSInteger *currentNumber;
+    bool operandPressed;
+    bool dontAddNumberBeforeEqualPressed;
+    int numTimesClearPressed;
+    double storedValue;
+    bool mrcPressed;
+    bool equalPressed;
 }
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-@property (strong, nonatomic) NSMutableArray *numberList;
-@property (strong, nonatomic) NSMutableArray *operatorList;
-@property NSInteger *previousNumber;
-@property NSInteger *currentNumber;
-@property bool operandPressed;
-@property bool dontAddNumberBeforeEqualPressed;
-@property int numTimesClearPressed;
-@property (strong, nonatomic) NSMutableArray *storedValues;
 
 - (void)configureView;
 @end
@@ -40,13 +42,6 @@ NSString *const EQUALS = @"=";
 NSString *const OPPOSITE = @"-/+";
 
 @synthesize lblDetailDescription;
-@synthesize operatorList;
-@synthesize numberList;
-@synthesize previousNumber;
-@synthesize currentNumber;
-@synthesize operandPressed;
-@synthesize numTimesClearPressed;
-@synthesize dontAddNumberBeforeEqualPressed;
 
 #pragma mark - Managing the detail item
 
@@ -70,6 +65,8 @@ NSString *const OPPOSITE = @"-/+";
     numberList = [[NSMutableArray alloc] init];
     operatorList = [[NSMutableArray alloc] init];
     numTimesClearPressed = 0;
+    storedValue = 0;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
@@ -159,16 +156,16 @@ NSString *const OPPOSITE = @"-/+";
 
 -(void) updateDisplay:(UIButton*) button
 {
+    //If there has just been an operand pressed, we want to make sure that we don't erase all the contents of the display label until the user clicks on a number, than we will delete all the contents.  We set operandPressed to false so that we don't keep deleting the contents of the label every time the user clicks on the number button.
+
+    if (operandPressed)
+    {
+        lblDetailDescription.text = @"";
+    }
     if (button.tag < 10)
     {
-        //If there has just been an operand pressed, we want to make sure that we don't erase all the contents of the display label until the user clicks on a number, than we will delete all the contents.  We set operandPressed to false so that we don't keep deleting the contents of the label every time the user clicks on the number button.
-        if (operandPressed)
-        {
-            lblDetailDescription.text = @"";
-        }
         //if this is a number than simply add the number to the integer.  If it's a decimal than check if there is already a decimal there and if not add the point.
         lblDetailDescription.text = [NSString stringWithFormat:@"%@%ld",lblDetailDescription.text, (long)button.tag];
-        operandPressed = false;
     }
     else if (button.tag == 10)
     {
@@ -177,6 +174,8 @@ NSString *const OPPOSITE = @"-/+";
             lblDetailDescription.text = [NSString stringWithFormat:@"%@.",lblDetailDescription.text];
         }
     }
+    
+    operandPressed = false;
 }
 
 - (IBAction)numberButtonPressed:(UIButton*)button {
@@ -184,6 +183,8 @@ NSString *const OPPOSITE = @"-/+";
     static double numBeforeEqualPressed = 0;
     numTimesClearPressed = 0;
     bool performOperation;
+    
+    mrcPressed = false;
     
     if (button.tag <= 10)
     {
@@ -196,12 +197,9 @@ NSString *const OPPOSITE = @"-/+";
         operand = [self getOperand:button:numBeforeEqualPressed];
         operandPressed = true;
         
-        if ([operand isEqualToString:EQUALS] || [operand isEqualToString:SQUAREROOT] || [operand isEqualToString:OPPOSITE] || [operand isEqualToString:PERCENTAGE])
-        {
-            performOperation = true;
-            //Perform the operation with the specified operand
-            [self performOperation:operand:performOperation];
-        }
+        performOperation = true;
+        //Perform the operation with the specified operand
+        [self performOperation:operand:performOperation];
     }
 }
 
@@ -246,54 +244,84 @@ NSString *const OPPOSITE = @"-/+";
 - (void) performOperation: (NSString *) operand : (bool) performOperation
 {
     bool addNum = false;
-    double num;
+    double num = 0;
     double num1, num2;
     
     if (([numberList count] != 0 && performOperation))
     {
+        
         if ([numberList count] >= 2)
         {
-            num1 = [[numberList objectAtIndex:[numberList count]-1] doubleValue];
-            num2 = [[numberList objectAtIndex:[numberList count]-2] doubleValue];
-        }
-        //If the operand is equals, then we find out what the operation was before that, and handle the operation correspondingly.
-        if ([operand isEqualToString:EQUALS])
-        {
-            for (int i = [operatorList count] - 1; i >= 0; i--)
+            //If the operand is equals, then we find out what the operation was before that, and handle the operation correspondingly.
+            if ([operand isEqualToString:EQUALS])
             {
-                operand = [operatorList objectAtIndex:i];
-                
-                if (![operand isEqualToString:EQUALS])
+                for (int i = [operatorList count] - 1; i >= 0; i--)
                 {
-                    i = 0;
+                    operand = [operatorList objectAtIndex:i];
+                    
+                    if (![operand isEqualToString:EQUALS])
+                    {
+                        i = 0;
+                    }
                 }
             }
-        }
-        
-        if ([operand isEqualToString:ADDITION])
+            
+            //If the operand is not equals, than we need to get the operand from the previous calculation the way a calculator normally works.
+            operand = [operatorList objectAtIndex:[operatorList count]-2];
+            equalPressed = false;
+                
+            num1 = [[numberList objectAtIndex:[numberList count]-1] doubleValue];
+            num2 = [[numberList objectAtIndex:[numberList count]-2] doubleValue];
+                
+            if ([operand isEqualToString:ADDITION])
+            {
+                num = [self add:num1 :num2];
+            }
+            else if ([operand isEqualToString:SUBTRACTION])
+            {
+                num = [self subtract:num1 :num2];
+            }
+            else if ([operand isEqualToString:MULTIPLY])
+            {
+                num = [self multiply:num1 :num2];
+            }
+            else if ([operand isEqualToString:DIVISION])
+            {
+                num = [self division:num1 :num2];
+            }
+            else if ([operand isEqualToString:PERCENTAGE])
+            {
+                operand = [operatorList objectAtIndex:[operatorList count] - 2];
+                
+                if ([operand isEqualToString:MULTIPLY])
+                {
+                    num = (num1 / 100) * num2;
+                }
+                else if ([operand isEqualToString:ADDITION])
+                {
+                    num = num2 + ((num1 / 100) * num2);
+                }
+                else if ([operand isEqualToString:SUBTRACTION])
+                {
+                    num = num2 - ((num1 / 100) * num2);
+                }
+                else if ([operand isEqualToString:DIVISION])
+                {
+                    num = (num2 / (num1 / 100));
+                }
+            }
+
+
+        if ([[operatorList objectAtIndex:[operatorList count] - 1] isEqualToString:EQUALS ])
         {
-            num = [self add:num1 :num2];
-            addNum = true;
+            equalPressed = true;
+        }
+        addNum = true;
         }
         else if ([operand isEqualToString:OPPOSITE])
         {
             num = [self oppositeValue];
             addNum = false;
-        }
-        else if ([operand isEqualToString:SUBTRACTION])
-        {
-            num = [self subtract:num1 :num2];
-            addNum = true;
-        }
-        else if ([operand isEqualToString:MULTIPLY])
-        {
-            num = [self multiply:num1 :num2];
-            addNum = true;
-        }
-        else if ([operand isEqualToString:DIVISION])
-        {
-            num = [self division:num1 :num2];
-            addNum = true;
         }
         else if ([operand isEqualToString:SQUAREROOT])
         {
@@ -305,30 +333,6 @@ NSString *const OPPOSITE = @"-/+";
             num = [self square];
             addNum = true;
         }
-        else if ([operand isEqualToString:PERCENTAGE])
-        {
-            operand = [operatorList objectAtIndex:[operatorList count] - 2];
-            
-            if ([operand isEqualToString:MULTIPLY])
-            {
-                num = (num1 / 100) * num2;
-                addNum = true;
-            }
-            else if ([operand isEqualToString:ADDITION])
-            {
-                num = num2 + ((num1 / 100) * num2);
-                addNum = true;
-            }
-            else if ([operand isEqualToString:SUBTRACTION])
-            {
-                num = num2 - ((num1 / 100) * num2);
-            }
-            else if ([operand isEqualToString:DIVISION])
-            {
-                num = (num2 / (num1 / 100));
-                addNum = true;
-            }
-        }
         else
         {
             num = [lblDetailDescription.text doubleValue];
@@ -336,6 +340,7 @@ NSString *const OPPOSITE = @"-/+";
         }
         
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num];
+        
         if (addNum)
         {
             [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
@@ -372,6 +377,7 @@ NSString *const OPPOSITE = @"-/+";
     static double salesPrice = 0;
     double cost = 0;
     operandPressed = true;
+    mrcPressed = false;
     
     //SEL Pressed
     if (button.tag == 22)
@@ -397,6 +403,7 @@ NSString *const OPPOSITE = @"-/+";
     static double cost	 = 0;
     double salesPrice = 0;
     operandPressed = true;
+    mrcPressed = false;
     
     //CST Pressed
     if (button.tag == 24)
@@ -424,6 +431,7 @@ NSString *const OPPOSITE = @"-/+";
     static double cost	 = 0;
     double margin = 0;
     operandPressed = true;
+    mrcPressed = false;
     
     //CST Pressed
     if (button.tag == 26)
@@ -439,8 +447,42 @@ NSString *const OPPOSITE = @"-/+";
         [numberList addObject:[[NSNumber alloc] initWithDouble:margin ]];
     }
 }
-
+//Handle adding and removing, and manipulating the values that are stored in memory
 - (IBAction)memoryButtonPressed:(UIButton *)button {
+    
+    if (button.tag == 19)
+    {
+        //IF they've pressed the MRC button twice, we clear the memory
+        if (mrcPressed)
+        {
+            storedValue = 0;
+            lblDetailDescription.text = @"";
+        }
+        else
+        {
+            //If they press the MRC button only once then we pull up the stored value onto the screen
+            lblDetailDescription.text = [[NSString alloc] initWithFormat:@"%g", storedValue];
+            mrcPressed = true;
+            
+            [numberList addObject:[[NSNumber alloc]initWithDouble:storedValue]];
+        }
+    }
+    else if (button.tag == 18)
+    {
+        [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
+        
+        [self performOperation:EQUALS :true];
+        storedValue = storedValue - [lblDetailDescription.text doubleValue];
+    }
+    else if (button.tag == 17)
+    {
+        [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
+        
+        [self performOperation:EQUALS :true];
+        storedValue = storedValue + [lblDetailDescription.text doubleValue];
+
+    }
+    operandPressed = true;
 }
 
 - (void)configureView

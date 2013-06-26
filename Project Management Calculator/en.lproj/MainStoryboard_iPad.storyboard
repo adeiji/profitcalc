@@ -297,6 +297,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="memoryButtonPressed:" destination="4" eventType="touchUpInside" id="x1n-0D-oYW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YiB-OP-Irx" customClass="NumberButtons">
                                         <rect key="frame" x="584" y="409" width="77" height="48"/>
@@ -309,6 +312,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="memoryButtonPressed:" destination="4" eventType="touchUpInside" id="xDE-6t-ahZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1fu-Id-c5q" customClass="NumberButtons">
                                         <rect key="frame" x="39" y="244" width="77" height="48"/>
