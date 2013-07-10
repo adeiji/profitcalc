@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
-/*
 typedef enum
 {
     MULTIPLICATION,
@@ -23,9 +23,48 @@ typedef enum
     SQUAREROOT,
     EQUALS,
     OPPOSITE,
-    PERCENTAGE
+    PERCENTAGE,
+    NOOPERAND,
+    PERCENTPLUS,
+    PERCENTMINUS,
+    PERCENTPLUSEQUALS,
+    PERCENTMINUSEQUALS,
+    PERCENTPLUSNUM,
+    PERCENTPLUSNUMEQUALS
 } OperandType;
-*/
+
+typedef enum
+{
+    OPERANDPRESSEDLAST,
+    EQUALSPRESSEDLAST,
+    NEWOPERATION,
+    NUMBERENTEREDLAST,
+    PERCENTAGEPRESSEDLAST
+} states;
+
+typedef enum
+{
+    DECIMALBUTTON = 10,
+    ADDITIONBUTTON = 11,
+    MINUSBUTTON = 12,
+    MULTIPLICATIONBUTTON = 13,
+    EQUALSBUTTON = 14,
+    DIVISIONBUTTON = 15,
+    OPPOSITEBUTTON = 16,
+    MEMORYADDBUTTON = 17,
+    MEMORYREMOVEBUTTON = 18,
+    MEMORYCLEARBUTTON = 19,
+    PERCENTAGEBUTTON = 20,
+    CLEARBUTTON = 21,
+    SQUAREROOTBUTTON = 22,
+    SALESMARGINBUTTON = 23,
+    SALESPRICEBUTTON = 24,
+    COSTMARGINBUTTON = 25,
+    COSTPRICEBUTTON = 26,
+    MARGINCOSTBUTTON = 27,
+    MARGINSALESBUTTON = 28
+} OperandButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *lblDetailDescription;
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
@@ -34,5 +73,8 @@ typedef enum
 - (IBAction)salebuttonPressed:(UIButton*)button;
 - (IBAction)marginButtonPressed:(UIButton *)button;
 - (IBAction)memoryButtonPressed:(UIButton *)button;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

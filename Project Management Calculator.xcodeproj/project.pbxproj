@@ -10,6 +10,7 @@
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
 		CE9981DD1776705400442FB3 /* negativepositive.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DC1776705400442FB3 /* negativepositive.png */; };
 		CE9981DF1776743C00442FB3 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DE1776743C00442FB3 /* title.png */; };
+		CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9A071717860FFC00B8BB11 /* FTWOperands.m */; };
 		CE9DD9BB17661EF10073C460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BA17661EF10073C460 /* UIKit.framework */; };
 		CE9DD9BD17661EF20073C460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BC17661EF10073C460 /* Foundation.framework */; };
 		CE9DD9BF17661EF20073C460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BE17661EF20073C460 /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9981DC1776705400442FB3 /* negativepositive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negativepositive.png; sourceTree = SOURCE_ROOT; };
 		CE9981DE1776743C00442FB3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = SOURCE_ROOT; };
+		CE9A071617860FFC00B8BB11 /* FTWOperands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWOperands.h; sourceTree = "<group>"; };
+		CE9A071717860FFC00B8BB11 /* FTWOperands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWOperands.m; sourceTree = "<group>"; };
 		CE9DD9B717661EF10073C460 /* Project Management Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Management Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9BA17661EF10073C460 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE9DD9BC17661EF10073C460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,6 +178,8 @@
 				CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */,
 				CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */,
 				CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */,
+				CE9A071617860FFC00B8BB11 /* FTWOperands.h */,
+				CE9A071717860FFC00B8BB11 /* FTWOperands.m */,
 				CE9DD9DA17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld */,
 				CE9DD9C317661EF20073C460 /* Supporting Files */,
 			);
@@ -340,6 +345,7 @@
 				CE9DDA0317661F6C0073C460 /* GradientView.m in Sources */,
 				CE9DDA0617662B280073C460 /* NumberButtons.m in Sources */,
 				CE9DDA0917663F650073C460 /* FTWLeftButtons.m in Sources */,
+				CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

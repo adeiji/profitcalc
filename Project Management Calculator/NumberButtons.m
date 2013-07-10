@@ -47,8 +47,7 @@
         CGContextAddArcToPoint(context, minX, maxY, minX, midY, radius);
         // Close the path
         CGContextClosePath(context);
-        
-        CGContextSetShadow(context, CGSizeMake(1, 5), 8);
+        CGContextSetShadow(context, CGSizeMake(1, rect.size.width / 60), rect.size.width / 100);
         CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.49 green:0.514 blue:0.514 alpha:1.0].CGColor);
         
         // Fill & stroke the path
@@ -79,11 +78,11 @@
     // Fill & stroke the path
     CGContextDrawPath(context, kCGPathFillStroke);
     
-    CGContextSetLineWidth(context, 7);
+    CGContextSetLineWidth(context, rect.size.width / 100);
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.42 green:0.455 blue:0.451 alpha:1.0].CGColor);
     CGContextMoveToPoint(context, minX + 5, maxY);
     CGContextAddLineToPoint(context, maxX, maxY);
-    CGContextSetLineWidth(context, 3);
+    CGContextSetLineWidth(context, rect.size.width / 200);
     CGContextAddLineToPoint(context, maxX, minY + 5);
     CGContextStrokePath(context);
 }

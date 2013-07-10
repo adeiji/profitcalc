@@ -9,6 +9,7 @@
 #import "FTWAppDelegate.h"
 
 #import "FTWMasterViewController.h"
+#import "FTWDetailViewController.h"
 
 @implementation FTWAppDelegate
 
@@ -29,7 +30,7 @@
         controller.managedObjectContext = self.managedObjectContext;
     } else {
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        FTWMasterViewController *controller = (FTWMasterViewController *)navigationController.topViewController;
+        FTWDetailViewController *controller = (FTWDetailViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
     return YES;

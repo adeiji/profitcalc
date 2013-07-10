@@ -9,17 +9,21 @@
 #import "FTWDetailViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "Math.h"
+#import "FTWOperands.h"
 
 @interface FTWDetailViewController ( )
 {
     NSMutableArray *numberList;
     NSMutableArray *operatorList;
-    NSInteger *previousNumber;
-    NSInteger *currentNumber;
-    bool operandPressed;
-    bool dontAddNumberBeforeEqualPressed;
+    NSMutableArray *numberListCopy;
+    long double previousNumber;
+    long double currentNumber;
+    long double reservedNumber;
+    long double reservedNumberForPercentPlusEqualsOperator;
+    long double storedValue;
+    int state;
+    FTWOperands *operands;
     int numTimesClearPressed;
-    double storedValue;
     bool mrcPressed;
     bool equalPressed;
 }
@@ -31,15 +35,6 @@
 
 @implementation FTWDetailViewController
 
-NSString *const MULTIPLY = @"*";
-NSString *const DIVISION = @"/";
-NSString *const ADDITION = @"+";
-NSString *const SUBTRACTION = @"-";
-NSString *const SQUARE = @"square";
-NSString *const SQUAREROOT = @"sqrt";
-NSString *const PERCENTAGE = @"%";
-NSString *const EQUALS = @"=";
-NSString *const OPPOSITE = @"-/+";
 
 @synthesize lblDetailDescription;
 
@@ -61,11 +56,16 @@ NSString *const OPPOSITE = @"-/+";
 
 - (void)viewDidLoad
 {
-    dontAddNumberBeforeEqualPressed = false;
     numberList = [[NSMutableArray alloc] init];
     operatorList = [[NSMutableArray alloc] init];
+    numberListCopy = [[NSMutableArray alloc] init];
     numTimesClearPressed = 0;
     storedValue = 0;
+    operands = [[FTWOperands alloc] init];
+    operands.currentOperand = NOOPERAND;
+    operands.previousOperand = NOOPERAND;
+    previousNumber = NAN;
+    currentNumber = NAN;
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -74,100 +74,87 @@ NSString *const OPPOSITE = @"-/+";
 }
 
 //This handles all the unique operands that are possible of creating through various operand selections available on this calculator.
--(NSString *) getSpecialOperand
+-(int) getSpecialOperand : (UIButton *) button
 {
-    int count = [operatorList count];
-    if (count > 1)
+    if (operands.currentOperand == MULTIPLICATION && button.tag == EQUALSBUTTON)        // *= is square
     {
-        NSString *operand = [[NSString alloc] initWithFormat:@"%@ %@", [operatorList objectAtIndex:count - 1], [operatorList objectAtIndex:count - 2]];
-    
-        if ([operand isEqualToString:@"= *"])
-        {
-            operand = @"square";
-            dontAddNumberBeforeEqualPressed = true;
-            operandPressed = false;
-        }
-    
-        else if ([operand isEqualToString:@"= +"])
-        {
-            operand = @"+";
-        }
-        else if ([operand isEqualToString:@"= ="])
-        {
-            return [operatorList objectAtIndex:count - 1];
-        }
-        
-        return operand;
+        return SQUARE;
+    }
+    else if (operands.previousOperand == PERCENTAGE && button.tag == ADDITIONBUTTON)    // %+
+    {
+        return PERCENTPLUS;
+    }
+    else if (operands.previousOperand == PERCENTAGE && button.tag == MINUSBUTTON)       //%-
+    {
+        return PERCENTMINUS;
+    }
+    else if (operands.previousOperand == PERCENTPLUS && button.tag == EQUALSBUTTON)     //%+=   is  (250 X 5%) + 250
+    {
+        return PERCENTPLUSEQUALS;
+    }
+    else if (operands.previousOperand == PERCENTMINUS && button.tag == EQUALSBUTTON)    //%-=   is  250 - (250 X 5%)
+    {
+        return PERCENTMINUSEQUALS;
+    }
+    else if (operands.currentOperand == PERCENTPLUS && button.tag < 10)
+    {
+        return PERCENTPLUSNUM;
+    }
+    else
+    {
+        return [self getOperand:button];
     }
     
-    return nil;
+    return NOOPERAND;
 }
-
--(NSString *) getOperand : (UIButton *) button : (double) numBeforeEqualPressed;
+//Returns the selected operand
+-(int) getOperand : (UIButton *) button
 {
-    if (button.tag != 14)
-    {
-        //Every time we press an operand button, we add that number to the number list
-        [numberList addObject:[[NSNumber alloc] initWithDouble:[lblDetailDescription.text doubleValue] ]];
-    }
-    if (button.tag == 16)       //Negative - Positive
+    if (button.tag == OPPOSITEBUTTON)       //Negative - Positive
     {
         return OPPOSITE;
     }
-    else if (button.tag == 11)      //Plus
+    else if (button.tag == ADDITIONBUTTON)      //Plus
     {
-        [operatorList addObject:@"+"];
         return ADDITION;
     }
-    else if (button.tag == 12)      //Minus
+    else if (button.tag == MINUSBUTTON)      //Minus
     {
-        [operatorList addObject:@"-"];
         return SUBTRACTION;
     }
-    else if (button.tag == 13)      //Multiply
+    else if (button.tag == MULTIPLICATIONBUTTON)      //Multiply
     {
-        [operatorList addObject:@"*"];
-        return MULTIPLY;
+        return MULTIPLICATION;
     }
-    else if (button.tag == 15)      //Divide
+    else if (button.tag == DIVISIONBUTTON)      //Divide
     {
-        [operatorList addObject:@"/"];
         return DIVISION;
     }
-    else if (button.tag == 22)      //Square Root
+    else if (button.tag == SQUAREROOTBUTTON)      //Square Root
     {
-        [operatorList addObject:@"sqrt"];
         return SQUAREROOT;
     }
-    else if (button.tag == 14)      //Equals button pressed
+    if (button.tag == PERCENTAGEBUTTON)      //Percentage button pressed
     {
-        [operatorList addObject:@"="];
-        [numberList addObject:[[NSNumber alloc] initWithDouble:numBeforeEqualPressed ]];
-        return EQUALS;
-    }
-    if (button.tag == 20)      //Percentage button pressed
-    {
-        [operatorList addObject:@"%"];
         return PERCENTAGE;
-    }
-
-    return nil;
+    }    
+    return 0;
 }
 
 -(void) updateDisplay:(UIButton*) button
 {
     //If there has just been an operand pressed, we want to make sure that we don't erase all the contents of the display label until the user clicks on a number, than we will delete all the contents.  We set operandPressed to false so that we don't keep deleting the contents of the label every time the user clicks on the number button.
 
-    if (operandPressed)
+    if (state == OPERANDPRESSEDLAST || state == EQUALSPRESSEDLAST)
     {
         lblDetailDescription.text = @"";
     }
-    if (button.tag < 10)
+    if (button.tag < 10)    //NOT A NUMBER BUTTON
     {
         //if this is a number than simply add the number to the integer.  If it's a decimal than check if there is already a decimal there and if not add the point.
         lblDetailDescription.text = [NSString stringWithFormat:@"%@%ld",lblDetailDescription.text, (long)button.tag];
     }
-    else if (button.tag == 10)
+    else if (button.tag == DECIMALBUTTON)
     {
         if ([lblDetailDescription.text rangeOfString:@"."].location == NSNotFound)
         {
@@ -175,32 +162,158 @@ NSString *const OPPOSITE = @"-/+";
         }
     }
     
-    operandPressed = false;
+    //set the state so that it shows that the last thing entered was a number
+    state = NUMBERENTEREDLAST;
 }
 
+- (void) validateOperation : (UIButton *) button
+{
+ 
+}
+
+- (void) percentageButtonPressed : (UIButton *) button
+{
+    if (operands.currentOperand == PERCENTPLUSNUM)
+    {
+        [self performSpecialOperation];
+    }
+    else
+    {
+        operands.currentOperand = [self getOperand : button];
+    
+        [self setNumbersToBeCalculated];        //Every time we press an operand button, we add that number to the number list
+        //[--self performOperation: (bool) performOperation: (bool) equals
+        [self performOperation : true : false];
+    
+        state = OPERANDPRESSEDLAST;
+    }
+}
+
+- (void) operandPressedOnce : (UIButton *) button
+{
+    operands.currentOperand = [self getOperand : button];
+    
+    [self setNumbersToBeCalculated];        //Every time we press an operand button, we add that number to the number list
+    
+    if (state != EQUALSPRESSEDLAST)         /*If the equals button was pressed last, we don't want perform the operation 
+                                             immediately, but wait until the next operand press*/
+    {
+        //[--self performOperation: (bool) performOperation: (bool) equals
+        [self performOperation : true : false];
+    }
+    else
+    {
+        operands.previousOperand = operands.currentOperand;
+    }
+    
+    state = OPERANDPRESSEDLAST;
+}
+
+- (void) equalButtonPressed : (UIButton *) button
+{
+    if (state == EQUALSPRESSEDLAST)  //If this is not the first continous time that the equal time has been pressed
+    {
+        state = EQUALSPRESSEDLAST;
+        //[--self performOperation: (bool) performOperation: (bool) equals
+        [self performOperation : true : true];
+    }
+    else if (state != EQUALSPRESSEDLAST)    //If the user presses the equals button for the first time
+    {
+        [self setNumbersToBeCalculated];
+        
+        if (state != OPERANDPRESSEDLAST)    //If the user has not pressed an operand before pressing the equals sing
+        {
+            state = EQUALSPRESSEDLAST;
+            //[--self performOperation: (bool) performOperation: (bool) equals
+            [self performOperation:true :true];     //perform the operation
+        }
+        else if (state == OPERANDPRESSEDLAST)       //if the user has just pressed an operand, we call the special operand method
+        {
+            operands.currentOperand = [self getSpecialOperand:button];
+            state = EQUALSPRESSEDLAST;
+            [self performSpecialOperation];
+            
+        }
+        else
+        {
+            //[--self performOperation: (bool) performOperation: (bool) equals
+            [self performOperation : true: true];       //simply perform the operation
+        }
+    }
+}
+
+//Handles all button presses that have to do with numbers or operations
 - (IBAction)numberButtonPressed:(UIButton*)button {
-    NSString *operand = [[NSString alloc] init];
     static double numBeforeEqualPressed = 0;
     numTimesClearPressed = 0;
     bool performOperation;
     
     mrcPressed = false;
     
-    if (button.tag <= 10)
+    if (button.tag <= 10) //If the user pressed a number
     {
+        if (operands.currentOperand == PERCENTPLUS)
+        {
+            operands.currentOperand = [self getSpecialOperand:button];
+        }
+        
         [self updateDisplay:button];
         numBeforeEqualPressed = [lblDetailDescription.text doubleValue];
     }
-    //OPERAND BUTTONS
-    if (button.tag > 10)
+
+    if (button.tag > 10) //If the user pressed an operand
     {
-        operand = [self getOperand:button:numBeforeEqualPressed];
-        operandPressed = true;
-        
-        performOperation = true;
-        //Perform the operation with the specified operand
-        [self performOperation:operand:performOperation];
+        if (button.tag == OPPOSITEBUTTON)
+        {
+            lblDetailDescription.text = [NSString stringWithFormat:@"%g",[self oppositeValue]];
+        }
+        else if (button.tag == SQUAREROOTBUTTON)   //Opposite Value || Square Root Operand ------ Respectively
+        {
+            operands.currentOperand = [self getOperand: button];
+            
+            [self performOperation : true : false];
+        }
+        else if (button.tag != EQUALSBUTTON)           //If the equal button has not been pressed now
+        {
+            if (button.tag == PERCENTAGEBUTTON)
+            {
+                [self percentageButtonPressed : button];
+            }
+            else if (state != OPERANDPRESSEDLAST)            //If the last button pressed was an operand then we need to get a special operand, otherwise, just get the normal operand
+            {
+                [self operandPressedOnce:button];
+            }                   
+            else                                        //In this case, two operands have been pressed consecutively.
+            {   
+                operands.currentOperand = [self getSpecialOperand : button];
+                state = OPERANDPRESSEDLAST;
+                
+                [self performSpecialOperation];
+            }
+        }
+        else if (button.tag == EQUALSBUTTON)
+        {
+            [self equalButtonPressed:button];
+        }
+        else
+        {
+            if (state != OPERANDPRESSEDLAST)
+            {
+                operands.currentOperand = [self getOperand : button];
+            
+                performOperation = true;
+                //Perform the operation with the specified operand
+                //[--self performOperation: (bool) performOperation: (bool) equals
+                [self performOperation:performOperation:false];
+            }
+        }
     }
+}
+
+-(void) setNumbersToBeCalculated
+{
+    previousNumber = currentNumber;
+    currentNumber = [lblDetailDescription.text doubleValue];
 }
 
 - (double) add:(double) num1 :(double) num2
@@ -209,17 +322,11 @@ NSString *const OPPOSITE = @"-/+";
 }
 - (double) subtract:(double) num1 : (double) num2
 {
-    return num2 - num1;
+    return num1 - num2;
 }
 - (double) oppositeValue
 {
-    double num;
-    
-    num = [lblDetailDescription.text doubleValue] * -1;
-    //Instead of adding and removing the number fromt he numberList, we simply keep updating it with the new number
-    [numberList replaceObjectAtIndex:[numberList count] - 1 withObject: [[NSNumber alloc] initWithDouble:num]];
-
-    return num;
+    return [lblDetailDescription.text doubleValue] * -1;
 }
 -(double) multiply:(double) num1 : (double) num2
 {
@@ -228,7 +335,7 @@ NSString *const OPPOSITE = @"-/+";
 
 -(double) division:(double) num1 : (double) num2
 {
-    return num2 / num1;
+    return num1 / num2;
 }
 
 -(double) sqrt
@@ -241,119 +348,226 @@ NSString *const OPPOSITE = @"-/+";
     return [lblDetailDescription.text doubleValue] * [lblDetailDescription.text doubleValue];
 }
 
-- (void) performOperation: (NSString *) operand : (bool) performOperation
+- (double) performCalculation: (double) num1 : (double) num2 : (int) operand
 {
-    bool addNum = false;
-    double num = 0;
-    double num1, num2;
-    
-    if (([numberList count] != 0 && performOperation))
+    if (operand == ADDITION)
     {
+        return [self add:num1 :num2];
+    }
+    else if (operand == SUBTRACTION)
+    {
+        return [self subtract:num1 :num2];
+    }
+    else if (operand == MULTIPLICATION)
+    {
+        return [self multiply:num1 :num2];
+    }
+    else if (operand == DIVISION)
+    {
+        return [self division:num1 :num2];
+    }
+    else if (operand == PERCENTAGE)     //When percentage is pressed then generally there are special calculations performed.  Ex - 250 X 5% is = to 5% of 250
+    {
+        operand = operands.previousOperand;
+        reservedNumber = num1;
         
-        if ([numberList count] >= 2)
+        if (operand == MULTIPLICATION)
         {
-            //If the operand is equals, then we find out what the operation was before that, and handle the operation correspondingly.
-            if ([operand isEqualToString:EQUALS])
-            {
-                for (int i = [operatorList count] - 1; i >= 0; i--)
-                {
-                    operand = [operatorList objectAtIndex:i];
-                    
-                    if (![operand isEqualToString:EQUALS])
-                    {
-                        i = 0;
-                    }
-                }
-            }
-            
-            //If the operand is not equals, than we need to get the operand from the previous calculation the way a calculator normally works.
-            operand = [operatorList objectAtIndex:[operatorList count]-2];
-            equalPressed = false;
-                
-            num1 = [[numberList objectAtIndex:[numberList count]-1] doubleValue];
-            num2 = [[numberList objectAtIndex:[numberList count]-2] doubleValue];
-                
-            if ([operand isEqualToString:ADDITION])
-            {
-                num = [self add:num1 :num2];
-            }
-            else if ([operand isEqualToString:SUBTRACTION])
-            {
-                num = [self subtract:num1 :num2];
-            }
-            else if ([operand isEqualToString:MULTIPLY])
-            {
-                num = [self multiply:num1 :num2];
-            }
-            else if ([operand isEqualToString:DIVISION])
-            {
-                num = [self division:num1 :num2];
-            }
-            else if ([operand isEqualToString:PERCENTAGE])
-            {
-                operand = [operatorList objectAtIndex:[operatorList count] - 2];
-                
-                if ([operand isEqualToString:MULTIPLY])
-                {
-                    num = (num1 / 100) * num2;
-                }
-                else if ([operand isEqualToString:ADDITION])
-                {
-                    num = num2 + ((num1 / 100) * num2);
-                }
-                else if ([operand isEqualToString:SUBTRACTION])
-                {
-                    num = num2 - ((num1 / 100) * num2);
-                }
-                else if ([operand isEqualToString:DIVISION])
-                {
-                    num = (num2 / (num1 / 100));
-                }
-            }
-
-
-        if ([[operatorList objectAtIndex:[operatorList count] - 1] isEqualToString:EQUALS ])
-        {
-            equalPressed = true;
+            reservedNumberForPercentPlusEqualsOperator = (reservedNumber / 100) * num2;
         }
-        addNum = true;
-        }
-        else if ([operand isEqualToString:OPPOSITE])
+        else if (operand == ADDITION) 
         {
-            num = [self oppositeValue];
-            addNum = false;
+            reservedNumberForPercentPlusEqualsOperator = reservedNumber + ((reservedNumber / 100) * num2);
         }
-        else if ([operand isEqualToString:SQUAREROOT])
+        else if (operand == SUBTRACTION)
         {
-            num = [self sqrt];
-            addNum = true;
+            reservedNumber = reservedNumber - ((reservedNumber / 100) * num2);
+            reservedNumberForPercentPlusEqualsOperator = reservedNumber;
         }
-        else if ([operand isEqualToString:SQUARE])
+        else if (operand == DIVISION)
         {
-            num = [self square];
-            addNum = true;
+            reservedNumberForPercentPlusEqualsOperator = (reservedNumber / (num2 / 100));
+        }
+        else if (operand == NOOPERAND)
+        {
+            reservedNumberForPercentPlusEqualsOperator = [lblDetailDescription.text doubleValue] / 100;
         }
         else
         {
-            num = [lblDetailDescription.text doubleValue];
-            addNum = false;
+            reservedNumberForPercentPlusEqualsOperator = [lblDetailDescription.text doubleValue];
         }
         
+        return reservedNumberForPercentPlusEqualsOperator;
+    }
+    
+    return num2;
+}
+
+- (int) performSimpleOperations
+{
+    return 1;
+}
+
+- (double) performSingularOperations
+{
+    int operand = operands.currentOperand;
+
+    if (operand == SQUAREROOT) //Get the square root of the number
+    {
+        return [self sqrt];
+    }
+    else if (operand == SQUARE)     //Square the number
+    {
+        return [self square];
+    }
+    else if (operand == NOOPERAND)  //Here is where there is no calculation performed, we simply wait for the next operand selection
+    {
+        double num = [lblDetailDescription.text doubleValue];
+        //Remove the last object, so that there is not a -1 in the operatorList which would show that no calculation was performed.  If this is not deleted then when you enter in another operand, the getSpecialOperand method will read the last operand and the -1, which will cause no action to be taken.
+        [operatorList removeLastObject];
+        
+        return num;
+    }
+    return -1;
+}
+//After the user presses equals we reset the number list so that we don't perform the calculation until there is another operand pressed
+-(void) resetNumberList
+{
+    [numberListCopy addObjectsFromArray:numberList];
+    [numberList removeAllObjects];
+    [numberList addObject: [numberListCopy objectAtIndex:[numberListCopy count] - 1]];
+    [numberListCopy removeObject:[numberListCopy objectAtIndex:[numberListCopy count] - 1]];
+    
+    equalPressed = false;
+}
+
+
+//Get the new value after the operands are pressed
+- (double) getAllInformationForCalculation : (int) operand
+{
+    //Perform the calculation with whatever the specified operand is
+    double calculatedNum =  [self performCalculation: previousNumber : currentNumber : operand];
+    
+   // [self addNumberToNumberList:calculatedNum];
+    
+    return calculatedNum;
+}
+
+
+//Add the given number to the number array
+-(void) addNumberToNumberList: (double) num
+{
+    [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
+}
+
+#pragma mark - Performing Operations
+//Performs all special operations
+- (void) performSpecialOperation
+{
+    int operand = operands.currentOperand;
+    double num;
+    
+    if (operand == PERCENTPLUSEQUALS)
+    {
+        num = reservedNumber + currentNumber;
+        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        
+        previousNumber = currentNumber;
+        currentNumber = num;
+    }
+    else if (operand == PERCENTMINUSEQUALS)
+    {
+        num = reservedNumber - currentNumber;
+        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        
+        previousNumber = currentNumber;
+        currentNumber = num;
+    }
+    else if (operand == SQUARE)
+    {
+        num = [self square];        
+        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        
+        previousNumber = currentNumber;
+        currentNumber = num;
+    }
+    else if (operand == PERCENTPLUSNUM)
+    {
+        num = reservedNumberForPercentPlusEqualsOperator + (reservedNumber * ([lblDetailDescription.text doubleValue] / 100));
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num];
         
-        if (addNum)
-        {
-            [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
-        }
+        previousNumber = currentNumber;
+        currentNumber = num;
     }
+    operands.previousOperand = operands.currentOperand;
+    
+}
+
+- (void) performOperation: (bool) willPerformOperation : (bool) equals
+{
+    double num = [lblDetailDescription.text doubleValue];
+    int operand = operands.currentOperand;
+    
+    if (operand != NOOPERAND)
+    {
+        //Check to see if there are any numbers that we're performing calculations on, if we can perform a calculation, and if they've pressed equals and they're not pressing an operand over and over again.
+        if (operand == SQUAREROOT || operand == SQUARE)
+        {
+            num = [self performSingularOperations];
+          
+            previousNumber = currentNumber;             /*These two lines are performed after every operation, to make sure
+                                                        that we keep updating the currentNumber, but we keep
+                                                        the previous number pressed*/
+            currentNumber = num;
+        }
+        else if (operands.currentOperand == PERCENTAGE)
+        {
+            num = [self getAllInformationForCalculation:PERCENTAGE];
+            previousNumber = currentNumber;
+            currentNumber = num;
+        }
+        else if (!isnan(previousNumber))
+        {
+            if (state == EQUALSPRESSEDLAST) /*If the equal button was pressed then we perform the operation, 
+                                             but don't change the CURRENTNUMBER variable, because if the user keeps 
+                                             pressing the equal button we want to keep performing the operation with the 
+                                             last number entered before operations began, which is what's stored in CURRENTNUMBER. */
+            {
+                num = [self getAllInformationForCalculation:operands.currentOperand];
+                previousNumber = num;
+            }
+            else if (operands.previousOperand == operands.currentOperand)   /*If the user has entered the same operand more than once than we
+                                                                             simply keep performing the same operation*/
+            {
+                num = [self getAllInformationForCalculation:operands.currentOperand];
+                previousNumber = currentNumber;
+                currentNumber = num;
+            }
+            else                            /*if the user has entered a different operand this time then the last operand entered, then we perform
+                                             the first operand that was pressed.*/
+            {
+                num = [self getAllInformationForCalculation:operands.previousOperand];
+                previousNumber = currentNumber;
+                currentNumber = num;
+            }
+        }
+        
+        //If the user has pressed equals, than we make sure that when the user clicks on another operand, the calculation is not done automatically.
+        //We do this by removing all the data except for the last number from the numberList array and copying it to the numberListCopy array.
+        operands.previousOperand = operands.currentOperand;
+        
+        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        
+    }
+    
+    [numberList addObject:[[NSNumber alloc] initWithDouble:[lblDetailDescription.text doubleValue]]];
+    [operatorList addObject:[[NSNumber alloc] initWithInt:operands.currentOperand]];
 }
 
 - (IBAction)copyToClipboard:(id)sender {
-    UIPasteboard *appPasteBoard = [UIPasteboard generalPasteboard];
+    NSMutableString *arrayAsParagraphs = [[numberList componentsJoinedByString:@"\n"] mutableCopy];
     
-    appPasteBoard.persistent = YES;
-    
-    [appPasteBoard setValue:operatorList forPasteboardType:(NSString *)UIPasteboardTypeListString];
+    [UIPasteboard generalPasteboard].string = arrayAsParagraphs;    
 }
 
 - (IBAction)btnClearPressed:(id)sender {
@@ -366,6 +580,10 @@ NSString *const OPPOSITE = @"-/+";
     }
     else if (numTimesClearPressed == 2)
     {
+        previousNumber = NAN;
+        currentNumber = NAN;
+        operands.currentOperand = NOOPERAND;
+        operands.previousOperand = NOOPERAND;
         numberList = [[NSMutableArray alloc] init];
         operatorList = [[NSMutableArray alloc] init];
         numTimesClearPressed = 0;
@@ -376,18 +594,18 @@ NSString *const OPPOSITE = @"-/+";
 - (IBAction)costButtonPressed:(UIButton *)button {
     static double salesPrice = 0;
     double cost = 0;
-    operandPressed = true;
+    state = OPERANDPRESSEDLAST;
     mrcPressed = false;
     
     //SEL Pressed
-    if (button.tag == 22)
+    if (button.tag == SALESPRICEBUTTON)
     {
         if (cost == 0)
         {
             salesPrice = [lblDetailDescription.text doubleValue];
         }
     }
-    else if (button.tag == 21)  //MAR pressed
+    else if (button.tag == SALESMARGINBUTTON)  //MAR pressed
     {
         if (salesPrice != 0)
         {
@@ -402,43 +620,42 @@ NSString *const OPPOSITE = @"-/+";
 - (IBAction)salebuttonPressed:(UIButton *) button {
     static double cost	 = 0;
     double salesPrice = 0;
-    operandPressed = true;
+    state = OPERANDPRESSEDLAST;
     mrcPressed = false;
     
     //CST Pressed
-    if (button.tag == 24)
+    if (button.tag == COSTPRICEBUTTON)
     {
         if (salesPrice == 0)
         {
             cost = [lblDetailDescription.text doubleValue];
         }
     }
-    else if (button.tag == 23)  //MAR pressed
+    else if (button.tag == COSTMARGINBUTTON)  //MAR pressed
     {
         if (cost != 0)
         {
-            salesPrice = cost + cost * ([lblDetailDescription.text doubleValue] / 100);
+            salesPrice = cost / (1 - ([lblDetailDescription.text doubleValue] / 100));
             //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
             lblDetailDescription.text = [NSString stringWithFormat:@"%g", salesPrice];
             [operatorList addObject:@"Sales Price Calculation"];
             [numberList addObject:[[NSNumber alloc] initWithDouble:salesPrice ]];
         }
     }
-
 }
 
 - (IBAction)marginButtonPressed:(UIButton *)button {
     static double cost	 = 0;
     double margin = 0;
-    operandPressed = true;
+    state = OPERANDPRESSEDLAST;
     mrcPressed = false;
     
     //CST Pressed
-    if (button.tag == 26)
+    if (button.tag == MARGINSALESBUTTON)
     {
         cost = [lblDetailDescription.text doubleValue];
     }
-    else if (button.tag == 25)  //MAR pressed
+    else if (button.tag == MARGINCOSTBUTTON)  //MAR pressed
     {
         margin = (1 - (cost / ([lblDetailDescription.text doubleValue]))) * 100;
         //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
@@ -450,7 +667,7 @@ NSString *const OPPOSITE = @"-/+";
 //Handle adding and removing, and manipulating the values that are stored in memory
 - (IBAction)memoryButtonPressed:(UIButton *)button {
     
-    if (button.tag == 19)
+    if (button.tag == MEMORYCLEARBUTTON)
     {
         //IF they've pressed the MRC button twice, we clear the memory
         if (mrcPressed)
@@ -461,28 +678,29 @@ NSString *const OPPOSITE = @"-/+";
         else
         {
             //If they press the MRC button only once then we pull up the stored value onto the screen
-            lblDetailDescription.text = [[NSString alloc] initWithFormat:@"%g", storedValue];
+            lblDetailDescription.text = [[NSString alloc] initWithFormat:@"%Lg", storedValue];
             mrcPressed = true;
             
             [numberList addObject:[[NSNumber alloc]initWithDouble:storedValue]];
         }
     }
-    else if (button.tag == 18)
+    else if (button.tag == MEMORYREMOVEBUTTON)
     {
         [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
-        
-        [self performOperation:EQUALS :true];
+        //[--self performOperation: (bool) performOperation: (bool) equals
+        [self performOperation:true:true];
         storedValue = storedValue - [lblDetailDescription.text doubleValue];
     }
-    else if (button.tag == 17)
+    else if (button.tag == MEMORYADDBUTTON)
     {
         [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
-        
-        [self performOperation:EQUALS :true];
+        //[--self performOperation: (bool) performOperation: (bool) equals
+        [self performOperation:true:true];
         storedValue = storedValue + [lblDetailDescription.text doubleValue];
 
     }
-    operandPressed = true;
+    
+    //state = OPERANDPRESSEDLAST;
 }
 
 - (void)configureView
