@@ -7,7 +7,7 @@
 //
 
 #import "FTWAppDelegate.h"
-
+#import "TestFlight.h"
 #import "FTWMasterViewController.h"
 #import "FTWDetailViewController.h"
 
@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"b912d9f1-a7e1-4129-bf8a-b20b6c3ad7a0"];
+    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;

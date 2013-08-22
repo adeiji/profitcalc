@@ -65,7 +65,7 @@ typedef enum
     MARGINSALESBUTTON = 28
 } OperandButton;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblDetailDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lblDetailDescription;
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
 - (IBAction)btnClearPressed:(id)sender;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2D17975EFE0061201F /* libTestFlight.a */; };
+		CE08DD3017975F430061201F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2F17975F430061201F /* libz.dylib */; };
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
 		CE9981DD1776705400442FB3 /* negativepositive.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DC1776705400442FB3 /* negativepositive.png */; };
 		CE9981DF1776743C00442FB3 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DE1776743C00442FB3 /* title.png */; };
@@ -52,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE08DD2C17975EDB0061201F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		CE08DD2D17975EFE0061201F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../../Downloads/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
+		CE08DD2F17975F430061201F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9981DC1776705400442FB3 /* negativepositive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negativepositive.png; sourceTree = SOURCE_ROOT; };
 		CE9981DE1776743C00442FB3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = SOURCE_ROOT; };
@@ -101,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE08DD3017975F430061201F /* libz.dylib in Frameworks */,
+				CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */,
 				CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */,
 				CE9DD9BB17661EF10073C460 /* UIKit.framework in Frameworks */,
 				CE9DD9BD17661EF20073C460 /* Foundation.framework in Frameworks */,
@@ -126,6 +133,9 @@
 		CE9DD9AE17661EF10073C460 = {
 			isa = PBXGroup;
 			children = (
+				CE08DD2F17975F430061201F /* libz.dylib */,
+				CE08DD2D17975EFE0061201F /* libTestFlight.a */,
+				CE08DD2C17975EDB0061201F /* TestFlight.h */,
 				CE9554021768E9650068A3DE /* MobileCoreServices.framework */,
 				CE9DDA161767E0FC0073C460 /* divide.png */,
 				CE9DDA0E17664C5E0073C460 /* sqrt.png */,
@@ -415,7 +425,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -428,8 +439,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PROVISIONING_PROFILE = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,14 +461,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -467,6 +484,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/Project Management Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -478,6 +500,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/Project Management Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -35,7 +35,6 @@
 
 @implementation FTWDetailViewController
 
-
 @synthesize lblDetailDescription;
 
 #pragma mark - Managing the detail item
@@ -211,6 +210,7 @@
 
 - (void) equalButtonPressed : (UIButton *) button
 {
+    
     if (state == EQUALSPRESSEDLAST)  //If this is not the first continous time that the equal time has been pressed
     {
         state = EQUALSPRESSEDLAST;
@@ -240,6 +240,7 @@
             [self performOperation : true: true];       //simply perform the operation
         }
     }
+    
 }
 
 //Handles all button presses that have to do with numbers or operations
@@ -352,18 +353,22 @@
 {
     if (operand == ADDITION)
     {
+        [numberList addObject:@"+"];
         return [self add:num1 :num2];
     }
     else if (operand == SUBTRACTION)
     {
+        [numberList addObject:@"-"];
         return [self subtract:num1 :num2];
     }
     else if (operand == MULTIPLICATION)
     {
+        [numberList addObject:@"*"];
         return [self multiply:num1 :num2];
     }
     else if (operand == DIVISION)
     {
+        [numberList addObject:@"/"];
         return [self division:num1 :num2];
     }
     else if (operand == PERCENTAGE)     //When percentage is pressed then generally there are special calculations performed.  Ex - 250 X 5% is = to 5% of 250
@@ -373,23 +378,28 @@
         
         if (operand == MULTIPLICATION)
         {
+            [numberList addObject:@"%*"];
             reservedNumberForPercentPlusEqualsOperator = (reservedNumber / 100) * num2;
         }
         else if (operand == ADDITION) 
         {
+            [numberList addObject:@"%+"];
             reservedNumberForPercentPlusEqualsOperator = reservedNumber + ((reservedNumber / 100) * num2);
         }
         else if (operand == SUBTRACTION)
         {
+            [numberList addObject:@"%-"];
             reservedNumber = reservedNumber - ((reservedNumber / 100) * num2);
             reservedNumberForPercentPlusEqualsOperator = reservedNumber;
         }
         else if (operand == DIVISION)
         {
+            [numberList addObject:@"%/"];
             reservedNumberForPercentPlusEqualsOperator = (reservedNumber / (num2 / 100));
         }
         else if (operand == NOOPERAND)
         {
+            [numberList addObject:@"%"];
             reservedNumberForPercentPlusEqualsOperator = [lblDetailDescription.text doubleValue] / 100;
         }
         else
@@ -414,10 +424,12 @@
 
     if (operand == SQUAREROOT) //Get the square root of the number
     {
+        [numberList addObject:@"SQRT"];
         return [self sqrt];
     }
     else if (operand == SQUARE)     //Square the number
     {
+        [numberList addObject:@"^2"];
         return [self square];
     }
     else if (operand == NOOPERAND)  //Here is where there is no calculation performed, we simply wait for the next operand selection
@@ -465,10 +477,11 @@
 - (void) performSpecialOperation
 {
     int operand = operands.currentOperand;
-    double num;
+    double num = [lblDetailDescription.text doubleValue];
     
     if (operand == PERCENTPLUSEQUALS)
     {
+        [numberList addObject:@"%+="];
         num = reservedNumber + currentNumber;
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
         
@@ -477,6 +490,7 @@
     }
     else if (operand == PERCENTMINUSEQUALS)
     {
+        [numberList addObject:@"%-="];
         num = reservedNumber - currentNumber;
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
         
@@ -485,6 +499,7 @@
     }
     else if (operand == SQUARE)
     {
+        [numberList addObject:@"^2"];
         num = [self square];        
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
         
@@ -493,6 +508,7 @@
     }
     else if (operand == PERCENTPLUSNUM)
     {
+        [numberList addObject:@"%+"];
         num = reservedNumberForPercentPlusEqualsOperator + (reservedNumber * ([lblDetailDescription.text doubleValue] / 100));
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", num];
         
@@ -500,6 +516,7 @@
         currentNumber = num;
     }
     operands.previousOperand = operands.currentOperand;
+    [numberList addObject:[[NSNumber alloc] initWithDouble:num] ];
     
 }
 
@@ -513,18 +530,22 @@
         //Check to see if there are any numbers that we're performing calculations on, if we can perform a calculation, and if they've pressed equals and they're not pressing an operand over and over again.
         if (operand == SQUAREROOT || operand == SQUARE)
         {
+            [numberList addObject:lblDetailDescription.text];
             num = [self performSingularOperations];
           
             previousNumber = currentNumber;             /*These two lines are performed after every operation, to make sure
                                                         that we keep updating the currentNumber, but we keep
                                                         the previous number pressed*/
             currentNumber = num;
+            [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
         }
         else if (operands.currentOperand == PERCENTAGE)
         {
+            [numberList addObject:lblDetailDescription.text];
             num = [self getAllInformationForCalculation:PERCENTAGE];
             previousNumber = currentNumber;
             currentNumber = num;
+            [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
         }
         else if (!isnan(previousNumber))
         {
@@ -533,23 +554,35 @@
                                              pressing the equal button we want to keep performing the operation with the 
                                              last number entered before operations began, which is what's stored in CURRENTNUMBER. */
             {
+                [numberList addObject:lblDetailDescription.text];
                 num = [self getAllInformationForCalculation:operands.currentOperand];
                 previousNumber = num;
+                
+                [numberList addObject:@"="];
+                [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
             }
             else if (operands.previousOperand == operands.currentOperand)   /*If the user has entered the same operand more than once than we
                                                                              simply keep performing the same operation*/
             {
+                [numberList addObject:lblDetailDescription.text];
                 num = [self getAllInformationForCalculation:operands.currentOperand];
                 previousNumber = currentNumber;
                 currentNumber = num;
+                [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
             }
             else                            /*if the user has entered a different operand this time then the last operand entered, then we perform
                                              the first operand that was pressed.*/
             {
+                [numberList addObject:lblDetailDescription.text];
                 num = [self getAllInformationForCalculation:operands.previousOperand];
                 previousNumber = currentNumber;
                 currentNumber = num;
+                [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
             }
+        }
+        else
+        {
+             [numberList addObject:lblDetailDescription.text];
         }
         
         //If the user has pressed equals, than we make sure that when the user clicks on another operand, the calculation is not done automatically.
@@ -560,7 +593,6 @@
         
     }
     
-    [numberList addObject:[[NSNumber alloc] initWithDouble:[lblDetailDescription.text doubleValue]]];
     [operatorList addObject:[[NSNumber alloc] initWithInt:operands.currentOperand]];
 }
 
