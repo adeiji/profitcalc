@@ -10,6 +10,8 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "Math.h"
 #import "FTWOperands.h"
+#import "FTWMasterViewController.h"
+#import "FTWDataLayer.h"
 
 @interface FTWDetailViewController ( )
 {
@@ -26,6 +28,9 @@
     int numTimesClearPressed;
     bool mrcPressed;
     bool equalPressed;
+    double marginToSave;
+    double costToSave;
+    double sellToSave;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -36,6 +41,7 @@
 @implementation FTWDetailViewController
 
 @synthesize lblDetailDescription;
+@synthesize lblNumberType;
 
 #pragma mark - Managing the detail item
 
@@ -65,11 +71,24 @@
     operands.previousOperand = NOOPERAND;
     previousNumber = NAN;
     currentNumber = NAN;
+    lblNumberType.text = @"";
+    
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+    
+    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeGestureRecognizer];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
+}
+
+- (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
+{
+    [self.navigationController pushViewController:self.calculationsTable animated:YES];
+    
+    NSLog(@"Left swipe detected");
 }
 
 //This handles all the unique operands that are possible of creating through various operand selections available on this calculator.
@@ -144,9 +163,10 @@
 {
     //If there has just been an operand pressed, we want to make sure that we don't erase all the contents of the display label until the user clicks on a number, than we will delete all the contents.  We set operandPressed to false so that we don't keep deleting the contents of the label every time the user clicks on the number button.
 
-    if (state == OPERANDPRESSEDLAST || state == EQUALSPRESSEDLAST)
+    if (state == OPERANDPRESSEDLAST || state == EQUALSPRESSEDLAST || state == MEMORYBUTTONPRESSEDLAST)
     {
         lblDetailDescription.text = @"";
+        lblNumberType.text = @"";
     }
     if (button.tag < 10)    //NOT A NUMBER BUTTON
     {
@@ -221,7 +241,7 @@
     {
         [self setNumbersToBeCalculated];
         
-        if (state != OPERANDPRESSEDLAST)    //If the user has not pressed an operand before pressing the equals sing
+        if (state != OPERANDPRESSEDLAST)    //If the user has not pressed an operand before pressing the equals sign
         {
             state = EQUALSPRESSEDLAST;
             //[--self performOperation: (bool) performOperation: (bool) equals
@@ -273,6 +293,7 @@
             operands.currentOperand = [self getOperand: button];
             
             [self performOperation : true : false];
+            state = OPERANDPRESSEDLAST;
         }
         else if (button.tag != EQUALSBUTTON)           //If the equal button has not been pressed now
         {
@@ -284,7 +305,7 @@
             {
                 [self operandPressedOnce:button];
             }                   
-            else                                        //In this case, two operands have been pressed consecutively.
+            else    //In this case, two operands have been pressed consecutively.
             {   
                 operands.currentOperand = [self getSpecialOperand : button];
                 state = OPERANDPRESSEDLAST;
@@ -609,6 +630,7 @@
     if (numTimesClearPressed == 1)
     {
         lblDetailDescription.text = @"";
+        lblNumberType.text = @"";
     }
     else if (numTimesClearPressed == 2)
     {
@@ -630,21 +652,25 @@
     mrcPressed = false;
     
     //SEL Pressed
-    if (button.tag == SALESPRICEBUTTON)
+    if (button.tag == COSTSELBUTTON)
     {
         if (cost == 0)
         {
             salesPrice = [lblDetailDescription.text doubleValue];
+            lblNumberType.text = @"SEL";
         }
     }
-    else if (button.tag == SALESMARGINBUTTON)  //MAR pressed
+    else if (button.tag == COSTMARBUTTON)  //MAR pressed
     {
         if (salesPrice != 0)
         {
             cost = salesPrice - ( salesPrice * ([lblDetailDescription.text doubleValue] / 100));
             lblDetailDescription.text = [NSString stringWithFormat:@"%g", cost];
+            lblNumberType.text = @"CST";
             [operatorList addObject:@"Cost Calculation"];
             [numberList addObject:[[NSNumber alloc] initWithDouble:cost ]];
+            
+            costToSave = cost;
         }
     }
 }
@@ -656,44 +682,52 @@
     mrcPressed = false;
     
     //CST Pressed
-    if (button.tag == COSTPRICEBUTTON)
+    if (button.tag == SELCOSTBUTTON)
     {
         if (salesPrice == 0)
         {
             cost = [lblDetailDescription.text doubleValue];
+            lblNumberType.text = @"CST";
         }
     }
-    else if (button.tag == COSTMARGINBUTTON)  //MAR pressed
+    else if (button.tag == SELMARBUTTON)  //MAR pressed
     {
         if (cost != 0)
         {
             salesPrice = cost / (1 - ([lblDetailDescription.text doubleValue] / 100));
+            lblNumberType.text = @"SEL";
             //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
             lblDetailDescription.text = [NSString stringWithFormat:@"%g", salesPrice];
             [operatorList addObject:@"Sales Price Calculation"];
             [numberList addObject:[[NSNumber alloc] initWithDouble:salesPrice ]];
+            
+            sellToSave = salesPrice;
         }
     }
 }
 
 - (IBAction)marginButtonPressed:(UIButton *)button {
-    static double cost	 = 0;
+    static double cost = 0;
     double margin = 0;
     state = OPERANDPRESSEDLAST;
     mrcPressed = false;
     
     //CST Pressed
-    if (button.tag == MARGINSALESBUTTON)
+    if (button.tag == MARCOSTBUTTON)
     {
         cost = [lblDetailDescription.text doubleValue];
+        lblNumberType.text = @"CST";
     }
-    else if (button.tag == MARGINCOSTBUTTON)  //MAR pressed
+    else if (button.tag == MARSELBUTTON)  //MAR pressed
     {
         margin = (1 - (cost / ([lblDetailDescription.text doubleValue]))) * 100;
+        lblNumberType.text = @"MAR";
         //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
         lblDetailDescription.text = [NSString stringWithFormat:@"%g", margin];
         [operatorList addObject:@"Sales Price Calculation"];
         [numberList addObject:[[NSNumber alloc] initWithDouble:margin ]];
+        
+        marginToSave = margin;
     }
 }
 //Handle adding and removing, and manipulating the values that are stored in memory
@@ -706,6 +740,7 @@
         {
             storedValue = 0;
             lblDetailDescription.text = @"";
+            lblNumberType.text = @"";
         }
         else
         {
@@ -722,6 +757,7 @@
         //[--self performOperation: (bool) performOperation: (bool) equals
         [self performOperation:true:true];
         storedValue = storedValue - [lblDetailDescription.text doubleValue];
+        
     }
     else if (button.tag == MEMORYADDBUTTON)
     {
@@ -729,10 +765,21 @@
         //[--self performOperation: (bool) performOperation: (bool) equals
         [self performOperation:true:true];
         storedValue = storedValue + [lblDetailDescription.text doubleValue];
-
     }
     
-    //state = OPERANDPRESSEDLAST;
+    state = MEMORYBUTTONPRESSEDLAST;
+}
+
+- (IBAction)saveButtonPressed:(id)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *myDate = [NSDate date];
+    NSString *dateString = [dateFormatter stringFromDate:myDate];
+    
+    FTWDataLayer *dataLayer = [[FTWDataLayer alloc] init:self.managedObjectContext];
+    dataLayer.fetchedResultsController = self.fetchedResultsController;
+    
+    [dataLayer SaveContext:[NSString stringWithFormat:@"SELL = %g\nCOST = %g\nMARGIN = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
 }
 
 - (void)configureView
@@ -740,7 +787,7 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.lblDetailDescription.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.lblDetailDescription.text = [[self.detailItem valueForKey:@"calculation"] description];
     }
 }
 
@@ -767,4 +814,8 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setLblNumberType:nil];
+    [super viewDidUnload];
+}
 @end

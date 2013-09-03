@@ -16,13 +16,24 @@
 
 @implementation FTWMasterViewController
 
+static const NSInteger xCoord = 50;
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     }
     [super awakeFromNib];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    UIControl *control = self.swipeButton;
+    CGPoint controlPoint = control.center;
+    controlPoint.x = xCoord;
+    control.center = controlPoint;
 }
 
 - (void)viewDidLoad
@@ -34,6 +45,10 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (FTWDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
+    [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +65,7 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:[NSDate date] forKey:@"calculation"];
     
     // Save the context.
     NSError *error = nil;
@@ -137,14 +152,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"calculation" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -229,7 +244,37 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"calculation"] description];
+}
+
+- (void)viewDidUnload {
+    [self setTableView:nil];
+    [self setSwipeButton:nil];
+    [super viewDidUnload];
+}
+- (IBAction)buttonTouched:(id)sender withEvent:(UIEvent *) event {
+}
+
+- (IBAction)buttonMoved:(id)sender withEvent:(UIEvent *) event {
+    CGPoint point = [[[event allTouches] anyObject] locationInView:self.view];
+    UIControl *control = sender;
+    
+    CGPoint controlPoint = control.center;
+    controlPoint.x = point.x;
+    
+    control.center = controlPoint;
+    
+    if (control.center.x > 250)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+- (IBAction)buttonReleased:(id)sender withEvent:(UIEvent *) event {
+    UIControl *control = sender;
+    CGPoint controlPoint = control.center;
+    controlPoint.x = xCoord;
+    control.center = controlPoint;
 }
 
 @end

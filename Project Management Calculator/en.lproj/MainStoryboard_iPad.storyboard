@@ -604,9 +604,9 @@
     <resources>
         <image name="actext.png" width="33" height="25"/>
         <image name="ce.png" width="31" height="33"/>
-        <image name="divide.png" width="25" height="25"/>
-        <image name="negativepositive.png" width="46" height="27"/>
-        <image name="sqrt.png" width="50" height="50"/>
+        <image name="divide.png" width="49" height="51"/>
+        <image name="negativepositive.png" width="45" height="45"/>
+        <image name="sqrt.png" width="44" height="45"/>
         <image name="title.png" width="691" height="37"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight takeOff:@"b912d9f1-a7e1-4129-bf8a-b20b6c3ad7a0"];
+    [TestFlight takeOff:@"6d7efa7c-5a99-45c8-a345-88b84f22be60"];
     
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -32,8 +32,17 @@
         controller.managedObjectContext = self.managedObjectContext;
     } else {
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+        
         FTWDetailViewController *controller = (FTWDetailViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
+        
+        FTWMasterViewController *masterController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CalculationsTable"];
+
+//        masterController.detailViewController = controller;
+        
+        controller.calculationsTable = masterController;
+        masterController.managedObjectContext = self.managedObjectContext;
+        
     }
     return YES;
 }
@@ -105,7 +114,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Project_Management_Calculator" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"FTWDataModel" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -118,7 +127,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Project_Management_Calculator.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FTWDataModel.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FTWMasterViewController.h"
 
 @interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
@@ -39,7 +40,8 @@ typedef enum
     EQUALSPRESSEDLAST,
     NEWOPERATION,
     NUMBERENTEREDLAST,
-    PERCENTAGEPRESSEDLAST
+    PERCENTAGEPRESSEDLAST,
+    MEMORYBUTTONPRESSEDLAST
 } states;
 
 typedef enum
@@ -57,15 +59,17 @@ typedef enum
     PERCENTAGEBUTTON = 20,
     CLEARBUTTON = 21,
     SQUAREROOTBUTTON = 22,
-    SALESMARGINBUTTON = 23,
-    SALESPRICEBUTTON = 24,
-    COSTMARGINBUTTON = 25,
-    COSTPRICEBUTTON = 26,
-    MARGINCOSTBUTTON = 27,
-    MARGINSALESBUTTON = 28
+    SELMARBUTTON = 23,
+    COSTSELBUTTON = 24,
+    COSTMARBUTTON = 25,
+    SELCOSTBUTTON = 26,
+    MARSELBUTTON = 27,
+    MARCOSTBUTTON = 28
 } OperandButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *lblDetailDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lblNumberType;
+
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
 - (IBAction)btnClearPressed:(id)sender;
@@ -73,8 +77,12 @@ typedef enum
 - (IBAction)salebuttonPressed:(UIButton*)button;
 - (IBAction)marginButtonPressed:(UIButton *)button;
 - (IBAction)memoryButtonPressed:(UIButton *)button;
+- (IBAction)saveButtonPressed:(id)sender;
+
+@property (strong, nonatomic) FTWMasterViewController *calculationsTable;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

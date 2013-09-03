@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CE014AF617D64FBA0032B9FF /* swipeCircle.png */; };
+		CE014AFA17D66ACA0032B9FF /* FTWDataLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE014AF917D66ACA0032B9FF /* FTWDataLayer.m */; };
+		CE014AFD17D6719B0032B9FF /* FTWDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE014AFB17D6719B0032B9FF /* FTWDataModel.xcdatamodeld */; };
 		CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2D17975EFE0061201F /* libTestFlight.a */; };
 		CE08DD3017975F430061201F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2F17975F430061201F /* libz.dylib */; };
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
@@ -20,12 +23,8 @@
 		CE9DD9C717661EF20073C460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9C517661EF20073C460 /* InfoPlist.strings */; };
 		CE9DD9C917661EF20073C460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9C817661EF20073C460 /* main.m */; };
 		CE9DD9CD17661EF20073C460 /* FTWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */; };
-		CE9DD9CF17661EF20073C460 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9CE17661EF20073C460 /* Default.png */; };
-		CE9DD9D117661EF20073C460 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9D017661EF20073C460 /* Default@2x.png */; };
-		CE9DD9D317661EF20073C460 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9D217661EF20073C460 /* Default-568h@2x.png */; };
 		CE9DD9D617661EF20073C460 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9D417661EF20073C460 /* MainStoryboard_iPhone.storyboard */; };
 		CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */; };
-		CE9DD9DC17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9DA17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld */; };
 		CE9DD9DF17661EF20073C460 /* FTWMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */; };
 		CE9DD9E217661EF20073C460 /* FTWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */; };
 		CE9DD9EA17661EF20073C460 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9E917661EF20073C460 /* SenTestingKit.framework */; };
@@ -40,7 +39,24 @@
 		CE9DDA0B1766439F0073C460 /* actext.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0A1766439F0073C460 /* actext.png */; };
 		CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0E17664C5E0073C460 /* sqrt.png */; };
 		CE9DDA1117664ECB0073C460 /* ce.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA1017664ECB0073C460 /* ce.png */; };
-		CE9DDA171767E0FD0073C460 /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA161767E0FC0073C460 /* divide.png */; };
+		CEF9D83117C6B618002457DF /* operandCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83017C6B618002457DF /* operandCircle.png */; };
+		CEF9D83517C6B8EC002457DF /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83417C6B8EC002457DF /* divide.png */; };
+		CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83617C6B9B1002457DF /* suboperandcircle.png */; };
+		CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83817C6BCAE002457DF /* numbersquares.png */; };
+		CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83A17C6BD6D002457DF /* salessquares.png */; };
+		CEF9D83D17C6BEB1002457DF /* cesquare.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83C17C6BEB1002457DF /* cesquare.png */; };
+		CEF9D83F17C6BFA2002457DF /* savecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83E17C6BFA2002457DF /* savecircle.png */; };
+		CEF9D84817C6F8CD002457DF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84017C6F8CC002457DF /* icon-72.png */; };
+		CEF9D84917C6F8CD002457DF /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84117C6F8CC002457DF /* icon-72@2x.png */; };
+		CEF9D84A17C6F8CD002457DF /* icon-small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84217C6F8CC002457DF /* icon-small-50.png */; };
+		CEF9D84B17C6F8CD002457DF /* icon-small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84317C6F8CC002457DF /* icon-small-50@2x.png */; };
+		CEF9D84C17C6F8CD002457DF /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84417C6F8CC002457DF /* icon-small.png */; };
+		CEF9D84D17C6F8CD002457DF /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84517C6F8CC002457DF /* icon-small@2x.png */; };
+		CEF9D84E17C6F8CD002457DF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84617C6F8CC002457DF /* icon.png */; };
+		CEF9D84F17C6F8CD002457DF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D84717C6F8CC002457DF /* icon@2x.png */; };
+		CEF9D86017C6FC73002457DF /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85D17C6FC73002457DF /* Default-568h.png */; };
+		CEF9D86117C6FC73002457DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85E17C6FC73002457DF /* Default.png */; };
+		CEF9D86217C6FC73002457DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85F17C6FC73002457DF /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE014AEF17D6441E0032B9FF /* Profit Management Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Profit Management Calculator.entitlements"; sourceTree = "<group>"; };
+		CE014AF617D64FBA0032B9FF /* swipeCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeCircle.png; sourceTree = "<group>"; };
+		CE014AF817D66ACA0032B9FF /* FTWDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWDataLayer.h; sourceTree = "<group>"; };
+		CE014AF917D66ACA0032B9FF /* FTWDataLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWDataLayer.m; sourceTree = "<group>"; };
+		CE014AFC17D6719B0032B9FF /* FTWDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FTWDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CE08DD2C17975EDB0061201F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		CE08DD2D17975EFE0061201F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../../Downloads/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
 		CE08DD2F17975F430061201F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -62,30 +83,26 @@
 		CE9981DE1776743C00442FB3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = SOURCE_ROOT; };
 		CE9A071617860FFC00B8BB11 /* FTWOperands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWOperands.h; sourceTree = "<group>"; };
 		CE9A071717860FFC00B8BB11 /* FTWOperands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWOperands.m; sourceTree = "<group>"; };
-		CE9DD9B717661EF10073C460 /* Project Management Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Management Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profit Management Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9BA17661EF10073C460 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE9DD9BC17661EF10073C460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE9DD9BE17661EF20073C460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE9DD9C017661EF20073C460 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CE9DD9C417661EF20073C460 /* Project Management Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project Management Calculator-Info.plist"; sourceTree = "<group>"; };
+		CE9DD9C417661EF20073C460 /* Profit Management Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Profit Management Calculator-Info.plist"; sourceTree = "<group>"; };
 		CE9DD9C617661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9DD9C817661EF20073C460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE9DD9CA17661EF20073C460 /* Project Management Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project Management Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		CE9DD9CA17661EF20073C460 /* Profit Management Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Profit Management Calculator-Prefix.pch"; sourceTree = "<group>"; };
 		CE9DD9CB17661EF20073C460 /* FTWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWAppDelegate.h; sourceTree = "<group>"; };
 		CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWAppDelegate.m; sourceTree = "<group>"; };
-		CE9DD9CE17661EF20073C460 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CE9DD9D017661EF20073C460 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CE9DD9D217661EF20073C460 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE9DD9D517661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		CE9DD9D817661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		CE9DD9DB17661EF20073C460 /* Project_Management_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_Management_Calculator.xcdatamodel; sourceTree = "<group>"; };
 		CE9DD9DD17661EF20073C460 /* FTWMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWMasterViewController.h; sourceTree = "<group>"; };
 		CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWMasterViewController.m; sourceTree = "<group>"; };
 		CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWDetailViewController.h; sourceTree = "<group>"; };
 		CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWDetailViewController.m; sourceTree = "<group>"; };
-		CE9DD9E817661EF20073C460 /* Project Management CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Management CalculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Profit Management CalculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9E917661EF20073C460 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CE9DD9F217661EF20073C460 /* Project Management CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project Management CalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		CE9DD9F217661EF20073C460 /* Profit Management CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Profit Management CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		CE9DD9F417661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9DD9F617661EF20073C460 /* Project_Management_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_Management_CalculatorTests.h; sourceTree = "<group>"; };
 		CE9DD9F717661EF20073C460 /* Project_Management_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Management_CalculatorTests.m; sourceTree = "<group>"; };
@@ -96,9 +113,26 @@
 		CE9DDA0717663F650073C460 /* FTWLeftButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWLeftButtons.h; sourceTree = "<group>"; };
 		CE9DDA0817663F650073C460 /* FTWLeftButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWLeftButtons.m; sourceTree = "<group>"; };
 		CE9DDA0A1766439F0073C460 /* actext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actext.png; sourceTree = "<group>"; };
-		CE9DDA0E17664C5E0073C460 /* sqrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sqrt.png; sourceTree = "<group>"; };
+		CE9DDA0E17664C5E0073C460 /* sqrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sqrt.png; path = ../sqrt.png; sourceTree = "<group>"; };
 		CE9DDA1017664ECB0073C460 /* ce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ce.png; sourceTree = "<group>"; };
-		CE9DDA161767E0FC0073C460 /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divide.png; sourceTree = "<group>"; };
+		CEF9D83017C6B618002457DF /* operandCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operandCircle.png; sourceTree = "<group>"; };
+		CEF9D83417C6B8EC002457DF /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = divide.png; path = ../divide.png; sourceTree = "<group>"; };
+		CEF9D83617C6B9B1002457DF /* suboperandcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = suboperandcircle.png; path = ../suboperandcircle.png; sourceTree = "<group>"; };
+		CEF9D83817C6BCAE002457DF /* numbersquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numbersquares.png; path = ../numbersquares.png; sourceTree = "<group>"; };
+		CEF9D83A17C6BD6D002457DF /* salessquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = salessquares.png; path = ../salessquares.png; sourceTree = "<group>"; };
+		CEF9D83C17C6BEB1002457DF /* cesquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cesquare.png; sourceTree = "<group>"; };
+		CEF9D83E17C6BFA2002457DF /* savecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savecircle.png; sourceTree = "<group>"; };
+		CEF9D84017C6F8CC002457DF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		CEF9D84117C6F8CC002457DF /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
+		CEF9D84217C6F8CC002457DF /* icon-small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-50.png"; sourceTree = "<group>"; };
+		CEF9D84317C6F8CC002457DF /* icon-small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-50@2x.png"; sourceTree = "<group>"; };
+		CEF9D84417C6F8CC002457DF /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		CEF9D84517C6F8CC002457DF /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		CEF9D84617C6F8CC002457DF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CEF9D84717C6F8CC002457DF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		CEF9D85D17C6FC73002457DF /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h.png"; path = "../Default-568h.png"; sourceTree = "<group>"; };
+		CEF9D85E17C6FC73002457DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		CEF9D85F17C6FC73002457DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,15 +164,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE014AF217D646D10032B9FF /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE014AF817D66ACA0032B9FF /* FTWDataLayer.h */,
+				CE014AF917D66ACA0032B9FF /* FTWDataLayer.m */,
+				CE014AFB17D6719B0032B9FF /* FTWDataModel.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		CE9DD9AE17661EF10073C460 = {
 			isa = PBXGroup;
 			children = (
-				CE08DD2F17975F430061201F /* libz.dylib */,
-				CE08DD2D17975EFE0061201F /* libTestFlight.a */,
-				CE08DD2C17975EDB0061201F /* TestFlight.h */,
+				CE014AEF17D6441E0032B9FF /* Profit Management Calculator.entitlements */,
+				CEF9D85C17C6F9B8002457DF /* Test Flight */,
 				CE9554021768E9650068A3DE /* MobileCoreServices.framework */,
-				CE9DDA161767E0FC0073C460 /* divide.png */,
-				CE9DDA0E17664C5E0073C460 /* sqrt.png */,
 				CE9DD9C217661EF20073C460 /* Project Management Calculator */,
 				CE9DD9F017661EF20073C460 /* Project Management CalculatorTests */,
 				CE9DD9B917661EF10073C460 /* Frameworks */,
@@ -149,8 +190,8 @@
 		CE9DD9B817661EF10073C460 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE9DD9B717661EF10073C460 /* Project Management Calculator.app */,
-				CE9DD9E817661EF20073C460 /* Project Management CalculatorTests.octest */,
+				CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */,
+				CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,27 +211,15 @@
 		CE9DD9C217661EF20073C460 /* Project Management Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				CE9DDA0A1766439F0073C460 /* actext.png */,
-				CE9DD9CB17661EF20073C460 /* FTWAppDelegate.h */,
-				CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */,
-				CE9DD9D417661EF20073C460 /* MainStoryboard_iPhone.storyboard */,
-				CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */,
-				CE9981DE1776743C00442FB3 /* title.png */,
-				CE9981DC1776705400442FB3 /* negativepositive.png */,
-				CE9DDA1017664ECB0073C460 /* ce.png */,
-				CE9DDA0717663F650073C460 /* FTWLeftButtons.h */,
-				CE9DDA0817663F650073C460 /* FTWLeftButtons.m */,
-				CE9DDA0417662B280073C460 /* NumberButtons.h */,
-				CE9DDA0517662B280073C460 /* NumberButtons.m */,
-				CE9DDA0117661F6C0073C460 /* GradientView.h */,
-				CE9DDA0217661F6C0073C460 /* GradientView.m */,
-				CE9DD9DD17661EF20073C460 /* FTWMasterViewController.h */,
-				CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */,
-				CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */,
-				CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */,
-				CE9A071617860FFC00B8BB11 /* FTWOperands.h */,
-				CE9A071717860FFC00B8BB11 /* FTWOperands.m */,
-				CE9DD9DA17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld */,
+				CE014AF217D646D10032B9FF /* Core Data */,
+				CEF9D85917C6F982002457DF /* App Delegate */,
+				CEF9D85A17C6F99E002457DF /* Storyboards */,
+				CEF9D85117C6F8E6002457DF /* Images */,
+				CEF9D85B17C6F9A6002457DF /* Left Buttons */,
+				CEF9D85717C6F95D002457DF /* Number Buttons Class */,
+				CEF9D85617C6F953002457DF /* Gradient View Class */,
+				CEF9D85417C6F93C002457DF /* View Controllers */,
+				CEF9D85517C6F944002457DF /* Operand Class */,
 				CE9DD9C317661EF20073C460 /* Supporting Files */,
 			);
 			path = "Project Management Calculator";
@@ -199,13 +228,11 @@
 		CE9DD9C317661EF20073C460 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE9DD9C417661EF20073C460 /* Project Management Calculator-Info.plist */,
+				CEF9D85017C6F8D4002457DF /* Icon Images */,
+				CE9DD9C417661EF20073C460 /* Profit Management Calculator-Info.plist */,
 				CE9DD9C517661EF20073C460 /* InfoPlist.strings */,
 				CE9DD9C817661EF20073C460 /* main.m */,
-				CE9DD9CA17661EF20073C460 /* Project Management Calculator-Prefix.pch */,
-				CE9DD9CE17661EF20073C460 /* Default.png */,
-				CE9DD9D017661EF20073C460 /* Default@2x.png */,
-				CE9DD9D217661EF20073C460 /* Default-568h@2x.png */,
+				CE9DD9CA17661EF20073C460 /* Profit Management Calculator-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,18 +250,139 @@
 		CE9DD9F117661EF20073C460 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE9DD9F217661EF20073C460 /* Project Management CalculatorTests-Info.plist */,
+				CE9DD9F217661EF20073C460 /* Profit Management CalculatorTests-Info.plist */,
 				CE9DD9F317661EF20073C460 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CEF9D85017C6F8D4002457DF /* Icon Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9D84017C6F8CC002457DF /* icon-72.png */,
+				CEF9D85D17C6FC73002457DF /* Default-568h.png */,
+				CEF9D85E17C6FC73002457DF /* Default.png */,
+				CEF9D85F17C6FC73002457DF /* Default@2x.png */,
+				CEF9D84117C6F8CC002457DF /* icon-72@2x.png */,
+				CEF9D84217C6F8CC002457DF /* icon-small-50.png */,
+				CEF9D84317C6F8CC002457DF /* icon-small-50@2x.png */,
+				CEF9D84417C6F8CC002457DF /* icon-small.png */,
+				CEF9D84517C6F8CC002457DF /* icon-small@2x.png */,
+				CEF9D84617C6F8CC002457DF /* icon.png */,
+				CEF9D84717C6F8CC002457DF /* icon@2x.png */,
+			);
+			name = "Icon Images";
+			sourceTree = "<group>";
+		};
+		CEF9D85117C6F8E6002457DF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE014AF617D64FBA0032B9FF /* swipeCircle.png */,
+				CEF9D85217C6F8EC002457DF /* UI Images */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CEF9D85217C6F8EC002457DF /* UI Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9D83017C6B618002457DF /* operandCircle.png */,
+				CE9DDA0E17664C5E0073C460 /* sqrt.png */,
+				CEF9D83A17C6BD6D002457DF /* salessquares.png */,
+				CE9DDA0A1766439F0073C460 /* actext.png */,
+				CEF9D83817C6BCAE002457DF /* numbersquares.png */,
+				CEF9D83617C6B9B1002457DF /* suboperandcircle.png */,
+				CEF9D83417C6B8EC002457DF /* divide.png */,
+				CEF9D83E17C6BFA2002457DF /* savecircle.png */,
+				CEF9D83C17C6BEB1002457DF /* cesquare.png */,
+				CE9981DE1776743C00442FB3 /* title.png */,
+				CE9981DC1776705400442FB3 /* negativepositive.png */,
+				CE9DDA1017664ECB0073C460 /* ce.png */,
+			);
+			name = "UI Images";
+			sourceTree = "<group>";
+		};
+		CEF9D85417C6F93C002457DF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DD9DD17661EF20073C460 /* FTWMasterViewController.h */,
+				CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */,
+				CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */,
+				CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CEF9D85517C6F944002457DF /* Operand Class */ = {
+			isa = PBXGroup;
+			children = (
+				CE9A071617860FFC00B8BB11 /* FTWOperands.h */,
+				CE9A071717860FFC00B8BB11 /* FTWOperands.m */,
+			);
+			name = "Operand Class";
+			sourceTree = "<group>";
+		};
+		CEF9D85617C6F953002457DF /* Gradient View Class */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DDA0117661F6C0073C460 /* GradientView.h */,
+				CE9DDA0217661F6C0073C460 /* GradientView.m */,
+			);
+			name = "Gradient View Class";
+			sourceTree = "<group>";
+		};
+		CEF9D85717C6F95D002457DF /* Number Buttons Class */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DDA0417662B280073C460 /* NumberButtons.h */,
+				CE9DDA0517662B280073C460 /* NumberButtons.m */,
+			);
+			name = "Number Buttons Class";
+			sourceTree = "<group>";
+		};
+		CEF9D85917C6F982002457DF /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DD9CB17661EF20073C460 /* FTWAppDelegate.h */,
+				CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		CEF9D85A17C6F99E002457DF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DD9D417661EF20073C460 /* MainStoryboard_iPhone.storyboard */,
+				CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CEF9D85B17C6F9A6002457DF /* Left Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DDA0717663F650073C460 /* FTWLeftButtons.h */,
+				CE9DDA0817663F650073C460 /* FTWLeftButtons.m */,
+			);
+			name = "Left Buttons";
+			sourceTree = "<group>";
+		};
+		CEF9D85C17C6F9B8002457DF /* Test Flight */ = {
+			isa = PBXGroup;
+			children = (
+				CE08DD2F17975F430061201F /* libz.dylib */,
+				CE08DD2D17975EFE0061201F /* libTestFlight.a */,
+				CE08DD2C17975EDB0061201F /* TestFlight.h */,
+			);
+			name = "Test Flight";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE9DD9B617661EF10073C460 /* Project Management Calculator */ = {
+		CE9DD9B617661EF10073C460 /* Profit Management Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Project Management Calculator" */;
+			buildConfigurationList = CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management Calculator" */;
 			buildPhases = (
 				CE9DD9B317661EF10073C460 /* Sources */,
 				CE9DD9B417661EF10073C460 /* Frameworks */,
@@ -244,14 +392,14 @@
 			);
 			dependencies = (
 			);
-			name = "Project Management Calculator";
+			name = "Profit Management Calculator";
 			productName = "Project Management Calculator";
-			productReference = CE9DD9B717661EF10073C460 /* Project Management Calculator.app */;
+			productReference = CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE9DD9E717661EF20073C460 /* Project Management CalculatorTests */ = {
+		CE9DD9E717661EF20073C460 /* Profit Management CalculatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Project Management CalculatorTests" */;
+			buildConfigurationList = CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management CalculatorTests" */;
 			buildPhases = (
 				CE9DD9E317661EF20073C460 /* Sources */,
 				CE9DD9E417661EF20073C460 /* Frameworks */,
@@ -263,9 +411,9 @@
 			dependencies = (
 				CE9DD9EF17661EF20073C460 /* PBXTargetDependency */,
 			);
-			name = "Project Management CalculatorTests";
+			name = "Profit Management CalculatorTests";
 			productName = "Project Management CalculatorTests";
-			productReference = CE9DD9E817661EF20073C460 /* Project Management CalculatorTests.octest */;
+			productReference = CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +426,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Ade;
 			};
-			buildConfigurationList = CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Project Management Calculator" */;
+			buildConfigurationList = CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Profit Management Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -290,8 +438,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE9DD9B617661EF10073C460 /* Project Management Calculator */,
-				CE9DD9E717661EF20073C460 /* Project Management CalculatorTests */,
+				CE9DD9B617661EF10073C460 /* Profit Management Calculator */,
+				CE9DD9E717661EF20073C460 /* Profit Management CalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,17 +450,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9DD9C717661EF20073C460 /* InfoPlist.strings in Resources */,
-				CE9DD9CF17661EF20073C460 /* Default.png in Resources */,
-				CE9DD9D117661EF20073C460 /* Default@2x.png in Resources */,
-				CE9DD9D317661EF20073C460 /* Default-568h@2x.png in Resources */,
 				CE9DD9D617661EF20073C460 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */,
 				CE9DDA0B1766439F0073C460 /* actext.png in Resources */,
 				CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */,
 				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
-				CE9DDA171767E0FD0073C460 /* divide.png in Resources */,
 				CE9981DD1776705400442FB3 /* negativepositive.png in Resources */,
 				CE9981DF1776743C00442FB3 /* title.png in Resources */,
+				CEF9D83117C6B618002457DF /* operandCircle.png in Resources */,
+				CEF9D83517C6B8EC002457DF /* divide.png in Resources */,
+				CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */,
+				CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */,
+				CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */,
+				CEF9D83D17C6BEB1002457DF /* cesquare.png in Resources */,
+				CEF9D83F17C6BFA2002457DF /* savecircle.png in Resources */,
+				CEF9D84817C6F8CD002457DF /* icon-72.png in Resources */,
+				CEF9D84917C6F8CD002457DF /* icon-72@2x.png in Resources */,
+				CEF9D84A17C6F8CD002457DF /* icon-small-50.png in Resources */,
+				CEF9D84B17C6F8CD002457DF /* icon-small-50@2x.png in Resources */,
+				CEF9D84C17C6F8CD002457DF /* icon-small.png in Resources */,
+				CEF9D84D17C6F8CD002457DF /* icon-small@2x.png in Resources */,
+				CEF9D84E17C6F8CD002457DF /* icon.png in Resources */,
+				CEF9D84F17C6F8CD002457DF /* icon@2x.png in Resources */,
+				CEF9D86017C6FC73002457DF /* Default-568h.png in Resources */,
+				CEF9D86117C6FC73002457DF /* Default.png in Resources */,
+				CEF9D86217C6FC73002457DF /* Default@2x.png in Resources */,
+				CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,13 +512,14 @@
 			files = (
 				CE9DD9C917661EF20073C460 /* main.m in Sources */,
 				CE9DD9CD17661EF20073C460 /* FTWAppDelegate.m in Sources */,
-				CE9DD9DC17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld in Sources */,
 				CE9DD9DF17661EF20073C460 /* FTWMasterViewController.m in Sources */,
 				CE9DD9E217661EF20073C460 /* FTWDetailViewController.m in Sources */,
 				CE9DDA0317661F6C0073C460 /* GradientView.m in Sources */,
 				CE9DDA0617662B280073C460 /* NumberButtons.m in Sources */,
 				CE9DDA0917663F650073C460 /* FTWLeftButtons.m in Sources */,
 				CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */,
+				CE014AFA17D66ACA0032B9FF /* FTWDataLayer.m in Sources */,
+				CE014AFD17D6719B0032B9FF /* FTWDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +536,7 @@
 /* Begin PBXTargetDependency section */
 		CE9DD9EF17661EF20073C460 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE9DD9B617661EF10073C460 /* Project Management Calculator */;
+			target = CE9DD9B617661EF10073C460 /* Profit Management Calculator */;
 			targetProxy = CE9DD9EE17661EF20073C460 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,8 +589,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -442,8 +606,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PROVISIONING_PROFILE = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,8 +625,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adebayo Ijidakinro (HJPTQ3N75W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -470,8 +634,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C1687E2-49D4-4F45-9EF6-DC718C86BEA9";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -481,15 +645,17 @@
 		CE9DD9FC17661EF20073C460 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management Calculator/Project Management Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "Project Management Calculator/Profit Management Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Project Management Calculator/Profit Management Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Profit Management Calculator";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -497,15 +663,17 @@
 		CE9DD9FD17661EF20073C460 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management Calculator/Project Management Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "Project Management Calculator/Profit Management Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Project Management Calculator/Profit Management Calculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Profit Management Calculator";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -520,8 +688,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management CalculatorTests/Project Management CalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Project Management CalculatorTests/Profit Management CalculatorTests-Info.plist";
+				PRODUCT_NAME = "Profit Management CalculatorTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -537,8 +705,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management CalculatorTests/Project Management CalculatorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Project Management CalculatorTests/Profit Management CalculatorTests-Info.plist";
+				PRODUCT_NAME = "Profit Management CalculatorTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -547,7 +715,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Project Management Calculator" */ = {
+		CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Profit Management Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9F917661EF20073C460 /* Debug */,
@@ -556,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Project Management Calculator" */ = {
+		CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9FC17661EF20073C460 /* Debug */,
@@ -565,7 +733,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Project Management CalculatorTests" */ = {
+		CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management CalculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9FF17661EF20073C460 /* Debug */,
@@ -577,13 +745,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE9DD9DA17661EF20073C460 /* Project_Management_Calculator.xcdatamodeld */ = {
+		CE014AFB17D6719B0032B9FF /* FTWDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE9DD9DB17661EF20073C460 /* Project_Management_Calculator.xcdatamodel */,
+				CE014AFC17D6719B0032B9FF /* FTWDataModel.xcdatamodel */,
 			);
-			currentVersion = CE9DD9DB17661EF20073C460 /* Project_Management_Calculator.xcdatamodel */;
-			path = Project_Management_Calculator.xcdatamodeld;
+			currentVersion = CE014AFC17D6719B0032B9FF /* FTWDataModel.xcdatamodel */;
+			path = FTWDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
