@@ -701,7 +701,6 @@
                             <constraint firstItem="Z0e-x9-ssj" firstAttribute="top" secondItem="22" secondAttribute="top" constant="98" type="user" id="cTR-2E-a5W"/>
                             <constraint firstItem="lAc-mh-1md" firstAttribute="bottom" secondItem="cZi-Qr-GAp" secondAttribute="bottom" type="default" id="dRb-Qu-rN4"/>
                             <constraint firstItem="Bpf-zl-ssn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z0e-x9-ssj" secondAttribute="bottom" constant="3" type="user" id="dgJ-vh-RGA"/>
-                            <constraint firstItem="M5v-fC-A2I" firstAttribute="baseline" secondItem="lAc-mh-1md" secondAttribute="baseline" type="default" id="eU9-l0-R0z"/>
                             <constraint firstItem="wDF-yE-vWJ" firstAttribute="baseline" secondItem="F3I-3n-kbb" secondAttribute="baseline" type="user" id="eVY-kg-QmP"/>
                             <constraint firstItem="TxF-PM-SQu" firstAttribute="bottom" secondItem="5Gx-RV-iA5" secondAttribute="bottom" type="user" id="eil-zr-7fv"/>
                             <constraint firstItem="wDF-yE-vWJ" firstAttribute="trailing" secondItem="Xnr-Bo-rCJ" secondAttribute="trailing" type="default" id="el4-Aw-JMD"/>
@@ -800,7 +799,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FTWMasterViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonMoved:withEvent:"/>
+                <relationship kind="action" name="buttonReleased:withEvent:"/>
                 <relationship kind="action" name="buttonTouched:"/>
+                <relationship kind="action" name="buttonTouched:withEvent:"/>
                 <relationship kind="outlet" name="swipeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
