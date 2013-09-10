@@ -749,22 +749,26 @@
             mrcPressed = true;
             
             [numberList addObject:[[NSNumber alloc]initWithDouble:storedValue]];
+            lblNumberType.text = @"M";
         }
     }
     else if (button.tag == MEMORYREMOVEBUTTON)
     {
         [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
         //[--self performOperation: (bool) performOperation: (bool) equals
-        [self performOperation:true:true];
+        //[self performOperation:true:true];
         storedValue = storedValue - [lblDetailDescription.text doubleValue];
-        
+        lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
+        lblNumberType.text = @"M";
     }
     else if (button.tag == MEMORYADDBUTTON)
     {
         [numberList addObject:[[NSNumber alloc]initWithDouble:[lblDetailDescription.text doubleValue]]];
         //[--self performOperation: (bool) performOperation: (bool) equals
-        [self performOperation:true:true];
+       // [self performOperation:true:true];
         storedValue = storedValue + [lblDetailDescription.text doubleValue];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
+        lblNumberType.text = @"M";
     }
     
     state = MEMORYBUTTONPRESSEDLAST;
