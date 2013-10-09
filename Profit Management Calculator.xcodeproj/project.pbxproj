@@ -12,6 +12,10 @@
 		CE014AFD17D6719B0032B9FF /* FTWDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE014AFB17D6719B0032B9FF /* FTWDataModel.xcdatamodeld */; };
 		CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2D17975EFE0061201F /* libTestFlight.a */; };
 		CE08DD3017975F430061201F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2F17975F430061201F /* libz.dylib */; };
+		CE3992711805CF9B003AE30B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3992701805CF9B003AE30B /* libTestFlight.a */; };
+		CE3992731805F7DC003AE30B /* divide-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3992721805F7DC003AE30B /* divide-small.png */; };
+		CE45808D17E0E87A00AD07E9 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE45808C17E0E87A00AD07E9 /* HelpView.xib */; };
+		CE45809017E0EA2600AD07E9 /* FTWHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */; };
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
 		CE9981DD1776705400442FB3 /* negativepositive.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DC1776705400442FB3 /* negativepositive.png */; };
 		CE9981DF1776743C00442FB3 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9981DE1776743C00442FB3 /* title.png */; };
@@ -80,6 +84,11 @@
 		CE08DD2C17975EDB0061201F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		CE08DD2D17975EFE0061201F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../../Downloads/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
 		CE08DD2F17975F430061201F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CE3992701805CF9B003AE30B /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../Programming/Frameworks/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
+		CE3992721805F7DC003AE30B /* divide-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divide-small.png"; sourceTree = SOURCE_ROOT; };
+		CE45808C17E0E87A00AD07E9 /* HelpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpView.xib; path = ../HelpView.xib; sourceTree = "<group>"; };
+		CE45808E17E0EA2600AD07E9 /* FTWHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWHelpViewController.h; sourceTree = "<group>"; };
+		CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWHelpViewController.m; sourceTree = "<group>"; };
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9981DC1776705400442FB3 /* negativepositive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negativepositive.png; sourceTree = SOURCE_ROOT; };
 		CE9981DE1776743C00442FB3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = SOURCE_ROOT; };
@@ -144,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3992711805CF9B003AE30B /* libTestFlight.a in Frameworks */,
 				CE08DD3017975F430061201F /* libz.dylib in Frameworks */,
 				CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */,
 				CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */,
@@ -203,6 +213,7 @@
 		CE9DD9B917661EF10073C460 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3992701805CF9B003AE30B /* libTestFlight.a */,
 				CE9DD9BA17661EF10073C460 /* UIKit.framework */,
 				CE9DD9BC17661EF10073C460 /* Foundation.framework */,
 				CE9DD9BE17661EF20073C460 /* CoreGraphics.framework */,
@@ -311,6 +322,8 @@
 		CEF9D85417C6F93C002457DF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE45808E17E0EA2600AD07E9 /* FTWHelpViewController.h */,
+				CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */,
 				CE9DD9DD17661EF20073C460 /* FTWMasterViewController.h */,
 				CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */,
 				CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */,
@@ -358,7 +371,9 @@
 		CEF9D85A17C6F99E002457DF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CE45808C17E0E87A00AD07E9 /* HelpView.xib */,
 				CE9DD9D417661EF20073C460 /* MainStoryboard_iPhone.storyboard */,
+				CE3992721805F7DC003AE30B /* divide-small.png */,
 				CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */,
 			);
 			name = Storyboards;
@@ -484,6 +499,8 @@
 				CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */,
 				CED7CBE417DFD185008AA2F3 /* save-icon.png in Resources */,
 				CED7CBE617DFD1FD008AA2F3 /* Settings-outline.png in Resources */,
+				CE3992731805F7DC003AE30B /* divide-small.png in Resources */,
+				CE45808D17E0E87A00AD07E9 /* HelpView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +545,7 @@
 				CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */,
 				CE014AFA17D66ACA0032B9FF /* FTWDataLayer.m in Sources */,
 				CE014AFD17D6719B0032B9FF /* FTWDataModel.xcdatamodeld in Sources */,
+				CE45809017E0EA2600AD07E9 /* FTWHelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +678,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
+					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
+					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = "Profit Management Calculator";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -678,7 +697,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\"",
+					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
+					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = "Profit Management Calculator";
 				TARGETED_DEVICE_FAMILY = "1,2";

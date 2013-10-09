@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1552" defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1096"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                    <rect key="frame" x="14" y="91" width="292" height="86"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="292" id="186"/>
+                        <constraint firstAttribute="height" constant="86" id="216"/>
+                    </constraints>
+                    <string key="text">Swipe Right to Left to access the saved calculations. To return to the calculator screen, swipe the slider at the top of the Save screen Left to Right.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Navigation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="108" y="16" width="104" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="104" id="107"/>
+                        <constraint firstAttribute="height" constant="29" id="108"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="20" y="62" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="152"/>
+                        <constraint firstAttribute="height" constant="21" id="153"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Delete Saved Calculations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="20" y="190" width="198" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="198" id="104"/>
+                        <constraint firstAttribute="height" constant="21" id="105"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Swipe the individual calculation Right to Left to bring up the delete button. Click to delete." translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                    <rect key="frame" x="14" y="219" width="292" height="64"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="292" id="191"/>
+                        <constraint firstAttribute="height" constant="64" id="219"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="20" y="291" width="65" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="111"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click settings cog icon to access Settings screen." translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                    <rect key="frame" x="14" y="320" width="292" height="51"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="114"/>
+                        <constraint firstAttribute="width" constant="292" id="235"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Functions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="108" y="376" width="104" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="113"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cost, Sell, and Margin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="20" y="418" width="162" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="162" id="156"/>
+                        <constraint firstAttribute="height" constant="21" id="157"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="14" y="447" width="292" height="300"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="155"/>
+                        <constraint firstAttribute="width" constant="292" id="189"/>
+                    </constraints>
+                    <string key="text">Using the [cst], [sel], [mar] keys, any one of these functions can be calculated when the other two values are known. Use any of the three columns to perform your calculation.  For example, to calculate the cost, use the first column. Enter a value for sell and click the [sel] button, then enter a value for margin (no decimals, “20” for 20%) and click the [mar] button.  After entering the second value by pressing the [mar] button, the cost is calculated and appears with the “CST” indicator displayed.  Any other calculation is performed the same way by entering any two of the three inputs.
+Click the save button (disk icon) to save any calculation that was just performed.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Memory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58">
+                    <rect key="frame" x="20" y="755" width="162" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="106"/>
+                        <constraint firstAttribute="width" constant="162" id="183"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64">
+                    <rect key="frame" x="14" y="784" width="286" height="207"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="207" id="109"/>
+                        <constraint firstAttribute="width" constant="286" id="110"/>
+                        <constraint firstAttribute="width" constant="286" id="185"/>
+                    </constraints>
+                    <string key="text">[mrc] recalls the value in memory to the display.
+[mrc][mrc] clears the memory.
+[m+] adds the displayed value to the value in memory.
+[m-] subtracts the displayed value to the value in memory.
+The Memory stores a running total value, modified by adding or subtracting values using the [m+] and [m-] buttons.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="All other functions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78">
+                    <rect key="frame" x="20" y="999" width="162" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="154"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="178"/>
+                        <constraint firstAttribute="width" constant="162" id="188"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="All other buttons behave as any typical calculator." translatesAutoresizingMaskIntoConstraints="NO" id="89">
+                    <rect key="frame" x="14" y="1028" width="286" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="158"/>
+                        <constraint firstAttribute="width" constant="286" id="190"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="64" secondAttribute="leading" id="115"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="116"/>
+                <constraint firstItem="89" firstAttribute="leading" secondItem="64" secondAttribute="leading" id="117"/>
+                <constraint firstItem="89" firstAttribute="top" secondItem="78" secondAttribute="bottom" constant="8" symbolic="YES" id="118"/>
+                <constraint firstItem="11" firstAttribute="top" secondItem="3" secondAttribute="top" constant="62" id="119"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="13" secondAttribute="leading" id="120"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="122"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="3" secondAttribute="top" constant="190" id="124"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="8" symbolic="YES" id="125"/>
+                <constraint firstItem="58" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="126"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="3" secondAttribute="top" constant="16" id="127"/>
+                <constraint firstItem="7" firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="128"/>
+                <constraint firstItem="58" firstAttribute="trailing" secondItem="78" secondAttribute="trailing" id="129"/>
+                <constraint firstItem="6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="376" id="130"/>
+                <constraint firstItem="6" firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="131"/>
+                <constraint firstItem="64" firstAttribute="top" secondItem="58" secondAttribute="bottom" constant="8" symbolic="YES" id="132"/>
+                <constraint firstAttribute="trailing" secondItem="89" secondAttribute="trailing" constant="20" symbolic="YES" id="133"/>
+                <constraint firstItem="4" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" id="134"/>
+                <constraint firstItem="6" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="135"/>
+                <constraint firstItem="11" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="136"/>
+                <constraint firstAttribute="trailing" secondItem="64" secondAttribute="trailing" constant="20" symbolic="YES" id="137"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="12" secondAttribute="leading" id="138"/>
+                <constraint firstItem="78" firstAttribute="top" secondItem="64" secondAttribute="bottom" constant="8" symbolic="YES" id="139"/>
+                <constraint firstItem="58" firstAttribute="top" secondItem="4" secondAttribute="bottom" constant="8" symbolic="YES" id="140"/>
+                <constraint firstItem="7" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="141"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="142"/>
+                <constraint firstItem="58" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="143"/>
+                <constraint firstItem="6" firstAttribute="centerX" secondItem="7" secondAttribute="centerX" id="144"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="8" symbolic="YES" id="145"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="146"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="9" secondAttribute="leading" id="147"/>
+                <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="8" symbolic="YES" id="148"/>
+                <constraint firstItem="78" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="149"/>
+                <constraint firstAttribute="bottom" secondItem="89" secondAttribute="bottom" constant="20" symbolic="YES" id="150"/>
+                <constraint firstItem="6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="376" id="160"/>
+                <constraint firstItem="12" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="16" id="161"/>
+                <constraint firstItem="78" firstAttribute="top" secondItem="3" secondAttribute="top" constant="999" id="162"/>
+                <constraint firstItem="9" firstAttribute="top" secondItem="3" secondAttribute="top" constant="219" id="164"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="165"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="418" id="166"/>
+                <constraint firstItem="10" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="190" id="168"/>
+                <constraint firstItem="64" firstAttribute="top" secondItem="3" secondAttribute="top" constant="784" id="169"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="447" id="170"/>
+                <constraint firstItem="89" firstAttribute="top" secondItem="3" secondAttribute="top" constant="1028" id="171"/>
+                <constraint firstItem="58" firstAttribute="top" secondItem="3" secondAttribute="top" constant="755" id="173"/>
+                <constraint firstItem="9" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="192"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="108" id="194"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="195"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="196"/>
+                <constraint firstItem="89" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="198"/>
+                <constraint firstItem="64" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="199"/>
+                <constraint firstItem="78" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3" secondAttribute="leading" constant="20" id="200"/>
+                <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="235" id="201"/>
+                <constraint firstAttribute="trailing" secondItem="58" secondAttribute="trailing" constant="138" id="202"/>
+                <constraint firstAttribute="trailing" secondItem="78" secondAttribute="trailing" constant="138" id="203"/>
+                <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" constant="108" id="205"/>
+                <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" constant="14" id="206"/>
+                <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" constant="14" id="207"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="14" id="208"/>
+                <constraint firstAttribute="trailing" secondItem="6" secondAttribute="trailing" constant="108" id="209"/>
+                <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="138" id="210"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="102" id="212"/>
+                <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="258" id="213"/>
+                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="14" id="214"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" id="NOq-Kh-zv3"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="291" id="TF4-6I-MRW"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="320" id="zSc-G2-f6h"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

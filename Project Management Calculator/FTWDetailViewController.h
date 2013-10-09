@@ -78,6 +78,7 @@ typedef enum
 - (IBAction)marginButtonPressed:(UIButton *)button;
 - (IBAction)memoryButtonPressed:(UIButton *)button;
 - (IBAction)saveButtonPressed:(id)sender;
+- (IBAction)helpButtonPressed:(id)sender;
 
 @property (strong, nonatomic) FTWMasterViewController *calculationsTable;
 

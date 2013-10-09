@@ -12,6 +12,7 @@
 #import "FTWOperands.h"
 #import "FTWMasterViewController.h"
 #import "FTWDataLayer.h"
+#import "FTWHelpViewController.h"
 
 @interface FTWDetailViewController ( )
 {
@@ -31,6 +32,8 @@
     double marginToSave;
     double costToSave;
     double sellToSave;
+    FTWHelpViewController *helpViewController;
+    NSString *newNumber;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -72,7 +75,7 @@
     previousNumber = NAN;
     currentNumber = NAN;
     lblNumberType.text = @"";
-    
+    newNumber = @"";
     UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
     
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
@@ -82,7 +85,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-}
+    helpViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"HelpViewController"];
+    }
 
 - (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
 {
@@ -162,21 +166,24 @@
 -(void) updateDisplay:(UIButton*) button
 {
     //If there has just been an operand pressed, we want to make sure that we don't erase all the contents of the display label until the user clicks on a number, than we will delete all the contents.  We set operandPressed to false so that we don't keep deleting the contents of the label every time the user clicks on the number button.
-
+    
     if (state == OPERANDPRESSEDLAST || state == EQUALSPRESSEDLAST || state == MEMORYBUTTONPRESSEDLAST)
     {
         lblDetailDescription.text = @"";
         lblNumberType.text = @"";
+        newNumber = @"";
     }
-    if (button.tag < 10)    //NOT A NUMBER BUTTON
+    if (button.tag < 10)    //IS A NUMBER BUTTON
     {
+        newNumber = [NSString stringWithFormat:@"%@%d", newNumber, button.tag];
         //if this is a number than simply add the number to the integer.  If it's a decimal than check if there is already a decimal there and if not add the point.
-        lblDetailDescription.text = [NSString stringWithFormat:@"%@%ld",lblDetailDescription.text, (long)button.tag];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", [newNumber doubleValue]];
     }
     else if (button.tag == DECIMALBUTTON)
     {
         if ([lblDetailDescription.text rangeOfString:@"."].location == NSNotFound)
         {
+            newNumber = [NSString stringWithFormat:@"%@.", newNumber];
             lblDetailDescription.text = [NSString stringWithFormat:@"%@.",lblDetailDescription.text];
         }
     }
@@ -631,6 +638,7 @@
     {
         lblDetailDescription.text = @"";
         lblNumberType.text = @"";
+        newNumber = @"";
     }
     else if (numTimesClearPressed == 2)
     {
@@ -741,6 +749,7 @@
             storedValue = 0;
             lblDetailDescription.text = @"";
             lblNumberType.text = @"";
+            newNumber = @"";
         }
         else
         {
@@ -784,6 +793,10 @@
     dataLayer.fetchedResultsController = self.fetchedResultsController;
     
     [dataLayer SaveContext:[NSString stringWithFormat:@"SELL = %g\nCOST = %g\nMARGIN = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
+}
+
+- (IBAction)helpButtonPressed:(id)sender {
+    [self.navigationController pushViewController:helpViewController animated:YES];
 }
 
 - (void)configureView
