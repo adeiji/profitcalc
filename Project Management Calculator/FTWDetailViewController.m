@@ -221,11 +221,14 @@
     
     [self setNumbersToBeCalculated];        //Every time we press an operand button, we add that number to the number list
     
-    if (state != EQUALSPRESSEDLAST)         /*If the equals button was pressed last, we don't want perform the operation 
-                                             immediately, but wait until the next operand press*/
+    if (state != EQUALSPRESSEDLAST)         /*If the equals button was pressed last, we don't want to perform the operation
+                                             immediately, but wait until the next operand is press*/
     {
-        //[--self performOperation: (bool) performOperation: (bool) equals
-        [self performOperation : true : false];
+        if (equalPressed == FALSE)
+        {
+            //[--self performOperation: (bool) performOperation: (bool) equals
+            [self performOperation : true : false];
+        }
     }
     else
     {
@@ -233,6 +236,7 @@
     }
     
     state = OPERANDPRESSEDLAST;
+    equalPressed = FALSE;
 }
 
 - (void) equalButtonPressed : (UIButton *) button
@@ -268,6 +272,8 @@
         }
     }
     
+    state = EQUALSPRESSEDLAST;
+    equalPressed = TRUE;
 }
 
 //Handles all button presses that have to do with numbers or operations
@@ -293,7 +299,7 @@
     {
         if (button.tag == OPPOSITEBUTTON)
         {
-            lblDetailDescription.text = [NSString stringWithFormat:@"%g",[self oppositeValue]];
+            lblDetailDescription.text = [NSString stringWithFormat:@"%.12g",[self oppositeValue]];
         }
         else if (button.tag == SQUAREROOTBUTTON)   //Opposite Value || Square Root Operand ------ Respectively
         {
@@ -511,7 +517,7 @@
     {
         [numberList addObject:@"%+="];
         num = reservedNumber + currentNumber;
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num]; //Display the new number
         
         previousNumber = currentNumber;
         currentNumber = num;
@@ -520,7 +526,7 @@
     {
         [numberList addObject:@"%-="];
         num = reservedNumber - currentNumber;
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num]; //Display the new number
         
         previousNumber = currentNumber;
         currentNumber = num;
@@ -529,7 +535,7 @@
     {
         [numberList addObject:@"^2"];
         num = [self square];        
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num]; //Display the new number
         
         previousNumber = currentNumber;
         currentNumber = num;
@@ -538,7 +544,7 @@
     {
         [numberList addObject:@"%+"];
         num = reservedNumberForPercentPlusEqualsOperator + (reservedNumber * ([lblDetailDescription.text doubleValue] / 100));
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num];
         
         previousNumber = currentNumber;
         currentNumber = num;
@@ -617,7 +623,7 @@
         //We do this by removing all the data except for the last number from the numberList array and copying it to the numberListCopy array.
         operands.previousOperand = operands.currentOperand;
         
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", num]; //Display the new number
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num]; //Display the new number
         
     }
     
@@ -637,21 +643,32 @@
     if (numTimesClearPressed == 1)
     {
         lblDetailDescription.text = @"";
+        
         lblNumberType.text = @"";
         newNumber = @"";
+    
+        if (equalPressed == TRUE)
+        {
+            [self clearEverything];
+        }
     }
     else if (numTimesClearPressed == 2)
     {
-        previousNumber = NAN;
-        currentNumber = NAN;
-        operands.currentOperand = NOOPERAND;
-        operands.previousOperand = NOOPERAND;
-        numberList = [[NSMutableArray alloc] init];
-        operatorList = [[NSMutableArray alloc] init];
-        numTimesClearPressed = 0;
+        [self clearEverything];
     }
-    
 }
+
+- (void) clearEverything
+{
+    previousNumber = NAN;
+    currentNumber = NAN;
+    operands.currentOperand = NOOPERAND;
+    operands.previousOperand = NOOPERAND;
+    numberList = [[NSMutableArray alloc] init];
+    operatorList = [[NSMutableArray alloc] init];
+    numTimesClearPressed = 0;
+}
+
 //Performing a cost calculation
 - (IBAction)costButtonPressed:(UIButton *)button {
     static double salesPrice = 0;
@@ -673,7 +690,7 @@
         if (salesPrice != 0)
         {
             cost = salesPrice - ( salesPrice * ([lblDetailDescription.text doubleValue] / 100));
-            lblDetailDescription.text = [NSString stringWithFormat:@"%g", cost];
+            lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", cost];
             lblNumberType.text = @"CST";
             [operatorList addObject:@"Cost Calculation"];
             [numberList addObject:[[NSNumber alloc] initWithDouble:cost ]];
@@ -705,7 +722,7 @@
             salesPrice = cost / (1 - ([lblDetailDescription.text doubleValue] / 100));
             lblNumberType.text = @"SEL";
             //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
-            lblDetailDescription.text = [NSString stringWithFormat:@"%g", salesPrice];
+            lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", salesPrice];
             [operatorList addObject:@"Sales Price Calculation"];
             [numberList addObject:[[NSNumber alloc] initWithDouble:salesPrice ]];
             
@@ -731,7 +748,7 @@
         margin = (1 - (cost / ([lblDetailDescription.text doubleValue]))) * 100;
         lblNumberType.text = @"MAR";
         //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
-        lblDetailDescription.text = [NSString stringWithFormat:@"%g", margin];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", margin];
         [operatorList addObject:@"Sales Price Calculation"];
         [numberList addObject:[[NSNumber alloc] initWithDouble:margin ]];
         
