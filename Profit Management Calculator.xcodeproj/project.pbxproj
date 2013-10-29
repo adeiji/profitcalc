@@ -45,6 +45,7 @@
 		CE9DDA1117664ECB0073C460 /* ce.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA1017664ECB0073C460 /* ce.png */; };
 		CED7CBE417DFD185008AA2F3 /* save-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CED7CBE317DFD185008AA2F3 /* save-icon.png */; };
 		CED7CBE617DFD1FD008AA2F3 /* Settings-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = CED7CBE517DFD1FD008AA2F3 /* Settings-outline.png */; };
+		CEE966E818206D39000BF0D3 /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE966E718206D39000BF0D3 /* infobutton.png */; };
 		CEF9D83117C6B618002457DF /* operandCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83017C6B618002457DF /* operandCircle.png */; };
 		CEF9D83517C6B8EC002457DF /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83417C6B8EC002457DF /* divide.png */; };
 		CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83617C6B9B1002457DF /* suboperandcircle.png */; };
@@ -128,6 +129,7 @@
 		CE9DDA1017664ECB0073C460 /* ce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ce.png; sourceTree = "<group>"; };
 		CED7CBE317DFD185008AA2F3 /* save-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "save-icon.png"; path = "../../../UI Images/Project Management Calculator/save-icon.png"; sourceTree = "<group>"; };
 		CED7CBE517DFD1FD008AA2F3 /* Settings-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-outline.png"; path = "../../../UI Images/Project Management Calculator/Settings-outline.png"; sourceTree = "<group>"; };
+		CEE966E718206D39000BF0D3 /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = infobutton.png; path = "../../../UI Images/Project Management Calculator/infobutton.png"; sourceTree = "<group>"; };
 		CEF9D83017C6B618002457DF /* operandCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operandCircle.png; sourceTree = "<group>"; };
 		CEF9D83417C6B8EC002457DF /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = divide.png; path = ../divide.png; sourceTree = "<group>"; };
 		CEF9D83617C6B9B1002457DF /* suboperandcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = suboperandcircle.png; path = ../suboperandcircle.png; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		CEF9D85217C6F8EC002457DF /* UI Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEE966E718206D39000BF0D3 /* infobutton.png */,
 				CED7CBE517DFD1FD008AA2F3 /* Settings-outline.png */,
 				CED7CBE317DFD185008AA2F3 /* save-icon.png */,
 				CEF9D83017C6B618002457DF /* operandCircle.png */,
@@ -479,6 +482,7 @@
 				CE9981DD1776705400442FB3 /* negativepositive.png in Resources */,
 				CE9981DF1776743C00442FB3 /* title.png in Resources */,
 				CEF9D83117C6B618002457DF /* operandCircle.png in Resources */,
+				CEE966E818206D39000BF0D3 /* infobutton.png in Resources */,
 				CEF9D83517C6B8EC002457DF /* divide.png in Resources */,
 				CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */,
 				CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */,

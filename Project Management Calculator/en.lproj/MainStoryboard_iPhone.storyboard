@@ -252,6 +252,8 @@
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-oi-gZv" customClass="NumberButtons">
                                 <rect key="frame" x="65" y="298" width="80" height="56"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="b5n-f6-Rpj"/>
+                                    <constraint firstAttribute="height" priority="750" constant="56" id="fcc-GN-EEv"/>
                                     <constraint firstAttribute="width" constant="80" id="rhD-QH-qyE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -291,7 +293,8 @@
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Qr-GAp" customClass="NumberButtons">
                                 <rect key="frame" x="66" y="363" width="80" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="v1N-hO-6Ap"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="SRQ-eb-KGX"/>
+                                    <constraint firstAttribute="height" priority="750" constant="56" id="v1N-hO-6Ap"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="4" backgroundImage="numbersquares.png">
@@ -305,7 +308,8 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-uQ-7WY" customClass="NumberButtons">
                                 <rect key="frame" x="67" y="428" width="80" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="UFc-xQ-Bd4"/>
+                                    <constraint firstAttribute="height" priority="750" constant="56" id="UFc-xQ-Bd4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="wem-5f-NrW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="1" backgroundImage="numbersquares.png">
@@ -319,7 +323,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-4s-qmD" customClass="NumberButtons">
                                 <rect key="frame" x="68" y="493" width="80" height="56"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6Kk-0S-wNi"/>
                                     <constraint firstAttribute="width" constant="80" id="hPZ-tc-xwd"/>
+                                    <constraint firstAttribute="height" priority="750" constant="56" id="ldk-8q-wKl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="0" backgroundImage="numbersquares.png">
@@ -484,7 +490,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-3n-kbb" customClass="NumberButtons">
-                                <rect key="frame" x="77" y="108" width="70" height="44"/>
+                                <rect key="frame" x="77" y="108" width="70" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DNV-Cp-cCR"/>
                                     <constraint firstAttribute="width" constant="70" id="JUm-cz-641"/>
@@ -500,7 +506,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-XV-L46" customClass="NumberButtons">
-                                <rect key="frame" x="159" y="108" width="70" height="44"/>
+                                <rect key="frame" x="159" y="108" width="70" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="K4T-3n-Gjg"/>
                                 </constraints>
@@ -514,7 +520,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDF-yE-vWJ" customClass="NumberButtons">
-                                <rect key="frame" x="240" y="108" width="72" height="44"/>
+                                <rect key="frame" x="240" y="108" width="72" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="cst" backgroundImage="salessquares.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -625,9 +631,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-px-hof">
-                                <rect key="frame" x="58" y="22" width="30" height="30"/>
+                                <rect key="frame" x="65" y="19" width="38" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="ia2-sR-EcZ"/>
+                                    <constraint firstAttribute="width" constant="38" id="ia2-sR-EcZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="save-icon.png">
@@ -639,9 +645,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zn-i8-9mK">
-                                <rect key="frame" x="17" y="19" width="30" height="36"/>
+                                <rect key="frame" x="17" y="19" width="40" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Mr0-FX-bCJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="H0a-dj-Plw"/>
+                                    <constraint firstAttribute="width" constant="40" id="Mr0-FX-bCJ"/>
+                                    <constraint firstAttribute="height" constant="43" id="X5s-zb-TIV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Settings-outline.png">
@@ -652,13 +660,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-sa-Rjs">
-                                <rect key="frame" x="101" y="26" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-sa-Rjs">
+                                <rect key="frame" x="113" y="22" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="9oF-0q-R7z"/>
+                                    <constraint firstAttribute="height" constant="35" id="9oF-0q-R7z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="infobutton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -676,7 +684,7 @@
                             <constraint firstItem="Gqq-vY-HEl" firstAttribute="leading" secondItem="M5v-fC-A2I" secondAttribute="leading" id="0Nd-Gf-23h"/>
                             <constraint firstItem="F3I-3n-kbb" firstAttribute="leading" secondItem="Z0e-x9-ssj" secondAttribute="trailing" constant="20" id="0j5-0X-cUb"/>
                             <constraint firstItem="wjQ-AX-7KH" firstAttribute="centerY" secondItem="kHA-4s-qmD" secondAttribute="centerY" id="0xy-mq-Iwf"/>
-                            <constraint firstItem="6aa-sa-Rjs" firstAttribute="leading" secondItem="Spd-px-hof" secondAttribute="trailing" constant="13" id="1RW-LU-fUt"/>
+                            <constraint firstItem="6aa-sa-Rjs" firstAttribute="leading" secondItem="Spd-px-hof" secondAttribute="trailing" constant="10" id="1RW-LU-fUt"/>
                             <constraint firstItem="Z0e-x9-ssj" firstAttribute="trailing" secondItem="Bpf-zl-ssn" secondAttribute="trailing" id="1eK-j1-Yjs"/>
                             <constraint firstItem="YOJ-5k-ezq" firstAttribute="bottom" secondItem="cob-oi-gZv" secondAttribute="bottom" id="2Gk-zO-IO4"/>
                             <constraint firstItem="Gqq-vY-HEl" firstAttribute="top" secondItem="cob-oi-gZv" secondAttribute="top" id="2qP-jr-azh"/>
@@ -728,12 +736,13 @@
                             <constraint firstItem="cZi-Qr-GAp" firstAttribute="bottom" secondItem="lAc-mh-1md" secondAttribute="bottom" id="SII-hk-1nU"/>
                             <constraint firstItem="mlN-uQ-7WY" firstAttribute="centerY" secondItem="B3U-JZ-18k" secondAttribute="centerY" id="SMO-m4-f28"/>
                             <constraint firstItem="YOJ-5k-ezq" firstAttribute="top" secondItem="fEh-BX-ie8" secondAttribute="bottom" constant="7" id="SNu-aP-9Po"/>
-                            <constraint firstItem="Spd-px-hof" firstAttribute="leading" secondItem="7zn-i8-9mK" secondAttribute="trailing" constant="11" id="Sc1-cK-Ht2"/>
+                            <constraint firstItem="Spd-px-hof" firstAttribute="leading" secondItem="7zn-i8-9mK" secondAttribute="trailing" constant="8" id="Sc1-cK-Ht2"/>
                             <constraint firstItem="Rea-Ib-7wt" firstAttribute="leading" secondItem="B3U-JZ-18k" secondAttribute="leading" id="TFW-nB-RUj"/>
                             <constraint firstItem="Gqq-vY-HEl" firstAttribute="trailing" secondItem="M5v-fC-A2I" secondAttribute="trailing" id="Tca-BD-tMP"/>
                             <constraint firstItem="Z0e-x9-ssj" firstAttribute="bottom" secondItem="5Gx-RV-iA5" secondAttribute="bottom" constant="4" id="Tfb-RY-UFB"/>
-                            <constraint firstItem="Spd-px-hof" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="2" id="UjX-dy-XXE"/>
+                            <constraint firstItem="Spd-px-hof" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="-1" id="UjX-dy-XXE"/>
                             <constraint firstItem="wDF-yE-vWJ" firstAttribute="leading" secondItem="XVE-XV-L46" secondAttribute="trailing" constant="11" id="V9T-S1-hXd"/>
+                            <constraint firstAttribute="trailing" secondItem="6aa-sa-Rjs" secondAttribute="trailing" constant="172" id="VJY-IX-Qfd"/>
                             <constraint firstItem="XVE-XV-L46" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="top" id="Vds-dP-2dG"/>
                             <constraint firstItem="Z0e-x9-ssj" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="top" id="XyP-FZ-2zC"/>
                             <constraint firstItem="XVE-XV-L46" firstAttribute="bottom" secondItem="F3I-3n-kbb" secondAttribute="bottom" id="Y1a-as-9zp"/>
@@ -743,7 +752,7 @@
                             <constraint firstItem="0Ju-v7-3fd" firstAttribute="leading" secondItem="Bpf-zl-ssn" secondAttribute="leading" id="azO-R9-FBS"/>
                             <constraint firstItem="lAc-mh-1md" firstAttribute="centerY" secondItem="cZi-Qr-GAp" secondAttribute="centerY" id="bA4-t3-lLN"/>
                             <constraint firstItem="7zn-i8-9mK" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="-1" id="c0U-dl-m4J"/>
-                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="top" secondItem="6aa-sa-Rjs" secondAttribute="bottom" constant="6" id="c5l-y9-Ze7"/>
+                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="top" secondItem="6aa-sa-Rjs" secondAttribute="bottom" constant="-3" id="c5l-y9-Ze7"/>
                             <constraint firstItem="oGi-B3-VfG" firstAttribute="top" secondItem="Vvv-Vt-AGf" secondAttribute="top" id="cU6-Dv-58K"/>
                             <constraint firstItem="mlN-uQ-7WY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cZi-Qr-GAp" secondAttribute="bottom" constant="5" id="cZ0-xH-epk"/>
                             <constraint firstItem="kHA-4s-qmD" firstAttribute="leading" secondItem="oGi-B3-VfG" secondAttribute="leading" id="cjR-TI-Iaw"/>
@@ -754,10 +763,10 @@
                             <constraint firstItem="mlN-uQ-7WY" firstAttribute="top" secondItem="toM-lP-aTJ" secondAttribute="top" id="dh1-Kt-ul5"/>
                             <constraint firstItem="5Gx-RV-iA5" firstAttribute="top" secondItem="TxF-PM-SQu" secondAttribute="top" id="dzJ-HS-Yfe"/>
                             <constraint firstAttribute="trailing" secondItem="SMW-ZM-EjY" secondAttribute="trailing" constant="16" id="eBv-z3-ETi"/>
-                            <constraint firstItem="cZX-Yr-e5U" firstAttribute="top" secondItem="7zn-i8-9mK" secondAttribute="bottom" constant="9" id="efh-4R-J4t"/>
+                            <constraint firstItem="cZX-Yr-e5U" firstAttribute="top" secondItem="7zn-i8-9mK" secondAttribute="bottom" constant="2" id="efh-4R-J4t"/>
                             <constraint firstItem="fEh-BX-ie8" firstAttribute="leading" secondItem="oGi-B3-VfG" secondAttribute="trailing" constant="6" id="egX-rk-EVD"/>
-                            <constraint firstItem="5Gx-RV-iA5" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="bottom" priority="750" constant="30" id="ehk-C2-CFv"/>
-                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="top" secondItem="Spd-px-hof" secondAttribute="bottom" constant="2" id="fDg-fx-m6w"/>
+                            <constraint firstItem="5Gx-RV-iA5" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="bottom" priority="750" constant="18" id="ehk-C2-CFv"/>
+                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="top" secondItem="Spd-px-hof" secondAttribute="bottom" constant="-5" id="fDg-fx-m6w"/>
                             <constraint firstItem="5Gx-RV-iA5" firstAttribute="bottom" secondItem="TxF-PM-SQu" secondAttribute="bottom" id="fMg-X1-X8d"/>
                             <constraint firstItem="YOJ-5k-ezq" firstAttribute="trailing" secondItem="lAc-mh-1md" secondAttribute="trailing" id="fgV-cN-3jD"/>
                             <constraint firstItem="Vvv-Vt-AGf" firstAttribute="leading" secondItem="fEh-BX-ie8" secondAttribute="trailing" constant="7" id="fue-d7-bUD"/>
@@ -787,7 +796,7 @@
                             <constraint firstItem="Xnr-Bo-rCJ" firstAttribute="trailing" secondItem="X8A-ae-7cu" secondAttribute="trailing" id="wlS-GD-ka0"/>
                             <constraint firstItem="cob-oi-gZv" firstAttribute="centerY" secondItem="0Ju-v7-3fd" secondAttribute="centerY" id="wsk-vd-TW2"/>
                             <constraint firstItem="XTj-QX-4Uo" firstAttribute="centerY" secondItem="cZX-Yr-e5U" secondAttribute="centerY" constant="1.5" id="xqt-Uj-ZgD"/>
-                            <constraint firstItem="6aa-sa-Rjs" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="6" id="yhG-EA-ZVX"/>
+                            <constraint firstItem="6aa-sa-Rjs" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="2" id="yhG-EA-ZVX"/>
                             <constraint firstItem="Rea-Ib-7wt" firstAttribute="trailing" secondItem="0Ju-v7-3fd" secondAttribute="trailing" id="zTr-hb-Daz"/>
                             <constraint firstItem="7zn-i8-9mK" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="-1" id="zi9-oH-iht"/>
                             <constraint firstItem="cob-oi-gZv" firstAttribute="bottom" secondItem="Gqq-vY-HEl" secondAttribute="bottom" id="zib-CX-kFB"/>
@@ -815,32 +824,13 @@
         <image name="Settings-outline.png" width="200" height="200"/>
         <image name="cesquare.png" width="53" height="82"/>
         <image name="divide-small.png" width="49" height="51"/>
+        <image name="infobutton.png" width="50" height="50"/>
         <image name="negativepositive.png" width="45" height="45"/>
         <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
         <image name="operandCircle.png" width="51" height="50"/>
-        <image name="operandCircle.png" width="51" height="50"/>
-        <image name="operandCircle.png" width="51" height="50"/>
-        <image name="operandCircle.png" width="51" height="50"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
         <image name="salessquares.png" width="72" height="33"/>
         <image name="save-icon.png" width="200" height="200"/>
         <image name="sqrt.png" width="44" height="45"/>
-        <image name="suboperandcircle.png" width="46" height="44"/>
-        <image name="suboperandcircle.png" width="46" height="44"/>
         <image name="suboperandcircle.png" width="46" height="44"/>
         <image name="swipeCircle.png" width="75" height="75"/>
     </resources>
