@@ -78,6 +78,8 @@
     newNumber = @"";
     UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
     
+    asdfadsf
+    
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeGestureRecognizer];
     

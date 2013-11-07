@@ -50,7 +50,6 @@
 		CEE9670118209395000BF0D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEE966FF18209395000BF0D3 /* InfoPlist.strings */; };
 		CEE9670318209395000BF0D3 /* Profit_Management_Calculator_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9670218209395000BF0D3 /* Profit_Management_Calculator_Tests.m */; };
 		CEF9D83117C6B618002457DF /* operandCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83017C6B618002457DF /* operandCircle.png */; };
-		CEF9D83517C6B8EC002457DF /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83417C6B8EC002457DF /* divide.png */; };
 		CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83617C6B9B1002457DF /* suboperandcircle.png */; };
 		CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83817C6BCAE002457DF /* numbersquares.png */; };
 		CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D83A17C6BD6D002457DF /* salessquares.png */; };
@@ -143,7 +142,6 @@
 		CEE9670218209395000BF0D3 /* Profit_Management_Calculator_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Profit_Management_Calculator_Tests.m; sourceTree = "<group>"; };
 		CEE9670418209395000BF0D3 /* Profit Management Calculator Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Profit Management Calculator Tests-Prefix.pch"; sourceTree = "<group>"; };
 		CEF9D83017C6B618002457DF /* operandCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operandCircle.png; sourceTree = "<group>"; };
-		CEF9D83417C6B8EC002457DF /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = divide.png; path = ../divide.png; sourceTree = "<group>"; };
 		CEF9D83617C6B9B1002457DF /* suboperandcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = suboperandcircle.png; path = ../suboperandcircle.png; sourceTree = "<group>"; };
 		CEF9D83817C6BCAE002457DF /* numbersquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numbersquares.png; path = ../numbersquares.png; sourceTree = "<group>"; };
 		CEF9D83A17C6BD6D002457DF /* salessquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = salessquares.png; path = ../salessquares.png; sourceTree = "<group>"; };
@@ -336,7 +334,6 @@
 				CE9DDA0A1766439F0073C460 /* actext.png */,
 				CEF9D83817C6BCAE002457DF /* numbersquares.png */,
 				CEF9D83617C6B9B1002457DF /* suboperandcircle.png */,
-				CEF9D83417C6B8EC002457DF /* divide.png */,
 				CEF9D83E17C6BFA2002457DF /* savecircle.png */,
 				CEF9D83C17C6BEB1002457DF /* cesquare.png */,
 				CEE966E918208681000BF0D3 /* negativepositive.png */,
@@ -530,7 +527,6 @@
 				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
 				CEF9D83117C6B618002457DF /* operandCircle.png in Resources */,
 				CEE966F118208F18000BF0D3 /* save-icon.png in Resources */,
-				CEF9D83517C6B8EC002457DF /* divide.png in Resources */,
 				CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */,
 				CEE966EE18208D97000BF0D3 /* infobutton.png in Resources */,
 				CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */,

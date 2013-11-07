@@ -37,7 +37,6 @@
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                                 <rect key="frame" x="0.0" y="105" width="320" height="443"/>
-                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="443" id="RRI-gr-AJr"/>
                                 </constraints>
@@ -53,7 +52,6 @@
                                                     <rect key="frame" x="15" y="0.0" width="290" height="111"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
@@ -69,7 +67,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B73-ua-PDT">
                                 <rect key="frame" x="46" y="51" width="239" height="6"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjx-rE-1NO">
                                 <rect key="frame" x="45" y="26" width="55" height="56"/>
@@ -87,12 +85,13 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="B73-ua-PDT" firstAttribute="top" secondItem="xGE-QE-buo" secondAttribute="bottom" constant="31" id="0ey-aS-xmG"/>
                             <constraint firstItem="13" firstAttribute="trailing" secondItem="e6y-Gv-wK9" secondAttribute="trailing" id="49R-Sk-PRH"/>
                             <constraint firstItem="13" firstAttribute="top" secondItem="Fjx-rE-1NO" secondAttribute="bottom" constant="23" id="AsR-pe-4xn"/>
                             <constraint firstItem="Fjx-rE-1NO" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" constant="45" id="JRs-TK-R31"/>
+                            <constraint firstItem="sd0-U5-2oH" firstAttribute="top" secondItem="13" secondAttribute="bottom" constant="20" id="MNS-Pv-sDn"/>
                             <constraint firstItem="13" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" id="QYV-lY-ZZk"/>
                             <constraint firstAttribute="trailing" secondItem="B73-ua-PDT" secondAttribute="trailing" constant="35" id="ojr-li-aTS"/>
                             <constraint firstItem="B73-ua-PDT" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" constant="46" id="orq-qt-hjp"/>
@@ -258,7 +257,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="7" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -283,7 +282,7 @@
                                 <rect key="frame" x="7" y="108" width="50" height="134"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="c/ce" backgroundImage="cesquare.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -298,7 +297,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="4" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -313,7 +312,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="1" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -329,7 +328,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="0" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -340,7 +339,7 @@
                                 <rect key="frame" x="150" y="493" width="80" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <state key="normal" title="." backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -351,7 +350,7 @@
                                 <rect key="frame" x="149" y="428" width="80" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="2" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -365,7 +364,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="5" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -376,7 +375,7 @@
                                 <rect key="frame" x="148" y="297" width="80" height="57"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="8" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -387,7 +386,7 @@
                                 <rect key="frame" x="230" y="428" width="82" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="3" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -398,7 +397,7 @@
                                 <rect key="frame" x="229" y="363" width="80" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="6" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -409,7 +408,7 @@
                                 <rect key="frame" x="229" y="298" width="80" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="9" backgroundImage="numbersquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -498,7 +497,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="sel" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -512,7 +511,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="cst" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -523,7 +522,7 @@
                                 <rect key="frame" x="240" y="108" width="72" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="cst" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -534,7 +533,7 @@
                                 <rect key="frame" x="158" y="182" width="70" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="mar" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -549,7 +548,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="mar" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -560,7 +559,7 @@
                                 <rect key="frame" x="240" y="182" width="72" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="sel" backgroundImage="salessquares.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -610,14 +609,13 @@
                                     <action selector="memoryButtonPressed:" destination="21" eventType="touchUpInside" id="WRE-Kh-I1w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7777777777" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
                                 <rect key="frame" x="65" y="54" width="245" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="8yJ-1g-pId"/>
                                     <constraint firstAttribute="width" constant="245" id="NpS-fl-FTx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MAR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Yr-e5U">
@@ -627,7 +625,6 @@
                                     <constraint firstAttribute="width" constant="38" id="Rjd-7P-5ei"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-px-hof">
@@ -678,7 +675,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Gqq-vY-HEl" firstAttribute="leading" secondItem="M5v-fC-A2I" secondAttribute="leading" id="0Nd-Gf-23h"/>
@@ -702,6 +699,7 @@
                             <constraint firstItem="Xnr-Bo-rCJ" firstAttribute="top" secondItem="TxF-PM-SQu" secondAttribute="top" id="8iC-l0-v29"/>
                             <constraint firstItem="EKd-wK-67k" firstAttribute="leading" secondItem="kHA-4s-qmD" secondAttribute="trailing" constant="2" id="9Zb-Ha-oiF"/>
                             <constraint firstItem="cZi-Qr-GAp" firstAttribute="bottom" secondItem="M5v-fC-A2I" secondAttribute="bottom" id="9zT-C7-u2c"/>
+                            <constraint firstItem="B3U-JZ-18k" firstAttribute="height" secondItem="Rea-Ib-7wt" secondAttribute="height" id="BGg-gx-nCy"/>
                             <constraint firstItem="Vvv-Vt-AGf" firstAttribute="bottom" secondItem="oGi-B3-VfG" secondAttribute="bottom" constant="-2" id="BK7-18-qrk"/>
                             <constraint firstItem="Vvv-Vt-AGf" firstAttribute="top" secondItem="Oug-7K-hpG" secondAttribute="top" id="Btw-hw-OuM"/>
                             <constraint firstItem="cob-oi-gZv" firstAttribute="centerY" secondItem="Gqq-vY-HEl" secondAttribute="centerY" id="EDM-LG-SLt"/>
@@ -744,6 +742,7 @@
                             <constraint firstItem="wDF-yE-vWJ" firstAttribute="leading" secondItem="XVE-XV-L46" secondAttribute="trailing" constant="11" id="V9T-S1-hXd"/>
                             <constraint firstAttribute="trailing" secondItem="6aa-sa-Rjs" secondAttribute="trailing" constant="172" id="VJY-IX-Qfd"/>
                             <constraint firstItem="XVE-XV-L46" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="top" id="Vds-dP-2dG"/>
+                            <constraint firstItem="wjQ-AX-7KH" firstAttribute="height" secondItem="B3U-JZ-18k" secondAttribute="height" id="Wqb-hu-gsm"/>
                             <constraint firstItem="Z0e-x9-ssj" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="top" id="XyP-FZ-2zC"/>
                             <constraint firstItem="XVE-XV-L46" firstAttribute="bottom" secondItem="F3I-3n-kbb" secondAttribute="bottom" id="Y1a-as-9zp"/>
                             <constraint firstItem="Rea-Ib-7wt" firstAttribute="trailing" secondItem="B3U-JZ-18k" secondAttribute="trailing" id="YCl-Wg-rQS"/>
@@ -795,6 +794,7 @@
                             <constraint firstItem="toM-lP-aTJ" firstAttribute="top" secondItem="X8A-ae-7cu" secondAttribute="top" id="utr-Gz-BfC"/>
                             <constraint firstItem="Xnr-Bo-rCJ" firstAttribute="trailing" secondItem="X8A-ae-7cu" secondAttribute="trailing" id="wlS-GD-ka0"/>
                             <constraint firstItem="cob-oi-gZv" firstAttribute="centerY" secondItem="0Ju-v7-3fd" secondAttribute="centerY" id="wsk-vd-TW2"/>
+                            <constraint firstItem="Rea-Ib-7wt" firstAttribute="height" secondItem="0Ju-v7-3fd" secondAttribute="height" id="xWn-Sv-fFg"/>
                             <constraint firstItem="XTj-QX-4Uo" firstAttribute="centerY" secondItem="cZX-Yr-e5U" secondAttribute="centerY" constant="1.5" id="xqt-Uj-ZgD"/>
                             <constraint firstItem="6aa-sa-Rjs" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="2" id="yhG-EA-ZVX"/>
                             <constraint firstItem="Rea-Ib-7wt" firstAttribute="trailing" secondItem="0Ju-v7-3fd" secondAttribute="trailing" id="zTr-hb-Daz"/>
@@ -823,15 +823,15 @@
     <resources>
         <image name="Settings-outline.png" width="200" height="200"/>
         <image name="cesquare.png" width="53" height="82"/>
-        <image name="divide-small.png" width="49" height="51"/>
+        <image name="divide-small.png" width="46" height="48"/>
         <image name="infobutton.png" width="50" height="50"/>
         <image name="negativepositive.png" width="45" height="45"/>
         <image name="numbersquares.png" width="81" height="56"/>
-        <image name="operandCircle.png" width="51" height="50"/>
+        <image name="operandCircle.png" width="46" height="44"/>
         <image name="salessquares.png" width="72" height="33"/>
         <image name="save-icon.png" width="200" height="200"/>
         <image name="sqrt.png" width="44" height="45"/>
-        <image name="suboperandcircle.png" width="46" height="44"/>
+        <image name="suboperandcircle.png" width="51" height="50"/>
         <image name="swipeCircle.png" width="75" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
