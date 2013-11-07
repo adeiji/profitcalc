@@ -102,15 +102,15 @@
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9A071617860FFC00B8BB11 /* FTWOperands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWOperands.h; sourceTree = "<group>"; };
 		CE9A071717860FFC00B8BB11 /* FTWOperands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWOperands.m; sourceTree = "<group>"; };
-		CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profit Management Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9DD9B717661EF10073C460 /* SalesManagementCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesManagementCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9BA17661EF10073C460 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE9DD9BC17661EF10073C460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE9DD9BE17661EF20073C460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE9DD9C017661EF20073C460 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CE9DD9C417661EF20073C460 /* Profit Management Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Profit Management Calculator-Info.plist"; sourceTree = "<group>"; };
+		CE9DD9C417661EF20073C460 /* SalesManagementCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalesManagementCalculator-Info.plist"; sourceTree = "<group>"; };
 		CE9DD9C617661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE9DD9C817661EF20073C460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE9DD9CA17661EF20073C460 /* Profit Management Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Profit Management Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		CE9DD9CA17661EF20073C460 /* SalesManagementCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalesManagementCalculator-Prefix.pch"; sourceTree = "<group>"; };
 		CE9DD9CB17661EF20073C460 /* FTWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWAppDelegate.h; sourceTree = "<group>"; };
 		CE9DD9CC17661EF20073C460 /* FTWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWAppDelegate.m; sourceTree = "<group>"; };
 		CE9DD9D517661EF20073C460 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		CE9DD9DE17661EF20073C460 /* FTWMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWMasterViewController.m; sourceTree = "<group>"; };
 		CE9DD9E017661EF20073C460 /* FTWDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWDetailViewController.h; sourceTree = "<group>"; };
 		CE9DD9E117661EF20073C460 /* FTWDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWDetailViewController.m; sourceTree = "<group>"; };
-		CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Profit Management CalculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9DD9E817661EF20073C460 /* SalesManagementCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesManagementCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DD9E917661EF20073C460 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE9DDA0117661F6C0073C460 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		CE9DDA0217661F6C0073C460 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
@@ -135,12 +135,12 @@
 		CEE966ED18208D97000BF0D3 /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infobutton.png; sourceTree = "<group>"; };
 		CEE966EF18208F18000BF0D3 /* save-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "save-icon.png"; path = "../save-icon.png"; sourceTree = "<group>"; };
 		CEE966F018208F18000BF0D3 /* Settings-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-outline.png"; path = "../Settings-outline.png"; sourceTree = "<group>"; };
-		CEE966F718209395000BF0D3 /* Profit Management Calculator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Profit Management Calculator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE966F718209395000BF0D3 /* SalesManagementCalculator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SalesManagementCalculator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE966F818209395000BF0D3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CEE966FE18209395000BF0D3 /* Profit Management Calculator Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Profit Management Calculator Tests-Info.plist"; sourceTree = "<group>"; };
+		CEE966FE18209395000BF0D3 /* SalesManagementCalculator Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalesManagementCalculator Tests-Info.plist"; sourceTree = "<group>"; };
 		CEE9670018209395000BF0D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEE9670218209395000BF0D3 /* Profit_Management_Calculator_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Profit_Management_Calculator_Tests.m; sourceTree = "<group>"; };
-		CEE9670418209395000BF0D3 /* Profit Management Calculator Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Profit Management Calculator Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CEE9670418209395000BF0D3 /* SalesManagementCalculator Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalesManagementCalculator Tests-Prefix.pch"; sourceTree = "<group>"; };
 		CEF9D83017C6B618002457DF /* operandCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operandCircle.png; sourceTree = "<group>"; };
 		CEF9D83617C6B9B1002457DF /* suboperandcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = suboperandcircle.png; path = ../suboperandcircle.png; sourceTree = "<group>"; };
 		CEF9D83817C6BCAE002457DF /* numbersquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = numbersquares.png; path = ../numbersquares.png; sourceTree = "<group>"; };
@@ -226,9 +226,9 @@
 		CE9DD9B817661EF10073C460 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */,
-				CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */,
-				CEE966F718209395000BF0D3 /* Profit Management Calculator Tests.xctest */,
+				CE9DD9B717661EF10073C460 /* SalesManagementCalculator.app */,
+				CE9DD9E817661EF20073C460 /* SalesManagementCalculatorTests.octest */,
+				CEE966F718209395000BF0D3 /* SalesManagementCalculator Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,10 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				CEF9D85017C6F8D4002457DF /* Icon Images */,
-				CE9DD9C417661EF20073C460 /* Profit Management Calculator-Info.plist */,
+				CE9DD9C417661EF20073C460 /* SalesManagementCalculator-Info.plist */,
 				CE9DD9C517661EF20073C460 /* InfoPlist.strings */,
 				CE9DD9C817661EF20073C460 /* main.m */,
-				CE9DD9CA17661EF20073C460 /* Profit Management Calculator-Prefix.pch */,
+				CE9DD9CA17661EF20073C460 /* SalesManagementCalculator-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,9 +288,9 @@
 		CEE966FD18209395000BF0D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEE966FE18209395000BF0D3 /* Profit Management Calculator Tests-Info.plist */,
+				CEE966FE18209395000BF0D3 /* SalesManagementCalculator Tests-Info.plist */,
 				CEE966FF18209395000BF0D3 /* InfoPlist.strings */,
-				CEE9670418209395000BF0D3 /* Profit Management Calculator Tests-Prefix.pch */,
+				CEE9670418209395000BF0D3 /* SalesManagementCalculator Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -425,9 +425,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE9DD9B617661EF10073C460 /* Profit Management Calculator */ = {
+		CE9DD9B617661EF10073C460 /* SalesManagementCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management Calculator" */;
+			buildConfigurationList = CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "SalesManagementCalculator" */;
 			buildPhases = (
 				CE9DD9B317661EF10073C460 /* Sources */,
 				CE9DD9B417661EF10073C460 /* Frameworks */,
@@ -437,14 +437,14 @@
 			);
 			dependencies = (
 			);
-			name = "Profit Management Calculator";
+			name = SalesManagementCalculator;
 			productName = "Project Management Calculator";
-			productReference = CE9DD9B717661EF10073C460 /* Profit Management Calculator.app */;
+			productReference = CE9DD9B717661EF10073C460 /* SalesManagementCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE9DD9E717661EF20073C460 /* Profit Management CalculatorTests */ = {
+		CE9DD9E717661EF20073C460 /* SalesManagementCalculatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management CalculatorTests" */;
+			buildConfigurationList = CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "SalesManagementCalculatorTests" */;
 			buildPhases = (
 				CE9DD9E317661EF20073C460 /* Sources */,
 				CE9DD9E417661EF20073C460 /* Frameworks */,
@@ -456,14 +456,14 @@
 			dependencies = (
 				CE9DD9EF17661EF20073C460 /* PBXTargetDependency */,
 			);
-			name = "Profit Management CalculatorTests";
+			name = SalesManagementCalculatorTests;
 			productName = "Project Management CalculatorTests";
-			productReference = CE9DD9E817661EF20073C460 /* Profit Management CalculatorTests.octest */;
+			productReference = CE9DD9E817661EF20073C460 /* SalesManagementCalculatorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		CEE966F618209394000BF0D3 /* Profit Management Calculator Tests */ = {
+		CEE966F618209394000BF0D3 /* SalesManagementCalculator Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEE9670718209395000BF0D3 /* Build configuration list for PBXNativeTarget "Profit Management Calculator Tests" */;
+			buildConfigurationList = CEE9670718209395000BF0D3 /* Build configuration list for PBXNativeTarget "SalesManagementCalculator Tests" */;
 			buildPhases = (
 				CEE966F318209394000BF0D3 /* Sources */,
 				CEE966F418209394000BF0D3 /* Frameworks */,
@@ -474,9 +474,9 @@
 			dependencies = (
 				CEE9670618209395000BF0D3 /* PBXTargetDependency */,
 			);
-			name = "Profit Management Calculator Tests";
+			name = "SalesManagementCalculator Tests";
 			productName = "Profit Management Calculator Tests";
-			productReference = CEE966F718209395000BF0D3 /* Profit Management Calculator Tests.xctest */;
+			productReference = CEE966F718209395000BF0D3 /* SalesManagementCalculator Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -494,7 +494,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Profit Management Calculator" */;
+			buildConfigurationList = CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "SalesManagementCalculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -506,9 +506,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE9DD9B617661EF10073C460 /* Profit Management Calculator */,
-				CE9DD9E717661EF20073C460 /* Profit Management CalculatorTests */,
-				CEE966F618209394000BF0D3 /* Profit Management Calculator Tests */,
+				CE9DD9B617661EF10073C460 /* SalesManagementCalculator */,
+				CE9DD9E717661EF20073C460 /* SalesManagementCalculatorTests */,
+				CEE966F618209394000BF0D3 /* SalesManagementCalculator Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -624,12 +624,12 @@
 /* Begin PBXTargetDependency section */
 		CE9DD9EF17661EF20073C460 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE9DD9B617661EF10073C460 /* Profit Management Calculator */;
+			target = CE9DD9B617661EF10073C460 /* SalesManagementCalculator */;
 			targetProxy = CE9DD9EE17661EF20073C460 /* PBXContainerItemProxy */;
 		};
 		CEE9670618209395000BF0D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE9DD9B617661EF10073C460 /* Profit Management Calculator */;
+			target = CE9DD9B617661EF10073C460 /* SalesManagementCalculator */;
 			targetProxy = CEE9670518209395000BF0D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -740,15 +740,15 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Project Management Calculator/Profit Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management Calculator/Profit Management Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
+				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
-				PRODUCT_NAME = "Profit Management Calculator";
+				PRODUCT_NAME = SalesManagementCalculator;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -759,15 +759,15 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Project Management Calculator/Profit Management Calculator-Prefix.pch";
-				INFOPLIST_FILE = "Project Management Calculator/Profit Management Calculator-Info.plist";
+				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
+				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
-				PRODUCT_NAME = "Profit Management Calculator";
+				PRODUCT_NAME = SalesManagementCalculator;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -784,7 +784,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management CalculatorTests/Profit Management CalculatorTests-Info.plist";
-				PRODUCT_NAME = "Profit Management CalculatorTests";
+				PRODUCT_NAME = SalesManagementCalculatorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -801,7 +801,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/Project Management Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management CalculatorTests/Profit Management CalculatorTests-Info.plist";
-				PRODUCT_NAME = "Profit Management CalculatorTests";
+				PRODUCT_NAME = SalesManagementCalculatorTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -822,7 +822,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Profit Management Calculator Tests/Profit Management Calculator Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Profit Management Calculator Tests/SalesManagementCalculator Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -831,9 +831,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Profit Management Calculator Tests/Profit Management Calculator Tests-Info.plist";
+				INFOPLIST_FILE = "Profit Management Calculator Tests/SalesManagementCalculator Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SalesManagementCalculator Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -855,14 +855,14 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Profit Management Calculator Tests/Profit Management Calculator Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Profit Management Calculator Tests/SalesManagementCalculator Tests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Profit Management Calculator Tests/Profit Management Calculator Tests-Info.plist";
+				INFOPLIST_FILE = "Profit Management Calculator Tests/SalesManagementCalculator Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SalesManagementCalculator Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -871,7 +871,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "Profit Management Calculator" */ = {
+		CE9DD9B217661EF10073C460 /* Build configuration list for PBXProject "SalesManagementCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9F917661EF20073C460 /* Debug */,
@@ -880,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management Calculator" */ = {
+		CE9DD9FB17661EF20073C460 /* Build configuration list for PBXNativeTarget "SalesManagementCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9FC17661EF20073C460 /* Debug */,
@@ -889,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "Profit Management CalculatorTests" */ = {
+		CE9DD9FE17661EF20073C460 /* Build configuration list for PBXNativeTarget "SalesManagementCalculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9DD9FF17661EF20073C460 /* Debug */,
@@ -898,7 +898,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEE9670718209395000BF0D3 /* Build configuration list for PBXNativeTarget "Profit Management Calculator Tests" */ = {
+		CEE9670718209395000BF0D3 /* Build configuration list for PBXNativeTarget "SalesManagementCalculator Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEE9670818209395000BF0D3 /* Debug */,
