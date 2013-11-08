@@ -828,30 +828,10 @@
         <image name="infobutton.png" width="50" height="50"/>
         <image name="negativepositive.png" width="45" height="45"/>
         <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
         <image name="operandCircle.png" width="46" height="44"/>
-        <image name="operandCircle.png" width="46" height="44"/>
-        <image name="operandCircle.png" width="46" height="44"/>
-        <image name="operandCircle.png" width="46" height="44"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
         <image name="salessquares.png" width="72" height="33"/>
         <image name="save-icon.png" width="200" height="200"/>
         <image name="sqrt.png" width="44" height="45"/>
-        <image name="suboperandcircle.png" width="51" height="50"/>
-        <image name="suboperandcircle.png" width="51" height="50"/>
         <image name="suboperandcircle.png" width="51" height="50"/>
         <image name="swipeCircle.png" width="75" height="75"/>
     </resources>
