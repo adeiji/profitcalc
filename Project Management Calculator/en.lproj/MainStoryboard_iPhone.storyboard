@@ -264,7 +264,7 @@
                                     <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="UTv-DB-MV9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEh-BX-ie8" customClass="NumberButtons">
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEh-BX-ie8" customClass="NumberButtons">
                                 <rect key="frame" x="113" y="247" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="OXK-7m-Ayi"/>
@@ -278,7 +278,7 @@
                                     <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="VC8-dG-Tim"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="21" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-x9-ssj" customClass="NumberButtons">
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-x9-ssj" customClass="NumberButtons">
                                 <rect key="frame" x="7" y="105" width="50" height="134"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="c/ce" backgroundImage="cesquare.png">
@@ -488,7 +488,7 @@
                                     <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="CCY-Bh-WcJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="24" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-3n-kbb" customClass="NumberButtons">
+                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-3n-kbb" customClass="NumberButtons">
                                 <rect key="frame" x="77" y="107" width="70" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DNV-Cp-cCR"/>
@@ -504,7 +504,7 @@
                                     <action selector="costButtonPressed:" destination="21" eventType="touchUpInside" id="SU6-vM-7au"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="26" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-XV-L46" customClass="NumberButtons">
+                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-XV-L46" customClass="NumberButtons">
                                 <rect key="frame" x="158" y="107" width="70" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="K4T-3n-Gjg"/>
@@ -529,7 +529,7 @@
                                     <action selector="marginButtonPressed:" destination="21" eventType="touchUpInside" id="fo2-62-ssO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="23" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxF-PM-SQu" customClass="NumberButtons">
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxF-PM-SQu" customClass="NumberButtons">
                                 <rect key="frame" x="158" y="181" width="70" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="mar" backgroundImage="salessquares.png">
@@ -540,7 +540,7 @@
                                     <action selector="salebuttonPressed:" destination="21" eventType="touchUpInside" id="nJW-nu-QOv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="25" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-RV-iA5" customClass="NumberButtons">
+                            <button opaque="NO" tag="25" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-RV-iA5" customClass="NumberButtons">
                                 <rect key="frame" x="77" y="181" width="70" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0tw-bF-1Z5"/>
@@ -610,7 +610,7 @@
                                     <action selector="memoryButtonPressed:" destination="21" eventType="touchUpInside" id="WRE-Kh-I1w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
                                 <rect key="frame" x="65" y="54" width="245" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="8yJ-1g-pId"/>
@@ -827,29 +827,10 @@
         <image name="infobutton.png" width="50" height="50"/>
         <image name="negativepositive.png" width="45" height="45"/>
         <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
-        <image name="numbersquares.png" width="81" height="56"/>
         <image name="operandCircle.png" width="46" height="44"/>
-        <image name="operandCircle.png" width="46" height="44"/>
-        <image name="operandCircle.png" width="46" height="44"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
-        <image name="salessquares.png" width="72" height="33"/>
         <image name="salessquares.png" width="72" height="33"/>
         <image name="save-icon.png" width="200" height="200"/>
         <image name="sqrt.png" width="44" height="45"/>
-        <image name="suboperandcircle.png" width="51" height="50"/>
-        <image name="suboperandcircle.png" width="51" height="50"/>
         <image name="suboperandcircle.png" width="51" height="50"/>
         <image name="subtract.png" width="46" height="44"/>
         <image name="swipeCircle.png" width="75" height="75"/>
