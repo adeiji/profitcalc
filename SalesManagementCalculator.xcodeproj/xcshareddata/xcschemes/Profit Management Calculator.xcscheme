@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE9DD9B617661EF10073C460"
-               BuildableName = "Profit Management Calculator.app"
+               BuildableName = "SalesManagementCalculator.app"
                BlueprintName = "SalesManagementCalculator"
                ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE9DD9E717661EF20073C460"
-               BuildableName = "Profit Management CalculatorTests.octest"
+               BuildableName = "SalesManagementCalculatorTests.octest"
                BlueprintName = "SalesManagementCalculatorTests"
                ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEE966F618209394000BF0D3"
-               BuildableName = "Profit Management Calculator Tests.xctest"
+               BuildableName = "SalesManagementCalculator Tests.xctest"
                BlueprintName = "SalesManagementCalculator Tests"
                ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE9DD9E717661EF20073C460"
-               BuildableName = "Profit Management CalculatorTests.octest"
+               BuildableName = "SalesManagementCalculatorTests.octest"
                BlueprintName = "SalesManagementCalculatorTests"
                ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
             </BuildableReference>
@@ -71,7 +71,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEE966F618209394000BF0D3"
-               BuildableName = "Profit Management Calculator Tests.xctest"
+               BuildableName = "SalesManagementCalculator Tests.xctest"
                BlueprintName = "SalesManagementCalculator Tests"
                ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
             </BuildableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE9DD9B617661EF10073C460"
-            BuildableName = "Profit Management Calculator.app"
+            BuildableName = "SalesManagementCalculator.app"
             BlueprintName = "SalesManagementCalculator"
             ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
          </BuildableReference>
@@ -100,7 +100,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE9DD9B617661EF10073C460"
-            BuildableName = "Profit Management Calculator.app"
+            BuildableName = "SalesManagementCalculator.app"
             BlueprintName = "SalesManagementCalculator"
             ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
          </BuildableReference>
@@ -118,7 +118,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE9DD9B617661EF10073C460"
-            BuildableName = "Profit Management Calculator.app"
+            BuildableName = "SalesManagementCalculator.app"
             BlueprintName = "SalesManagementCalculator"
             ReferencedContainer = "container:SalesManagementCalculator.xcodeproj">
          </BuildableReference>

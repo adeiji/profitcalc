@@ -16,6 +16,7 @@
 		CE3992731805F7DC003AE30B /* divide-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3992721805F7DC003AE30B /* divide-small.png */; };
 		CE45808D17E0E87A00AD07E9 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE45808C17E0E87A00AD07E9 /* HelpView.xib */; };
 		CE45809017E0EA2600AD07E9 /* FTWHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */; };
+		CE492A2118319D86002A6197 /* subtract.png in Resources */ = {isa = PBXBuildFile; fileRef = CE492A2018319D86002A6197 /* subtract.png */; };
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
 		CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9A071717860FFC00B8BB11 /* FTWOperands.m */; };
 		CE9DD9BB17661EF10073C460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9DD9BA17661EF10073C460 /* UIKit.framework */; };
@@ -99,6 +100,7 @@
 		CE45808C17E0E87A00AD07E9 /* HelpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpView.xib; path = ../HelpView.xib; sourceTree = "<group>"; };
 		CE45808E17E0EA2600AD07E9 /* FTWHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWHelpViewController.h; sourceTree = "<group>"; };
 		CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWHelpViewController.m; sourceTree = "<group>"; };
+		CE492A2018319D86002A6197 /* subtract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtract.png; sourceTree = "<group>"; };
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9A071617860FFC00B8BB11 /* FTWOperands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWOperands.h; sourceTree = "<group>"; };
 		CE9A071717860FFC00B8BB11 /* FTWOperands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWOperands.m; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		CEF9D85217C6F8EC002457DF /* UI Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE492A2018319D86002A6197 /* subtract.png */,
 				CEE966EF18208F18000BF0D3 /* save-icon.png */,
 				CEE966F018208F18000BF0D3 /* Settings-outline.png */,
 				CEE966ED18208D97000BF0D3 /* infobutton.png */,
@@ -525,6 +528,7 @@
 				CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */,
 				CEE966F218208F18000BF0D3 /* Settings-outline.png in Resources */,
 				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
+				CE492A2118319D86002A6197 /* subtract.png in Resources */,
 				CEF9D83117C6B618002457DF /* operandCircle.png in Resources */,
 				CEE966F118208F18000BF0D3 /* save-icon.png in Resources */,
 				CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */,
