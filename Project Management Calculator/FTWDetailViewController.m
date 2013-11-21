@@ -13,6 +13,7 @@
 #import "FTWMasterViewController.h"
 #import "FTWDataLayer.h"
 #import "FTWHelpViewController.h"
+#import "NumberButtons.h"
 
 @interface FTWDetailViewController ( )
 {
@@ -45,6 +46,11 @@
 
 @synthesize lblDetailDescription;
 @synthesize lblNumberType;
+@synthesize functionViews = __functionViews;
+@synthesize numberViews = __numberViews;
+@synthesize mainOperandViews = __mainOperandViews;
+@synthesize subOperandViews = __subOperandViews;
+@synthesize clearButton = __clearButton;
 
 #pragma mark - Managing the detail item
 
@@ -86,7 +92,39 @@
     [self configureView];
     
     helpViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"HelpViewController"];
+    
+    [self setButtonBorders];
+}
+
+- (void) setButtonBorders
+{
+    for (UIView *view in __functionViews.subviews)
+    {
+        view.layer.borderWidth = 2.0f;
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+        view.layer.cornerRadius = 10;
     }
+    for (UIView *view in __numberViews.subviews)
+    {
+        view.layer.borderWidth = 2.0f;
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+        view.layer.cornerRadius = 10;
+    }
+    for (UIView *view in __subOperandViews.subviews)
+    {
+        view.backgroundColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0];
+        view.layer.cornerRadius = 21;
+    }
+    for (UIView *view in __mainOperandViews.subviews)
+    {
+        view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
+        view.layer.cornerRadius = 25;
+    }
+    
+    __clearButton.layer.cornerRadius = 10.0f;
+    __clearButton.layer.borderWidth = 2.0f;
+    __clearButton.layer.borderColor = [UIColor colorWithRed:0.086 green:0.627 blue:0.522 alpha:1.0].CGColor;
+}
 
 - (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
 {
