@@ -102,13 +102,13 @@
     {
         view.layer.borderWidth = 2.0f;
         view.layer.borderColor = [UIColor blackColor].CGColor;
-        view.layer.cornerRadius = 10;
+        view.layer.cornerRadius = 7;
     }
     for (UIView *view in __numberViews.subviews)
     {
         view.layer.borderWidth = 2.0f;
         view.layer.borderColor = [UIColor blackColor].CGColor;
-        view.layer.cornerRadius = 10;
+        view.layer.cornerRadius = 7;
     }
     for (UIView *view in __subOperandViews.subviews)
     {
@@ -121,7 +121,7 @@
         view.layer.cornerRadius = 25;
     }
     
-    __clearButton.layer.cornerRadius = 10.0f;
+    __clearButton.layer.cornerRadius = 7.0f;
     __clearButton.layer.borderWidth = 2.0f;
     __clearButton.layer.borderColor = [UIColor colorWithRed:0.086 green:0.627 blue:0.522 alpha:1.0].CGColor;
 }
