@@ -492,6 +492,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Ade;
 				TargetAttributes = {
+					CE9DD9B617661EF10073C460 = {
+						DevelopmentTeam = HJPTQ3N75W;
+					};
 					CEE966F618209394000BF0D3 = {
 						TestTargetID = CE9DD9B617661EF10073C460;
 					};
@@ -743,6 +746,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
@@ -753,6 +758,7 @@
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -762,6 +768,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
@@ -772,6 +780,7 @@
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
