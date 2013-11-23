@@ -865,14 +865,14 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSDate *myDate = [NSDate date];
     NSString *dateString = [dateFormatter stringFromDate:myDate];
     
     FTWDataLayer *dataLayer = [[FTWDataLayer alloc] init:self.managedObjectContext];
     dataLayer.fetchedResultsController = self.fetchedResultsController;
     
-    [dataLayer SaveContext:[NSString stringWithFormat:@"SELL = %g\nCOST = %g\nMARGIN = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
+    [dataLayer SaveContext:[NSString stringWithFormat:@"SEL = %g\nCST = %g\nMAR = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
