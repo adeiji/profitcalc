@@ -51,6 +51,7 @@
 @synthesize mainOperandViews = __mainOperandViews;
 @synthesize subOperandViews = __subOperandViews;
 @synthesize clearButton = __clearButton;
+@synthesize lblMemory = __lblMemory;
 
 #pragma mark - Managing the detail item
 
@@ -81,6 +82,7 @@
     previousNumber = NAN;
     currentNumber = NAN;
     lblNumberType.text = @"";
+    __lblMemory.text = @"";
     newNumber = @"";
     UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
     
@@ -117,7 +119,14 @@
     }
     for (UIView *view in __mainOperandViews.subviews)
     {
-        view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
+        if (view.tag == EQUALSBUTTON)
+        {
+            view.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1.0];
+        }
+        else
+        {
+            view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
+        }
         view.layer.cornerRadius = 25;
     }
     
@@ -208,7 +217,10 @@
     if (state == OPERANDPRESSEDLAST || state == EQUALSPRESSEDLAST || state == MEMORYBUTTONPRESSEDLAST)
     {
         lblDetailDescription.text = @"";
+
         lblNumberType.text = @"";
+    
+        
         newNumber = @"";
     }
     if (button.tag < 10)    //IS A NUMBER BUTTON
@@ -681,8 +693,9 @@
     if (numTimesClearPressed == 1)
     {
         lblDetailDescription.text = @"";
-        
+
         lblNumberType.text = @"";
+        
         newNumber = @"";
     
         if (equalPressed == TRUE)
@@ -803,7 +816,7 @@
         {
             storedValue = 0;
             lblDetailDescription.text = @"";
-            lblNumberType.text = @"";
+            __lblMemory.text = @"";
             newNumber = @"";
         }
         else
@@ -813,7 +826,7 @@
             mrcPressed = true;
             
             [numberList addObject:[[NSNumber alloc]initWithDouble:storedValue]];
-            lblNumberType.text = @"M";
+            __lblMemory.text = @"M";
         }
     }
     else if (button.tag == MEMORYREMOVEBUTTON)
@@ -823,7 +836,7 @@
         //[self performOperation:true:true];
         storedValue = storedValue - [lblDetailDescription.text doubleValue];
         lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
-        lblNumberType.text = @"M";
+        __lblMemory.text = @"M";
     }
     else if (button.tag == MEMORYADDBUTTON)
     {
@@ -832,7 +845,7 @@
        // [self performOperation:true:true];
         storedValue = storedValue + [lblDetailDescription.text doubleValue];
         lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
-        lblNumberType.text = @"M";
+        __lblMemory.text = @"M";
     }
     
     state = MEMORYBUTTONPRESSEDLAST;

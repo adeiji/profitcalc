@@ -69,6 +69,7 @@ typedef enum
 
 @property (strong, nonatomic) IBOutlet UILabel *lblDetailDescription;
 @property (strong, nonatomic) IBOutlet UILabel *lblNumberType;
+@property (strong, nonatomic) IBOutlet UILabel *lblMemory;
 
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
