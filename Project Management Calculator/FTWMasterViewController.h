@@ -20,6 +20,8 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 - (IBAction)buttonTouched:(id)sender;
 - (IBAction)buttonMoved:(id)sender withEvent:(UIEvent *) event;
+- (IBAction)gotoCalculator:(id)sender;
+- (IBAction)clearAll:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *swipeButton;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

@@ -52,6 +52,7 @@
 @synthesize subOperandViews = __subOperandViews;
 @synthesize clearButton = __clearButton;
 @synthesize lblMemory = __lblMemory;
+@synthesize helpButton = __helpButton;
 
 #pragma mark - Managing the detail item
 
@@ -133,6 +134,11 @@
     __clearButton.layer.cornerRadius = 7.0f;
     __clearButton.layer.borderWidth = 2.0f;
     __clearButton.layer.borderColor = [UIColor colorWithRed:0.086 green:0.627 blue:0.522 alpha:1.0].CGColor;
+    
+    __helpButton.layer.cornerRadius = 13.0f;
+    __helpButton.layer.borderWidth = 1;
+    __helpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    __helpButton.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1.0];
 }
 
 - (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
@@ -740,6 +746,7 @@
     {
         if (salesPrice != 0)
         {
+            marginToSave = [lblDetailDescription.text doubleValue];
             cost = salesPrice - ( salesPrice * ([lblDetailDescription.text doubleValue] / 100));
             lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", cost];
             lblNumberType.text = @"CST";
@@ -747,6 +754,7 @@
             [numberList addObject:[[NSNumber alloc] initWithDouble:cost ]];
             
             costToSave = cost;
+            sellToSave = salesPrice;
         }
     }
 }
@@ -770,6 +778,7 @@
     {
         if (cost != 0)
         {
+            marginToSave = [lblDetailDescription.text doubleValue];
             salesPrice = cost / (1 - ([lblDetailDescription.text doubleValue] / 100));
             lblNumberType.text = @"SEL";
             //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
@@ -778,6 +787,7 @@
             [numberList addObject:[[NSNumber alloc] initWithDouble:salesPrice ]];
             
             sellToSave = salesPrice;
+            costToSave = cost;
         }
     }
 }
@@ -796,6 +806,7 @@
     }
     else if (button.tag == MARSELBUTTON)  //MAR pressed
     {
+        sellToSave = [lblDetailDescription.text doubleValue];
         margin = (1 - (cost / ([lblDetailDescription.text doubleValue]))) * 100;
         lblNumberType.text = @"MAR";
         //salesPrice = cost - ( cost * ([lblDetailDescription.text doubleValue] / 100));
@@ -804,6 +815,7 @@
         [numberList addObject:[[NSNumber alloc] initWithDouble:margin ]];
         
         marginToSave = margin;
+        costToSave = cost;
     }
 }
 //Handle adding and removing, and manipulating the values that are stored in memory

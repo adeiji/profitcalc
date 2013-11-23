@@ -83,6 +83,7 @@ typedef enum
 
 @property (strong, nonatomic) FTWMasterViewController *calculationsTable;
 
+@property (strong, nonatomic) IBOutlet UIButton *helpButton;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
 @property (strong, nonatomic) IBOutlet UIView *subOperandViews;
 @property (strong, nonatomic) IBOutlet UIView *mainOperandViews;

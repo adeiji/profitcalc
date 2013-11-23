@@ -270,6 +270,35 @@ static const NSInteger xCoord = 50;
     }
     
 }
+
+- (IBAction)gotoCalculator:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (IBAction)clearAll:(id)sender {
+    
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
+    
+    NSArray * result = [context executeFetchRequest:fetch error:nil];
+    
+    for (id calculation in result)
+    {
+        [context deleteObject:calculation];
+    }
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 - (IBAction)buttonReleased:(id)sender withEvent:(UIEvent *) event {
     UIControl *control = sender;
     CGPoint controlPoint = control.center;
