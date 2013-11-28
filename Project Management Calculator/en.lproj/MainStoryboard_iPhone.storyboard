@@ -245,8 +245,12 @@
                                     <action selector="btnClearPressed:" destination="21" eventType="touchUpInside" id="183-Y4-1bg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-QX-4Uo">
                                 <rect key="frame" x="6" y="58" width="258" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="GdG-UL-X8l"/>
+                                    <constraint firstAttribute="height" constant="70" id="ezU-78-eev"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -280,7 +284,7 @@
                                     <segue destination="LCg-Na-eZc" kind="push" id="1lU-H3-rn1"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-84-zLm" userLabel="functionViews">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-84-zLm" userLabel="functionViews">
                                 <rect key="frame" x="5" y="128" width="260" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -351,8 +355,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="ZGG-i5-UQv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="fFC-l2-ieX"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-fM-KsB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-fM-KsB">
                                 <rect key="frame" x="5" y="319" width="257" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -478,8 +486,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="Plb-R3-yaH"/>
+                                    <constraint firstAttribute="width" constant="257" id="Xza-dj-qdM"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pem-1V-AmD" userLabel="mainOperandViews">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pem-1V-AmD" userLabel="mainOperandViews">
                                 <rect key="frame" x="263" y="260" width="50" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -538,8 +550,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="tL4-L7-Ddl"/>
+                                    <constraint firstAttribute="width" constant="50" id="zJd-0N-cb6"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-P0-qOe" userLabel="subOperandViews">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-P0-qOe" userLabel="subOperandViews">
                                 <rect key="frame" x="7" y="267" width="258" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -597,6 +613,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="UHh-mD-qNP"/>
+                                    <constraint firstAttribute="width" constant="258" id="XqI-mH-xrl"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LKt-uK-fyL">
                                 <rect key="frame" x="7" y="126" width="302" height="2"/>
@@ -620,6 +640,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="38" id="EZT-o1-d3x"/>
+                            <constraint firstItem="Pv1-fM-KsB" firstAttribute="bottom" secondItem="pem-1V-AmD" secondAttribute="bottom" id="NFX-Kk-hbs"/>
+                            <constraint firstItem="Pv1-fM-KsB" firstAttribute="top" secondItem="xHc-P0-qOe" secondAttribute="bottom" constant="10" id="WKa-Bi-M57"/>
+                            <constraint firstItem="lVn-ux-07N" firstAttribute="top" secondItem="Pv1-fM-KsB" secondAttribute="bottom" constant="3" id="bKI-X9-7qD"/>
+                            <constraint firstItem="Pv1-fM-KsB" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="5" id="iU7-2U-W2t"/>
+                            <constraint firstItem="xHc-P0-qOe" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="7" id="l9p-rP-KBB"/>
+                            <constraint firstAttribute="trailing" secondItem="pem-1V-AmD" secondAttribute="trailing" constant="7" id="pEe-dQ-UIK"/>
+                            <constraint firstItem="xHc-P0-qOe" firstAttribute="top" secondItem="NYg-84-zLm" secondAttribute="bottom" constant="-8" id="rra-qR-ffU"/>
+                            <constraint firstItem="XTj-QX-4Uo" firstAttribute="leading" secondItem="NYg-84-zLm" secondAttribute="leading" constant="1" id="uXE-BF-mSR"/>
+                            <constraint firstItem="NYg-84-zLm" firstAttribute="top" secondItem="XTj-QX-4Uo" secondAttribute="bottom" id="v5W-dm-7tc"/>
+                            <constraint firstItem="Pv1-fM-KsB" firstAttribute="leading" secondItem="NYg-84-zLm" secondAttribute="leading" id="xfr-aE-6KU"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Project Management Calculator" id="26">

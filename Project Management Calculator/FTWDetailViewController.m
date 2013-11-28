@@ -103,9 +103,9 @@
 {
     for (UIView *view in __functionViews.subviews)
     {
+        view.layer.cornerRadius = 7;
         view.layer.borderWidth = 2.0f;
         view.layer.borderColor = [UIColor blackColor].CGColor;
-        view.layer.cornerRadius = 7;
     }
     for (UIView *view in __numberViews.subviews)
     {
@@ -115,27 +115,37 @@
     }
     for (UIView *view in __subOperandViews.subviews)
     {
-        view.backgroundColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0];
-        view.layer.cornerRadius = 21;
-    }
-    for (UIView *view in __mainOperandViews.subviews)
-    {
-        if (view.tag == EQUALSBUTTON)
-        {
-            view.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1.0];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            view.layer.cornerRadius = view.layer.frame.size.width / 2;
         }
         else
         {
-            view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
+            view.layer.cornerRadius = 21;
         }
-        view.layer.cornerRadius = 25;
+        
+        view.backgroundColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0];
+    }
+    for (UIView *view in __mainOperandViews.subviews)
+    {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            view.layer.cornerRadius = 52.5;
+        }
+        else
+        {
+            view.layer.cornerRadius = 25;
+        }
+
+        view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
     }
     
     __clearButton.layer.cornerRadius = 7.0f;
     __clearButton.layer.borderWidth = 2.0f;
-    __clearButton.layer.borderColor = [UIColor colorWithRed:0.086 green:0.627 blue:0.522 alpha:1.0].CGColor;
+    __clearButton.layer.borderColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0].CGColor;
     
-    __helpButton.layer.cornerRadius = 13.0f;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        __helpButton.layer.cornerRadius = 20.0f;
+    }
+    
     __helpButton.layer.borderWidth = 1;
     __helpButton.layer.borderColor = [UIColor whiteColor].CGColor;
     __helpButton.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1.0];
