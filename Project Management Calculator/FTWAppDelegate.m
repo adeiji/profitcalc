@@ -22,10 +22,8 @@
 {
     [TestFlight takeOff:@"6d7efa7c-5a99-45c8-a345-88b84f22be60"];
     
-    FTWCoreDataSingleton *coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
-    coreDataSingleton.managedObjectContext = self.managedObjectContext;
+    ((FTWCoreDataSingleton *)[FTWCoreDataSingleton sharedCoreDataObject]).managedObjectContext = self.managedObjectContext;
     
-//    [coreDataSingleton insertDate];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 

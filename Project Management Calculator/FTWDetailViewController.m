@@ -36,7 +36,6 @@
     double sellToSave;
     FTWHelpViewController *helpViewController;
     NSString *newNumber;
-    FTWCoreDataSingleton *coreDataSingleton;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -77,6 +76,13 @@ static const NSInteger xCoord = 50;
     }        
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.fetchedResultsController = [[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController];
+}
+
 - (void)viewDidLoad
 {
     numberList = [[NSMutableArray alloc] init];
@@ -104,7 +110,7 @@ static const NSInteger xCoord = 50;
     helpViewController = [[UIStoryboard storyboardWithName:MAINSTORYBOARD_IPHONE bundle:nil] instantiateViewControllerWithIdentifier:@"HelpViewController"];
     
     [self setButtonBorders];
-    coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
+    
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.calculationsTable = [[UIStoryboard storyboardWithName:MAINSTORYBOARD_IPAD bundle:nil] instantiateViewControllerWithIdentifier:@"CalculationsTable"];
@@ -112,9 +118,6 @@ static const NSInteger xCoord = 50;
     else{
         self.calculationsTable = [[UIStoryboard storyboardWithName:MAINSTORYBOARD_IPHONE bundle:nil] instantiateViewControllerWithIdentifier:@"CalculationsTable"];
     }
-    
-    
-    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
 }
 
 - (void) setButtonBorders
@@ -900,7 +903,7 @@ static const NSInteger xCoord = 50;
 //    FTWDataLayer *dataLayer = [[FTWDataLayer alloc] init:self.managedObjectContext];
 //    dataLayer.fetchedResultsController = self.fetchedResultsController;
     
-    [coreDataSingleton SaveContext:[NSString stringWithFormat:@"SEL = %g\nCST = %g\nMAR = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
+    [FTWCoreDataSingleton SaveContext:[NSString stringWithFormat:@"SEL = %g\nCST = %g\nMAR = %g", sellToSave, costToSave, marginToSave] dateString:dateString Context:[[FTWCoreDataSingleton sharedCoreDataObject] managedObjectContext]];
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
@@ -995,7 +998,7 @@ static const NSInteger xCoord = 50;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] objectAtIndexPath:indexPath];
         self.detailItem = object;
     }
 }
@@ -1004,7 +1007,7 @@ static const NSInteger xCoord = 50;
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
@@ -1104,8 +1107,7 @@ static const NSInteger xCoord = 50;
 
 - (IBAction)clearAll:(id)sender {
     //Clear everything in the fetchedresultscontroller
-    [coreDataSingleton clearAll];
-    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
+    [[FTWCoreDataSingleton sharedCoreDataObject] clearAll];
 }
 
 - (IBAction)buttonReleased:(id)sender withEvent:(UIEvent *) event {

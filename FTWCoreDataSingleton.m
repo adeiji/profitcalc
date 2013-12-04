@@ -28,7 +28,6 @@
 - (id) init {
     if (self = [super init]) {
         //Get the fetched results controller.
-        
     }
     
     return self;
@@ -96,10 +95,10 @@
 
 }
 
-- (void) SaveContext : (NSString *) calculationString
++ (void) SaveContext : (NSString *) calculationString
           dateString : (NSString *) dateString
+             Context : (NSManagedObjectContext *) context
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSManagedObject *calculation;
     calculation = [NSEntityDescription insertNewObjectForEntityForName:@"Calculations" inManagedObjectContext:context];
     

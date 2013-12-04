@@ -18,7 +18,8 @@
 - (NSFetchedResultsController *) fetchedResultsController;
 - (void) clearAll;
 
-- (void) SaveContext : (NSString *) calculationString
-          dateString : (NSString *) dateString;
++ (void) SaveContext : (NSString *) calculationString
+          dateString : (NSString *) dateString
+             Context : (NSManagedObjectContext *) context;
 
 @end

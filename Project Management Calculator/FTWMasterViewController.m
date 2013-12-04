@@ -12,9 +12,6 @@
 #import "FTWAppDelegate.h"
 
 @interface FTWMasterViewController ()
-{
-    FTWCoreDataSingleton *coreDataSingleton;
-}
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -39,6 +36,14 @@ static const NSInteger xCoord = 50;
     CGPoint controlPoint = control.center;
     controlPoint.x = xCoord;
     control.center = controlPoint;
+    
+    self.fetchedResultsController = [[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController];
+    
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
+    
+    NSArray * result = [context executeFetchRequest:fetch error:nil];
 }
 
 - (void)viewDidLoad
@@ -54,17 +59,6 @@ static const NSInteger xCoord = 50;
     [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
     [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    //Get the CoreDataSingleton object and then set this instances fetchedResultsController object to the singleton object's
-    coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
-    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
-    
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
-    
-    NSArray * result = [context executeFetchRequest:fetch error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,12 +72,12 @@ static const NSInteger xCoord = 50;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    return [[[[FTWCoreDataSingleton sharedCoreDataObject]  fetchedResultsController] sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] sections][section];
     
     return [sectionInfo numberOfObjects];
 }
@@ -126,7 +120,7 @@ static const NSInteger xCoord = 50;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] objectAtIndexPath:indexPath];
         self.detailViewController.detailItem = object;
     }
 }
@@ -135,7 +129,7 @@ static const NSInteger xCoord = 50;
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
@@ -204,7 +198,7 @@ static const NSInteger xCoord = 50;
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSManagedObject *object = [[[FTWCoreDataSingleton sharedCoreDataObject] fetchedResultsController] objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"calculation"] description];
 }
 
@@ -240,8 +234,7 @@ static const NSInteger xCoord = 50;
 
 - (IBAction)clearAll:(id)sender {
     //Clear everything in the fetchedresultscontroller
-    [coreDataSingleton clearAll];
-    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
+    [[FTWCoreDataSingleton sharedCoreDataObject] clearAll];
 }
 
 - (IBAction)buttonReleased:(id)sender withEvent:(UIEvent *) event {
