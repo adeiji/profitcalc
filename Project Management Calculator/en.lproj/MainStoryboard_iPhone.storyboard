@@ -288,8 +288,11 @@
                                 <rect key="frame" x="5" y="128" width="260" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-3n-kbb" userLabel="sel1">
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-3n-kbb" userLabel="sel1">
                                         <rect key="frame" x="2" y="8" width="80" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="vEu-VB-0au"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="sel">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,8 +335,11 @@
                                             <action selector="salebuttonPressed:" destination="21" eventType="touchUpInside" id="nJW-nu-QOv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="25" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-RV-iA5" userLabel="mar1">
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-RV-iA5" userLabel="mar1">
                                         <rect key="frame" x="2" y="68" width="80" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="f9D-Vq-I6U"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="mar">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -356,8 +362,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="5Gx-RV-iA5" firstAttribute="leading" secondItem="F3I-3n-kbb" secondAttribute="leading" id="25W-qf-kLG"/>
+                                    <constraint firstItem="F3I-3n-kbb" firstAttribute="top" secondItem="NYg-84-zLm" secondAttribute="top" constant="8" id="KsF-IC-dai"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Gx-RV-iA5" secondAttribute="bottom" constant="23" id="XgW-fV-N8g"/>
                                     <constraint firstAttribute="width" constant="260" id="ZGG-i5-UQv"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="fFC-l2-ieX"/>
+                                    <constraint firstItem="5Gx-RV-iA5" firstAttribute="leading" secondItem="NYg-84-zLm" secondAttribute="leading" constant="2" id="n57-zD-ck1"/>
+                                    <constraint firstItem="5Gx-RV-iA5" firstAttribute="height" secondItem="F3I-3n-kbb" secondAttribute="height" id="xeh-l9-YOm"/>
+                                    <constraint firstItem="5Gx-RV-iA5" firstAttribute="top" secondItem="F3I-3n-kbb" secondAttribute="bottom" constant="4" id="z5V-uj-B63"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-fM-KsB">

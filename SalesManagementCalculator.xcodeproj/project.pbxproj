@@ -17,6 +17,7 @@
 		CE45808D17E0E87A00AD07E9 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE45808C17E0E87A00AD07E9 /* HelpView.xib */; };
 		CE45809017E0EA2600AD07E9 /* FTWHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */; };
 		CE492A2118319D86002A6197 /* subtract.png in Resources */ = {isa = PBXBuildFile; fileRef = CE492A2018319D86002A6197 /* subtract.png */; };
+		CE6C5405184EE1A900AA9145 /* FTWCoreDataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C5404184EE1A900AA9145 /* FTWCoreDataSingleton.m */; };
 		CE75F0EA1846C79600E14DCB /* save-icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE75F0E91846C79600E14DCB /* save-icon-small.png */; };
 		CE9554031768E9650068A3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9554021768E9650068A3DE /* MobileCoreServices.framework */; };
 		CE9A071817860FFD00B8BB11 /* FTWOperands.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9A071717860FFC00B8BB11 /* FTWOperands.m */; };
@@ -102,6 +103,8 @@
 		CE45808E17E0EA2600AD07E9 /* FTWHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWHelpViewController.h; sourceTree = "<group>"; };
 		CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWHelpViewController.m; sourceTree = "<group>"; };
 		CE492A2018319D86002A6197 /* subtract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtract.png; sourceTree = "<group>"; };
+		CE6C5403184EE1A900AA9145 /* FTWCoreDataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWCoreDataSingleton.h; sourceTree = "<group>"; };
+		CE6C5404184EE1A900AA9145 /* FTWCoreDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWCoreDataSingleton.m; sourceTree = "<group>"; };
 		CE75F0E91846C79600E14DCB /* save-icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-icon-small.png"; sourceTree = "<group>"; };
 		CE9554021768E9650068A3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE9A071617860FFC00B8BB11 /* FTWOperands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWOperands.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 		CE9DD9AE17661EF10073C460 = {
 			isa = PBXGroup;
 			children = (
+				CE6C5403184EE1A900AA9145 /* FTWCoreDataSingleton.h */,
+				CE6C5404184EE1A900AA9145 /* FTWCoreDataSingleton.m */,
 				CE75F0E91846C79600E14DCB /* save-icon-small.png */,
 				CE014AEF17D6441E0032B9FF /* Profit Management Calculator.entitlements */,
 				CEF9D85C17C6F9B8002457DF /* Test Flight */,
@@ -601,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6C5405184EE1A900AA9145 /* FTWCoreDataSingleton.m in Sources */,
 				CE9DD9C917661EF20073C460 /* main.m in Sources */,
 				CE9DD9CD17661EF20073C460 /* FTWAppDelegate.m in Sources */,
 				CE9DD9DF17661EF20073C460 /* FTWMasterViewController.m in Sources */,
