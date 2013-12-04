@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "FTWMasterViewController.h"
 
-@interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
@@ -82,6 +82,7 @@ typedef enum
 - (IBAction)helpButtonPressed:(id)sender;
 
 @property (strong, nonatomic) FTWMasterViewController *calculationsTable;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) IBOutlet UIButton *helpButton;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
