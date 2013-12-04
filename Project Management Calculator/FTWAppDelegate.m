@@ -24,6 +24,7 @@
     
     FTWCoreDataSingleton *coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
     coreDataSingleton.managedObjectContext = self.managedObjectContext;
+    
 //    [coreDataSingleton insertDate];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {

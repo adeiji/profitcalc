@@ -9,6 +9,7 @@
 #import "FTWMasterViewController.h"
 #import "FTWCoreDataSingleton.h"
 #import "FTWDetailViewController.h"
+#import "FTWAppDelegate.h"
 
 @interface FTWMasterViewController ()
 {
@@ -58,6 +59,12 @@ static const NSInteger xCoord = 50;
     //Get the CoreDataSingleton object and then set this instances fetchedResultsController object to the singleton object's
     coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
     self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
+    
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
+    
+    NSArray * result = [context executeFetchRequest:fetch error:nil];
 }
 
 - (void)didReceiveMemoryWarning
