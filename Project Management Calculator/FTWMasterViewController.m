@@ -54,10 +54,10 @@ static const NSInteger xCoord = 50;
     [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     
+    
     //Get the CoreDataSingleton object and then set this instances fetchedResultsController object to the singleton object's
     coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
     self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,21 +66,17 @@ static const NSInteger xCoord = 50;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
-{
-    self.fetchedResultsController = [coreDataSingleton insertDate];
-}
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[coreDataSingleton.fetchedResultsController sections] count];
+    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [coreDataSingleton.fetchedResultsController sections][section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     
     return [sectionInfo numberOfObjects];
 }
