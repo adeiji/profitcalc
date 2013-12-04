@@ -10,6 +10,7 @@
 #import "TestFlight.h"
 #import "FTWMasterViewController.h"
 #import "FTWDetailViewController.h"
+#import "FTWCoreDataSingleton.h"
 
 @implementation FTWAppDelegate
 
@@ -21,27 +22,15 @@
 {
     [TestFlight takeOff:@"6d7efa7c-5a99-45c8-a345-88b84f22be60"];
     
+    FTWCoreDataSingleton *coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
+    coreDataSingleton.managedObjectContext = self.managedObjectContext;
+//    [coreDataSingleton insertDate];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-   //     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+
         UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
-//        splitViewController.delegate = (id)navigationController.topViewController;
-        
-  //      UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
-//        FTWMasterViewController *controller = (FTWMasterViewController *)masterNavigationController.topViewController;
-  //      controller.managedObjectContext = self.managedObjectContext;
     } else {
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        
-        FTWDetailViewController *controller = (FTWDetailViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-        
-        FTWMasterViewController *masterController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CalculationsTable"];
-
-//        masterController.detailViewController = controller;
-        
-        controller.calculationsTable = masterController;
-        masterController.managedObjectContext = self.managedObjectContext;
         
     }
     return YES;

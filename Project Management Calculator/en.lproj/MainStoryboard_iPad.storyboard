@@ -350,7 +350,7 @@
                                             <action selector="marginButtonPressed:" destination="4" eventType="touchUpInside" id="nZ1-Ra-qg6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Te4-b7-oCj" customClass="NumberButtons">
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Te4-b7-oCj" customClass="NumberButtons">
                                         <rect key="frame" x="9" y="124" width="130" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MAR">
@@ -361,7 +361,7 @@
                                             <action selector="costButtonPressed:" destination="4" eventType="touchUpInside" id="cF7-qF-4kj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KfG-8j-7Zt" customClass="NumberButtons">
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KfG-8j-7Zt" customClass="NumberButtons">
                                         <rect key="frame" x="147" y="124" width="130" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MAR">
@@ -415,7 +415,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vbn-uU-bAy">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Vbn-uU-bAy">
                                         <rect key="frame" x="0.0" y="22" width="223" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vbn-uU-bAy" id="kvB-RG-l1y">
@@ -432,6 +432,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4" id="miP-rC-Kom"/>
+                                    <outlet property="delegate" destination="4" id="Xbx-VP-n8y"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" id="96Y-cm-yie">
                                 <rect key="frame" x="0.0" y="64" width="223" height="61"/>
@@ -464,11 +468,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <action selector="helpButtonPressed:" destination="4" id="kQO-GJ-rXo"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="save-icon-small.png" id="M7w-1M-OSS">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="copyToClipboard:" destination="4" id="V1i-4L-ZyE"/>
+                                <action selector="saveButtonPressed:" destination="4" id="a5z-u2-8Ps"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -478,9 +485,12 @@
                         <outlet property="functionViews" destination="3yF-kp-2yF" id="WTw-FW-m8A"/>
                         <outlet property="helpButton" destination="BcQ-py-FLP" id="LrD-y7-OFJ"/>
                         <outlet property="lblDetailDescription" destination="1DQ-8c-bPT" id="E3q-ZG-i38"/>
+                        <outlet property="lblMemory" destination="j4b-Dm-D30" id="1rz-hv-cNx"/>
+                        <outlet property="lblNumberType" destination="D7u-Z6-MKd" id="9HJ-Ao-lqi"/>
                         <outlet property="mainOperandViews" destination="TnY-Mu-oyu" id="dcj-io-nWc"/>
                         <outlet property="numberViews" destination="tNb-bT-qnL" id="m6r-Zx-mjy"/>
                         <outlet property="subOperandViews" destination="df3-g9-vpl" id="QOX-Ht-o2L"/>
+                        <outlet property="tableView" destination="K7j-qc-PzO" id="oEf-sQ-hTu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>

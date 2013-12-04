@@ -7,11 +7,15 @@
 //
 
 #import "FTWMasterViewController.h"
-
+#import "FTWCoreDataSingleton.h"
 #import "FTWDetailViewController.h"
 
 @interface FTWMasterViewController ()
+{
+    FTWCoreDataSingleton *coreDataSingleton;
+}
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @implementation FTWMasterViewController
@@ -49,6 +53,11 @@ static const NSInteger xCoord = 50;
     [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
     [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //Get the CoreDataSingleton object and then set this instances fetchedResultsController object to the singleton object's
+    coreDataSingleton = [FTWCoreDataSingleton sharedCoreDataObject];
+    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,34 +68,20 @@ static const NSInteger xCoord = 50;
 
 - (void)insertNewObject:(id)sender
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"calculation"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    self.fetchedResultsController = [coreDataSingleton insertDate];
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    return [[coreDataSingleton.fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [coreDataSingleton.fetchedResultsController sections][section];
+    
     return [sectionInfo numberOfObjects];
 }
 
@@ -128,7 +123,7 @@ static const NSInteger xCoord = 50;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
         self.detailViewController.detailItem = object;
     }
 }
@@ -137,49 +132,12 @@ static const NSInteger xCoord = 50;
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        NSManagedObject *object = [[coreDataSingleton fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
 
 #pragma mark - Fetched results controller
-
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"calculation" ascending:NO];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	//    abort();
-	}
-    
-    return _fetchedResultsController;
-}    
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -278,25 +236,9 @@ static const NSInteger xCoord = 50;
 }
 
 - (IBAction)clearAll:(id)sender {
-    
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
-    [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
-    
-    NSArray * result = [context executeFetchRequest:fetch error:nil];
-    
-    for (id calculation in result)
-    {
-        [context deleteObject:calculation];
-    }
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    //Clear everything in the fetchedresultscontroller
+    [coreDataSingleton clearAll];
+    self.fetchedResultsController = coreDataSingleton.fetchedResultsController;
 }
 
 - (IBAction)buttonReleased:(id)sender withEvent:(UIEvent *) event {

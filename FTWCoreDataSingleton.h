@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FTWCoreDataSingleton : NSObject
+@interface FTWCoreDataSingleton : NSObject <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
++ (id) sharedCoreDataObject;
+- (NSFetchedResultsController *) insertDate;
+- (NSFetchedResultsController *) fetchedResultsController;
+- (void) clearAll;
+
+- (void) SaveContext : (NSString *) calculationString
+          dateString : (NSString *) dateString;
 
 @end

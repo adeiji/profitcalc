@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "FTWMasterViewController.h"
 
-@interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface FTWDetailViewController : UIViewController <UISplitViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) id detailItem;
 
@@ -91,6 +91,8 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UIView *numberViews;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 
 @end
