@@ -107,7 +107,7 @@
                                              selector:@selector(orientationChanged:)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
-    
+    self.landscapeView = [[[NSBundle mainBundle] loadNibNamed:@"LandscapeView" owner:self options:nil] objectAtIndex:0];
 }
 
 - (void) editMainFunctionConstraints
@@ -128,20 +128,21 @@
         NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:button
                                                                             attribute:NSLayoutAttributeHeight
                                                                             relatedBy:0
-                                                                               toItem:nil
+                                                                               toItem:self.equalsButton
                                                                             attribute:NSLayoutAttributeHeight
                                                                            multiplier:1.0
-                                                                             constant:45.0];
+                                                                             constant:-3.0];
         
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:button
                                                                            attribute:NSLayoutAttributeWidth
                                                                            relatedBy:0
-                                                                              toItem:nil
-                                                                           attribute:NSLayoutAttributeWidth
+                                                                              toItem:button
+                                                                           attribute:NSLayoutAttributeHeight
                                                                           multiplier:1.0
-                                                                            constant:45.0];
+                                                                            constant:0.0];
         
-        [button addConstraints:@[widthConstraint, heightConstraint]];
+        [button addConstraints:@[widthConstraint]];
+        [self.view addConstraint:heightConstraint];
     }
 }
 
@@ -155,14 +156,14 @@
     {
         if (UIInterfaceOrientationIsLandscape(deviceOrientation))
         {
-            [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerLandscape"]  animated:YES];
+            self.view = self.landscapeView;
             
             [self setButtonBorders];
             
         }
         else
         {
-            [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerPortrait"]  animated:YES];
+            self.view = self.portraitView;
             [self setButtonBorders];
         }
     }
@@ -234,6 +235,11 @@
     __helpButton.layer.borderWidth = 1;
     __helpButton.layer.borderColor = [UIColor whiteColor].CGColor;
     __helpButton.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1.0];
+    
+    //Set the equals button background color to the same as the main operand function buttons background.
+    self.equalsButton.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
+    self.equalsButton.layer.borderColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0].CGColor;
+
 }
 
 - (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
@@ -1026,6 +1032,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.view isEqual:self.landscapeView])
+    {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 150)];
+        
+        cell.textLabel.numberOfLines = 4;
+        [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
+        [cell.textLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+        
+        
+        [self configureCell:cell atIndexPath:indexPath];
+        
+        return cell;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;

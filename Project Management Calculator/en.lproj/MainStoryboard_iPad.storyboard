@@ -174,26 +174,26 @@
                                             <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="cTc-sr-uP7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tql-Qm-E6M" customClass="NumberButtons">
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHN-yr-rkM" customClass="NumberButtons">
                                         <rect key="frame" x="285" y="357" width="130" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="%">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="dfd-nD-WZB"/>
+                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="1wX-Ih-yak"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="TnY-Mu-oyu">
-                                <rect key="frame" x="645" y="409" width="112" height="600"/>
+                                <rect key="frame" x="645" y="523" width="112" height="517"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E8p-Uf-8tc" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="128" width="105" height="105"/>
+                                        <rect key="frame" x="3" y="125" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="X">
@@ -205,7 +205,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nU8-Dz-QCg" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="246" width="105" height="105"/>
+                                        <rect key="frame" x="3" y="243" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <state key="normal" title="-">
@@ -217,7 +217,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vDu-4I-bdK" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="359" width="105" height="105"/>
+                                        <rect key="frame" x="3" y="356" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="+">
@@ -228,20 +228,8 @@
                                             <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="EbG-ER-WWu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHN-yr-rkM" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="475" width="105" height="105"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="=">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="1wX-Ih-yak"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oCL-fJ-ToG" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="9" width="105" height="105"/>
+                                        <rect key="frame" x="3" y="10" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="divide-small.png">
                                             <color key="titleColor" red="0.69019607843137254" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,7 +242,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="df3-g9-vpl">
-                                <rect key="frame" x="231" y="415" width="406" height="106"/>
+                                <rect key="frame" x="231" y="415" width="526" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iw5-O9-37F" customClass="NumberButtons">
@@ -269,7 +257,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hAd-SR-pTf" customClass="NumberButtons">
-                                        <rect key="frame" x="167" y="18" width="70" height="70"/>
+                                        <rect key="frame" x="176" y="18" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MRC">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,7 +268,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fKd-E9-IYU" customClass="NumberButtons">
-                                        <rect key="frame" x="252" y="18" width="70" height="70"/>
+                                        <rect key="frame" x="264" y="18" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="M -">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,7 +279,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YiB-OP-Irx" customClass="NumberButtons">
-                                        <rect key="frame" x="336" y="18" width="70" height="70"/>
+                                        <rect key="frame" x="350" y="18" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="M +">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,13 +290,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="of9-Tg-W12" customClass="NumberButtons">
-                                        <rect key="frame" x="84" y="18" width="70" height="70"/>
+                                        <rect key="frame" x="89" y="18" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="sqrt.png">
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="04v-UU-tc5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tql-Qm-E6M" customClass="NumberButtons">
+                                        <rect key="frame" x="435" y="18" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="dfd-nD-WZB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -456,7 +456,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Profit Management Calculator" id="53">
+                    <navigationItem key="navigationItem" title="Sales Calculator" id="53">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="YVq-Z3-ma5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BcQ-py-FLP">
                                 <rect key="frame" x="16" y="2" width="40" height="40"/>
@@ -480,13 +480,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="clearButton" destination="FG2-mk-LOg" id="NQx-G4-ahF"/>
+                        <outlet property="equalsButton" destination="UHN-yr-rkM" id="jba-yZ-gvW"/>
                         <outlet property="functionViews" destination="3yF-kp-2yF" id="WTw-FW-m8A"/>
                         <outlet property="helpButton" destination="BcQ-py-FLP" id="LrD-y7-OFJ"/>
-                        <outlet property="lblDetailDescription" destination="1DQ-8c-bPT" id="E3q-ZG-i38"/>
+                        <outlet property="lblDetailDescription" destination="1DQ-8c-bPT" id="bbT-3s-31U"/>
                         <outlet property="lblMemory" destination="j4b-Dm-D30" id="747-Xl-Tr7"/>
                         <outlet property="lblNumberType" destination="D7u-Z6-MKd" id="HWA-Op-4fe"/>
                         <outlet property="mainOperandViews" destination="TnY-Mu-oyu" id="dcj-io-nWc"/>
                         <outlet property="numberViews" destination="tNb-bT-qnL" id="m6r-Zx-mjy"/>
+                        <outlet property="portraitView" destination="ZbK-v6-mI5" id="9Qb-U6-stA"/>
                         <outlet property="subOperandViews" destination="df3-g9-vpl" id="QOX-Ht-o2L"/>
                         <outlet property="tableView" destination="K7j-qc-PzO" id="3oS-FP-5Zl"/>
                     </connections>
