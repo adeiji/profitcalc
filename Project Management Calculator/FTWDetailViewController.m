@@ -97,9 +97,102 @@
     
     helpViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"HelpViewController"];
     
+    [self editMainFunctionConstraints];
     [self setButtonBorders];
     FTWAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
+    //Start observing whether the device is changing orientation
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationChanged:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+    
+}
+
+- (void) editMainFunctionConstraints
+{
+    //Remove all the height and width constraints so that we can set them to make sure that the height and the width are equal.
+    for (UIButton *button in self.mainFunctionButtons)
+    {
+        //Check all the constraints to see which one is applicable to our particular button and then remove that constraint.
+        for (NSLayoutConstraint *constraint in self.heightWidthConstraints)
+        {
+            if ([[button constraints] containsObject:constraint])
+            {
+                [button removeConstraint:constraint];
+            }
+                
+        }
+        
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:button
+                                                                            attribute:NSLayoutAttributeHeight
+                                                                            relatedBy:0
+                                                                               toItem:nil
+                                                                            attribute:NSLayoutAttributeHeight
+                                                                           multiplier:1.0
+                                                                             constant:42.0];
+        
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:button
+                                                                           attribute:NSLayoutAttributeWidth
+                                                                           relatedBy:0
+                                                                              toItem:nil
+                                                                           attribute:NSLayoutAttributeWidth
+                                                                          multiplier:1.0
+                                                                            constant:45.0];
+        
+        [button addConstraints:@[widthConstraint, heightConstraint]];
+    }
+}
+
+- (void) orientationChanged : (NSNotification *) notification
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    
+    [self.navigationController popViewControllerAnimated:NO];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        if (UIInterfaceOrientationIsLandscape(deviceOrientation))
+        {
+            [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerLandscape"]  animated:YES];
+            
+            [self setButtonBorders];
+            
+        }
+        else
+        {
+            [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerPortrait"]  animated:YES];
+            [self setButtonBorders];
+        }
+    }
+    
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+//        {
+//            if (UIInterfaceOrientationIsLandscape(deviceOrientation))
+//            {
+//                [self.navigationController presentModalViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerLandscape"]  animated:YES];
+//                
+//                
+//                [self setButtonBorders];
+//                
+//            }
+//            else
+//            {
+//                [self.navigationController presentModalViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerPortrait"]  animated:YES];
+//                
+//                [self setButtonBorders];
+//            }
+//        }
+//    }];
+    
+    
+}
+
+- (void) setViewToLandscape
+{
+
 }
 
 - (void) setButtonBorders
@@ -118,25 +211,14 @@
     }
     for (UIView *view in __subOperandViews.subviews)
     {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            view.layer.cornerRadius = view.layer.frame.size.width / 2;
-        }
-        else
-        {
-            view.layer.cornerRadius = 21;
-        }
-        
+        //if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        view.layer.cornerRadius = view.layer.frame.size.width / 2;
         view.backgroundColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0];
     }
     for (UIView *view in __mainOperandViews.subviews)
     {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            view.layer.cornerRadius = 52.5;
-        }
-        else
-        {
-            view.layer.cornerRadius = 25;
-        }
+        [view layoutIfNeeded];
+        view.layer.cornerRadius = view.layer.frame.size.width / 2;
 
         view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
     }
@@ -1115,6 +1197,17 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    if ((orientation == UIInterfaceOrientationPortrait) ||
+        (orientation == UIInterfaceOrientationLandscapeLeft))
+        return YES;
+    
+    return NO;
 }
 
 - (IBAction)clearAll:(id)sender {

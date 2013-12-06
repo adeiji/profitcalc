@@ -23,7 +23,7 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="16">
             <objects>
-                <viewController title="Detail" id="4" customClass="FTWDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewControllerPortrait" title="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4" customClass="FTWDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZbK-v6-mI5">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,13 +569,13 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="ANY-da-1V2">
             <objects>
-                <viewController title="Detail" id="PJg-ch-GZA" customClass="FTWDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewControllerLandscape" title="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PJg-ch-GZA" customClass="FTWDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDf-Rs-3mG">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WOS-W2-NSq" customClass="NumberButtons">
-                                <rect key="frame" x="807" y="102" width="75" height="170"/>
+                                <rect key="frame" x="758" y="131" width="237" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ce.png">
                                     <color key="titleShadowColor" white="0.60455101659999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -585,11 +585,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="hJB-aS-iNm">
-                                <rect key="frame" x="231" y="293" width="415" height="472"/>
+                                <rect key="frame" x="311" y="339" width="392" height="426"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A2Z-bP-A5i" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="9" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="2" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="8">
@@ -601,7 +601,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wLa-9Z-Ag0" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="9" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="2" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="7">
@@ -613,7 +613,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aux-uq-Yg3" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="9" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="0.0" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="9">
@@ -625,7 +625,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pfO-KH-dGG" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="125" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="105" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="5">
@@ -637,7 +637,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P0s-Ub-aSS" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="125" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="105" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="4">
@@ -649,7 +649,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SNh-ew-VaI" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="125" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="103" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="6">
@@ -661,7 +661,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DPy-Xf-dak" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="241" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="208" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="2">
@@ -673,7 +673,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6DX-o9-ZGx" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="241" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="208" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="1">
@@ -685,7 +685,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NZa-kO-AQj" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="241" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="206" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="3">
@@ -697,7 +697,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z6G-D4-Q7i" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="357" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="311" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
                                         <state key="normal" title="0">
@@ -709,7 +709,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z8p-Rb-rFq" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="357" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="311" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
                                         <state key="normal" title=".">
@@ -721,7 +721,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L0t-GL-KsS" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="357" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="309" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="%">
@@ -735,11 +735,11 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="uvR-rA-Hhu">
-                                <rect key="frame" x="892" y="171" width="112" height="600"/>
+                                <rect key="frame" x="870" y="232" width="145" height="542"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tM7-zT-31Q" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="128" width="105" height="105"/>
+                                        <rect key="frame" x="30" y="109" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="X">
@@ -751,7 +751,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F37-Br-qMS" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="246" width="105" height="105"/>
+                                        <rect key="frame" x="30" y="212" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <state key="normal" title="-">
@@ -763,7 +763,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MFh-XL-oxx" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="359" width="105" height="105"/>
+                                        <rect key="frame" x="30" y="315" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="+">
@@ -775,7 +775,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MvY-to-XOr" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="475" width="105" height="105"/>
+                                        <rect key="frame" x="30" y="418" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="=">
@@ -787,7 +787,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VVZ-1h-5tc" customClass="NumberButtons">
-                                        <rect key="frame" x="3" y="9" width="105" height="105"/>
+                                        <rect key="frame" x="30" y="6" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="divide-small.png">
                                             <color key="titleColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -800,13 +800,13 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="9KE-nZ-MCN">
-                                <rect key="frame" x="660" y="451" width="80" height="408"/>
+                                <rect key="frame" x="738" y="232" width="139" height="533"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AEK-Kf-TuI" customClass="NumberButtons">
-                                        <rect key="frame" x="6" y="9" width="70" height="70"/>
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AEK-Kf-TuI" customClass="NumberButtons">
+                                        <rect key="frame" x="20" y="6" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="negativepositive.png">
+                                        <state key="normal" image="negativepositive.png">
                                             <color key="titleColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -815,7 +815,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JU7-PL-hUS" customClass="NumberButtons">
-                                        <rect key="frame" x="6" y="165" width="70" height="70"/>
+                                        <rect key="frame" x="20" y="212" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MRC">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -826,7 +826,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="shJ-c8-ryQ" customClass="NumberButtons">
-                                        <rect key="frame" x="6" y="243" width="70" height="70"/>
+                                        <rect key="frame" x="20" y="315" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="M -">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -837,7 +837,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j2Q-r3-D6x" customClass="NumberButtons">
-                                        <rect key="frame" x="6" y="321" width="70" height="70"/>
+                                        <rect key="frame" x="20" y="418" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="M +">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -847,10 +847,10 @@
                                             <action selector="memoryButtonPressed:" destination="PJg-ch-GZA" eventType="touchUpInside" id="GXo-K3-3pV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NIc-IH-ZhT" customClass="NumberButtons">
-                                        <rect key="frame" x="6" y="87" width="70" height="70"/>
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NIc-IH-ZhT" customClass="NumberButtons">
+                                        <rect key="frame" x="20" y="109" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="sqrt.png">
+                                        <state key="normal" image="sqrt.png">
                                             <color key="titleShadowColor" red="0.34509803919999998" green="0.3803921569" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -860,11 +860,11 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="26n-ar-pNd">
-                                <rect key="frame" x="589" y="131" width="415" height="234"/>
+                                <rect key="frame" x="311" y="131" width="392" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Rl-Fk-kMy" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="4" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="4" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="SEL">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -875,7 +875,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yrk-QN-P9u" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="5" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="4" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="CST">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -886,7 +886,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B1F-YI-FiL" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="5" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="4" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="CST">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -897,7 +897,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Doq-On-IAn" customClass="NumberButtons">
-                                        <rect key="frame" x="9" y="124" width="130" height="105"/>
+                                        <rect key="frame" x="9" y="108" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MAR">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -908,7 +908,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MSo-ay-qRV" customClass="NumberButtons">
-                                        <rect key="frame" x="147" y="124" width="130" height="105"/>
+                                        <rect key="frame" x="137" y="107" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="MAR">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -919,7 +919,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cKA-sS-z0n" customClass="NumberButtons">
-                                        <rect key="frame" x="285" y="124" width="130" height="105"/>
+                                        <rect key="frame" x="265" y="107" width="120" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="SEL">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -932,44 +932,44 @@
                                 </subviews>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="pAp-QO-yzy">
-                                <rect key="frame" x="231" y="62" width="711" height="54"/>
+                                <rect key="frame" x="311" y="62" width="628" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="60"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="VGR-fr-MDp">
-                                <rect key="frame" x="231" y="121" width="517" height="2"/>
+                                <rect key="frame" x="311" y="124" width="683" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XW2-PD-1Qu">
-                                <rect key="frame" x="962" y="61" width="42" height="21"/>
+                                <rect key="frame" x="951" y="61" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mM2-70-2oU">
-                                <rect key="frame" x="962" y="96" width="42" height="21"/>
+                                <rect key="frame" x="951" y="96" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ewf-BM-Z3j">
-                                <rect key="frame" x="0.0" y="124" width="223" height="644"/>
+                                <rect key="frame" x="0.0" y="124" width="281" height="644"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Gz7-Sw-TfZ" style="IBUITableViewCellStyleDefault" id="Hea-24-15F">
-                                        <rect key="frame" x="0.0" y="22" width="223" height="135"/>
+                                        <rect key="frame" x="0.0" y="22" width="281" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hea-24-15F" id="dmt-U1-fbu">
-                                            <rect key="frame" x="0.0" y="0.0" width="223" height="134"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gz7-Sw-TfZ">
-                                                    <rect key="frame" x="15" y="0.0" width="193" height="134"/>
+                                                    <rect key="frame" x="15" y="0.0" width="251" height="134"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -985,7 +985,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" id="sMK-CR-Of5">
-                                <rect key="frame" x="0.0" y="64" width="223" height="61"/>
+                                <rect key="frame" x="0.0" y="64" width="281" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Calculations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s29-sf-Lif">
