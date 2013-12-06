@@ -131,7 +131,7 @@
                                                                                toItem:nil
                                                                             attribute:NSLayoutAttributeHeight
                                                                            multiplier:1.0
-                                                                             constant:42.0];
+                                                                             constant:45.0];
         
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:button
                                                                            attribute:NSLayoutAttributeWidth
