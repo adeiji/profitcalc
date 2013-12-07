@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="42">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
+        <deployment version="1536" defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -304,7 +304,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="%">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -385,7 +385,7 @@
                                     </button>
                                 </subviews>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="1DQ-8c-bPT">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" adjustsLetterSpacingToFitWidth="YES" id="1DQ-8c-bPT">
                                 <rect key="frame" x="231" y="82" width="455" height="72"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="60"/>
@@ -396,14 +396,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D7u-Z6-MKd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D7u-Z6-MKd">
                                 <rect key="frame" x="703" y="89" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4b-Dm-D30">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4b-Dm-D30">
                                 <rect key="frame" x="703" y="124" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -411,7 +411,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" id="K7j-qc-PzO">
-                                <rect key="frame" x="0.0" y="124" width="223" height="900"/>
+                                <rect key="frame" x="0.0" y="160" width="223" height="864"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -452,6 +452,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Bh-cd-utF">
+                                <rect key="frame" x="162" y="129" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Clear All">
+                                    <color key="titleColor" red="0.15686274510000001" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearAll:" destination="4" eventType="touchUpInside" id="Hba-L7-P4d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -468,6 +480,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QAf-az-DGb" kind="push" id="Xau-nv-K7a"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="save-icon-small.png" id="M7w-1M-OSS">
@@ -482,20 +497,39 @@
                         <outlet property="clearButton" destination="FG2-mk-LOg" id="NQx-G4-ahF"/>
                         <outlet property="equalsButton" destination="UHN-yr-rkM" id="jba-yZ-gvW"/>
                         <outlet property="functionViews" destination="3yF-kp-2yF" id="WTw-FW-m8A"/>
-                        <outlet property="helpButton" destination="BcQ-py-FLP" id="LrD-y7-OFJ"/>
-                        <outlet property="lblDetailDescription" destination="1DQ-8c-bPT" id="bbT-3s-31U"/>
+                        <outlet property="helpButton" destination="BcQ-py-FLP" id="R6q-Px-tU1"/>
                         <outlet property="lblMemory" destination="j4b-Dm-D30" id="747-Xl-Tr7"/>
-                        <outlet property="lblNumberType" destination="D7u-Z6-MKd" id="HWA-Op-4fe"/>
+                        <outlet property="lblPortraitDetailDescription" destination="1DQ-8c-bPT" id="cXW-JN-UDX"/>
+                        <outlet property="lblPortraitMemory" destination="j4b-Dm-D30" id="aWe-xM-E8y"/>
+                        <outlet property="lblPortraitNumberType" destination="D7u-Z6-MKd" id="oc5-eq-KIk"/>
                         <outlet property="mainOperandViews" destination="TnY-Mu-oyu" id="dcj-io-nWc"/>
                         <outlet property="numberViews" destination="tNb-bT-qnL" id="m6r-Zx-mjy"/>
+                        <outlet property="portraitTableView" destination="K7j-qc-PzO" id="NN7-AR-dh9"/>
                         <outlet property="portraitView" destination="ZbK-v6-mI5" id="9Qb-U6-stA"/>
                         <outlet property="subOperandViews" destination="df3-g9-vpl" id="QOX-Ht-o2L"/>
-                        <outlet property="tableView" destination="K7j-qc-PzO" id="3oS-FP-5Zl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="582" y="253"/>
+        </scene>
+        <!--Help View Controller - Help-->
+        <scene sceneID="UcU-s8-Mpo">
+            <objects>
+                <viewController id="QAf-az-DGb" customClass="FTWHelpViewController" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="HhA-LA-PCd">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Help" id="FOi-0I-gKh"/>
+                    <connections>
+                        <outlet property="scrollView" destination="HhA-LA-PCd" id="uZW-Lg-Vi6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlG-Lb-jXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="253"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="18">

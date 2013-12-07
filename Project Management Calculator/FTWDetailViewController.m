@@ -108,6 +108,19 @@
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
     self.landscapeView = [[[NSBundle mainBundle] loadNibNamed:@"LandscapeView" owner:self options:nil] objectAtIndex:0];
+    
+    if (![[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        self.lbliPhoneDetailDescription.text = self.lblDetailDescription.text;
+        self.lblDetailDescription = self.lbliPhoneDetailDescription;
+        //Get the current memory setting being displayed.
+        self.lbliPhoneMemory.text = self.lblMemory.text;
+        self.lblMemory = self.lbliPhoneMemory;
+        //Get the current number type being displayed right now.
+        self.lbliPhoneNumberType.text = self.lblNumberType.text;
+        self.lblNumberType = self.lbliPhoneNumberType;
+    }
+    
 }
 
 - (void) editMainFunctionConstraints
@@ -150,20 +163,52 @@
 {
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     
-    [self.navigationController popViewControllerAnimated:NO];
+    //[self.navigationController popViewControllerAnimated:NO];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
     {
-        if (UIInterfaceOrientationIsLandscape(deviceOrientation))
+        if ([self isKindOfClass:[FTWHelpViewController class]])
+         {
+             //DO NOTHING
+         }
+        else if (UIInterfaceOrientationIsLandscape(deviceOrientation)) /*We first need to get the correct view and set it 
+                                                                        up as the main view.  Then we get the current information 
+                                                                        in the labels displayed currently, and display that on the 
+                                                                        labels that will be stored next.*/
         {
+            //Set the view to the correct view for the landscape view
+
             self.view = self.landscapeView;
+            //Get the current number
+            self.lblLandscapeDetailDescription.text = self.lblDetailDescription.text;
+            self.lblDetailDescription = self.lblLandscapeDetailDescription;
+            //Get the current memory setting being displayed.
+            self.lblLandscapeMemory.text = self.lblMemory.text;
+            self.lblMemory = self.lblLandscapeMemory;
+            //Get the current number type being displayed right now.
+            self.lblLandscapeNumberType.text = self.lblNumberType.text;
+            self.lblNumberType = self.lblLandscapeNumberType;
             
+            self.tableView = self.landscapeTableView;
+            [self.tableView reloadData];
             [self setButtonBorders];
             
         }
         else
         {
+            //Set the view to the correct view for the landscape view
             self.view = self.portraitView;
+            self.lblPortraitDetailDescription.text = self.lblDetailDescription.text;
+            self.lblDetailDescription = self.lblPortraitDetailDescription;
+            //Get the current memory setting being displayed.
+            self.lblPortraitMemory.text = self.lblMemory.text;
+            self.lblMemory = self.lblPortraitMemory;
+            //Get the current number type being displayed right now.
+            self.lblPortraitNumberType.text = self.lblNumberType.text;
+            self.lblNumberType = self.lblPortraitNumberType;
+            
+            self.tableView = self.portraitTableView;
+            [self.tableView reloadData];
             [self setButtonBorders];
         }
     }
@@ -228,10 +273,8 @@
     __clearButton.layer.borderWidth = 2.0f;
     __clearButton.layer.borderColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0].CGColor;
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        __helpButton.layer.cornerRadius = 20.0f;
-    }
     
+    __helpButton.layer.cornerRadius = __helpButton.layer.frame.size.width / 2.0;
     __helpButton.layer.borderWidth = 1;
     __helpButton.layer.borderColor = [UIColor whiteColor].CGColor;
     __helpButton.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1.0];
@@ -1190,35 +1233,12 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"calculation"] description];
-}
-
-- (IBAction)buttonTouched:(id)sender withEvent:(UIEvent *) event {
-}
-
-- (IBAction)buttonMoved:(id)sender withEvent:(UIEvent *) event {
-    CGPoint point = [[[event allTouches] anyObject] locationInView:self.view];
-    UIControl *control = sender;
-    
-    CGPoint controlPoint = control.center;
-    controlPoint.x = point.x;
-    
-    control.center = controlPoint;
-    
-    if (control.center.x > 250)
+    if ([self.fetchedResultsController.fetchedObjects count] > 0)
     {
-        [self.navigationController popViewControllerAnimated:YES];
+        NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        cell.textLabel.text = [[object valueForKey:@"calculation"] description];
     }
-    
 }
-
-- (IBAction)gotoCalculator:(id)sender {
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-}
-
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation

@@ -27,12 +27,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIView *helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpView" owner:self options:nil] objectAtIndex:0];
     
-    self.scrollView.contentSize = helpView.frame.size;
-    [self.scrollView addSubview:helpView];
-    self.scrollView.scrollEnabled = YES;
+    //If device is iPad
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        UIView *helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPad" owner:self options:nil] objectAtIndex:0];
+        
+        self.scrollView.contentSize = helpView.frame.size;
+        [self.scrollView addSubview:helpView];
+        self.scrollView.scrollEnabled = YES;
+    }
+    else
+    {
+        UIView *helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpView" owner:self options:nil] objectAtIndex:0];
     
+        self.scrollView.contentSize = helpView.frame.size;
+        [self.scrollView addSubview:helpView];
+        self.scrollView.scrollEnabled = YES;
+    }
 
 }
 

@@ -67,9 +67,17 @@ typedef enum
     MARCOSTBUTTON = 28
 } OperandButton;
 
-@property (strong, nonatomic) IBOutlet UILabel *lblDetailDescription;
-@property (strong, nonatomic) IBOutlet UILabel *lblNumberType;
-@property (strong, nonatomic) IBOutlet UILabel *lblMemory;
+@property (strong, nonatomic) IBOutlet UILabel *lbliPhoneDetailDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lbliPhoneNumberType;
+@property (strong, nonatomic) IBOutlet UILabel *lbliPhoneMemory;
+
+@property (strong, nonatomic) UILabel *lblDetailDescription;
+@property (strong, nonatomic) UILabel *lblNumberType;
+@property (strong, nonatomic) UILabel *lblMemory;
+@property (strong, nonatomic) IBOutlet UILabel *lblPortraitNumberType;
+@property (strong, nonatomic) IBOutlet UILabel *lblPortraitMemory;
+@property (strong, nonatomic) IBOutlet UILabel *lblLandscapeNumberType;
+@property (strong, nonatomic) IBOutlet UILabel *lblLandscapeMemory;
 
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
@@ -80,9 +88,13 @@ typedef enum
 - (IBAction)memoryButtonPressed:(UIButton *)button;
 - (IBAction)saveButtonPressed:(id)sender;
 - (IBAction)helpButtonPressed:(id)sender;
+- (IBAction)clearAll:(id)sender;
 
 @property (strong, nonatomic) FTWMasterViewController *calculationsTable;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *landscapeTableView;
+@property (strong, nonatomic) IBOutlet UITableView *portraitTableView;
+
 
 @property (strong, nonatomic) IBOutlet UIButton *helpButton;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
@@ -90,14 +102,17 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UIView *mainOperandViews;
 @property (strong, nonatomic) IBOutlet UIView *functionViews;
 @property (strong, nonatomic) IBOutlet UIView *numberViews;
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UIButton *equalsButton;
+@property (strong, nonatomic) IBOutlet UILabel *lblPortraitDetailDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lblLandscapeDetailDescription;
 
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *heightWidthConstraints;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *mainFunctionButtons;
 
 @property (strong, nonatomic) UIView *landscapeView;
 @property (strong, nonatomic) IBOutlet UIView *portraitView;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
