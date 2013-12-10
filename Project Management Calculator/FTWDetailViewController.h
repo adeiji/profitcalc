@@ -78,6 +78,7 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UILabel *lblPortraitMemory;
 @property (strong, nonatomic) IBOutlet UILabel *lblLandscapeNumberType;
 @property (strong, nonatomic) IBOutlet UILabel *lblLandscapeMemory;
+@property (strong, nonatomic) IBOutlet UINavigationItem *topNavigationBariPad;
 
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
