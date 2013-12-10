@@ -14,6 +14,22 @@
 		CE08DD3017975F430061201F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2F17975F430061201F /* libz.dylib */; };
 		CE3992711805CF9B003AE30B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3992701805CF9B003AE30B /* libTestFlight.a */; };
 		CE3992731805F7DC003AE30B /* divide-small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3992721805F7DC003AE30B /* divide-small.png */; };
+		CE3FADA91857801100AC471F /* icon@ipad-landscape-nonretina-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FAD9A1857801000AC471F /* icon@ipad-landscape-nonretina-launch.png */; };
+		CE3FADAA1857801100AC471F /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FAD9B1857801000AC471F /* Default-Landscape@2x~ipad.png */; };
+		CE3FADAB1857801100AC471F /* icon@ipad-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FAD9C1857801000AC471F /* icon@ipad-nonretina.png */; };
+		CE3FADAD1857801100AC471F /* icon@ipad-portrait-nonretina-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FAD9E1857801000AC471F /* icon@ipad-portrait-nonretina-launch.png */; };
+		CE3FADAE1857801100AC471F /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FAD9F1857801000AC471F /* Default-Portrait@2x~ipad.png */; };
+		CE3FADAF1857801100AC471F /* icon@ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA01857801000AC471F /* icon@ipad-retina.png */; };
+		CE3FADB01857801100AC471F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA11857801000AC471F /* Default.png */; };
+		CE3FADB11857801100AC471F /* icon@iphone-nonretina-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA21857801000AC471F /* icon@iphone-nonretina-launch.png */; };
+		CE3FADB21857801100AC471F /* icon@iphone-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA31857801000AC471F /* icon@iphone-nonretina.png */; };
+		CE3FADB31857801100AC471F /* icon@pad-spotlight-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA41857801000AC471F /* icon@pad-spotlight-nonretina.png */; };
+		CE3FADB41857801100AC471F /* icon@pad-spotlight-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA51857801000AC471F /* icon@pad-spotlight-retina.png */; };
+		CE3FADB51857801100AC471F /* icon@phone-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA61857801000AC471F /* icon@phone-retina.png */; };
+		CE3FADB61857801100AC471F /* icon@phone-spotlight-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADA71857801000AC471F /* icon@phone-spotlight-retina.png */; };
+		CE3FADB81857817F00AC471F /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADB71857817F00AC471F /* Default~iphone.png */; };
+		CE3FADBA1857827100AC471F /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADB91857827100AC471F /* Default~ipad.png */; };
+		CE3FADBC185782AC00AC471F /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FADBB185782AC00AC471F /* Default-Landscape~ipad.png */; };
 		CE45808D17E0E87A00AD07E9 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE45808C17E0E87A00AD07E9 /* HelpView.xib */; };
 		CE45809017E0EA2600AD07E9 /* FTWHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */; };
 		CE492A2118319D86002A6197 /* subtract.png in Resources */ = {isa = PBXBuildFile; fileRef = CE492A2018319D86002A6197 /* subtract.png */; };
@@ -108,6 +124,22 @@
 		CE08DD2F17975F430061201F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CE3992701805CF9B003AE30B /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../Programming/Frameworks/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
 		CE3992721805F7DC003AE30B /* divide-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divide-small.png"; sourceTree = SOURCE_ROOT; };
+		CE3FAD9A1857801000AC471F /* icon@ipad-landscape-nonretina-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@ipad-landscape-nonretina-launch.png"; sourceTree = "<group>"; };
+		CE3FAD9B1857801000AC471F /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		CE3FAD9C1857801000AC471F /* icon@ipad-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@ipad-nonretina.png"; sourceTree = "<group>"; };
+		CE3FAD9E1857801000AC471F /* icon@ipad-portrait-nonretina-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@ipad-portrait-nonretina-launch.png"; sourceTree = "<group>"; };
+		CE3FAD9F1857801000AC471F /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		CE3FADA01857801000AC471F /* icon@ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@ipad-retina.png"; sourceTree = "<group>"; };
+		CE3FADA11857801000AC471F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CE3FADA21857801000AC471F /* icon@iphone-nonretina-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@iphone-nonretina-launch.png"; sourceTree = "<group>"; };
+		CE3FADA31857801000AC471F /* icon@iphone-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@iphone-nonretina.png"; sourceTree = "<group>"; };
+		CE3FADA41857801000AC471F /* icon@pad-spotlight-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@pad-spotlight-nonretina.png"; sourceTree = "<group>"; };
+		CE3FADA51857801000AC471F /* icon@pad-spotlight-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@pad-spotlight-retina.png"; sourceTree = "<group>"; };
+		CE3FADA61857801000AC471F /* icon@phone-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@phone-retina.png"; sourceTree = "<group>"; };
+		CE3FADA71857801000AC471F /* icon@phone-spotlight-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@phone-spotlight-retina.png"; sourceTree = "<group>"; };
+		CE3FADB71857817F00AC471F /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = SOURCE_ROOT; };
+		CE3FADB91857827100AC471F /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
+		CE3FADBB185782AC00AC471F /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		CE45808C17E0E87A00AD07E9 /* HelpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpView.xib; path = ../HelpView.xib; sourceTree = "<group>"; };
 		CE45808E17E0EA2600AD07E9 /* FTWHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWHelpViewController.h; sourceTree = "<group>"; };
 		CE45808F17E0EA2600AD07E9 /* FTWHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWHelpViewController.m; sourceTree = "<group>"; };
@@ -326,6 +358,7 @@
 		CEF9D85017C6F8D4002457DF /* Icon Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FADB71857817F00AC471F /* Default~iphone.png */,
 				CEF9D84017C6F8CC002457DF /* icon-72.png */,
 				CEF9D85D17C6FC73002457DF /* Default-568h.png */,
 				CEF9D85E17C6FC73002457DF /* Default.png */,
@@ -353,6 +386,21 @@
 		CEF9D85217C6F8EC002457DF /* UI Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FADBB185782AC00AC471F /* Default-Landscape~ipad.png */,
+				CE3FADB91857827100AC471F /* Default~ipad.png */,
+				CE3FAD9A1857801000AC471F /* icon@ipad-landscape-nonretina-launch.png */,
+				CE3FAD9B1857801000AC471F /* Default-Landscape@2x~ipad.png */,
+				CE3FAD9C1857801000AC471F /* icon@ipad-nonretina.png */,
+				CE3FAD9E1857801000AC471F /* icon@ipad-portrait-nonretina-launch.png */,
+				CE3FAD9F1857801000AC471F /* Default-Portrait@2x~ipad.png */,
+				CE3FADA01857801000AC471F /* icon@ipad-retina.png */,
+				CE3FADA11857801000AC471F /* Default.png */,
+				CE3FADA21857801000AC471F /* icon@iphone-nonretina-launch.png */,
+				CE3FADA31857801000AC471F /* icon@iphone-nonretina.png */,
+				CE3FADA41857801000AC471F /* icon@pad-spotlight-nonretina.png */,
+				CE3FADA51857801000AC471F /* icon@pad-spotlight-retina.png */,
+				CE3FADA61857801000AC471F /* icon@phone-retina.png */,
+				CE3FADA71857801000AC471F /* icon@phone-spotlight-retina.png */,
 				CE6858F01856D05700D4B4B1 /* divide-small-ipad-large.png */,
 				CE6858EE1856CD1500D4B4B1 /* divide-small-ipad.png */,
 				CE6858E41856918000D4B4B1 /* icon-iPad.png */,
@@ -559,11 +607,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3FADB81857817F00AC471F /* Default~iphone.png in Resources */,
 				CE6858DF1851868400D4B4B1 /* LandscapeView.xib in Resources */,
+				CE3FADBC185782AC00AC471F /* Default-Landscape~ipad.png in Resources */,
 				CE9DD9C717661EF20073C460 /* InfoPlist.strings in Resources */,
+				CE3FADB51857801100AC471F /* icon@phone-retina.png in Resources */,
 				CE9DD9D617661EF20073C460 /* MainStoryboard_iPhone.storyboard in Resources */,
+				CE3FADB11857801100AC471F /* icon@iphone-nonretina-launch.png in Resources */,
+				CE3FADB01857801100AC471F /* Default.png in Resources */,
+				CE3FADB31857801100AC471F /* icon@pad-spotlight-nonretina.png in Resources */,
 				CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */,
 				CE9DDA0B1766439F0073C460 /* actext.png in Resources */,
+				CE3FADAD1857801100AC471F /* icon@ipad-portrait-nonretina-launch.png in Resources */,
 				CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */,
 				CE6858EB1856918000D4B4B1 /* icon-iphone4.png in Resources */,
 				CEE966F218208F18000BF0D3 /* Settings-outline.png in Resources */,
@@ -573,9 +628,12 @@
 				CEF9D83117C6B618002457DF /* operandCircle.png in Resources */,
 				CE6858F11856D05800D4B4B1 /* divide-small-ipad-large.png in Resources */,
 				CEE966F118208F18000BF0D3 /* save-icon.png in Resources */,
+				CE3FADB61857801100AC471F /* icon@phone-spotlight-retina.png in Resources */,
 				CEF9D83717C6B9B1002457DF /* suboperandcircle.png in Resources */,
 				CEE966EE18208D97000BF0D3 /* infobutton.png in Resources */,
 				CEF9D83917C6BCAE002457DF /* numbersquares.png in Resources */,
+				CE3FADB41857801100AC471F /* icon@pad-spotlight-retina.png in Resources */,
+				CE3FADA91857801100AC471F /* icon@ipad-landscape-nonretina-launch.png in Resources */,
 				CE6858EF1856CD1500D4B4B1 /* divide-small-ipad.png in Resources */,
 				CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */,
 				CEF9D83D17C6BEB1002457DF /* cesquare.png in Resources */,
@@ -585,16 +643,22 @@
 				CEF9D84917C6F8CD002457DF /* icon-72@2x.png in Resources */,
 				CEF9D84A17C6F8CD002457DF /* icon-small-50.png in Resources */,
 				CEF9D84B17C6F8CD002457DF /* icon-small-50@2x.png in Resources */,
+				CE3FADAB1857801100AC471F /* icon@ipad-nonretina.png in Resources */,
 				CEF9D84C17C6F8CD002457DF /* icon-small.png in Resources */,
 				CE75F0EA1846C79600E14DCB /* save-icon-small.png in Resources */,
 				CEF9D84D17C6F8CD002457DF /* icon-small@2x.png in Resources */,
 				CE6858EC1856918000D4B4B1 /* icon-splash-iPad-l.png in Resources */,
 				CEF9D84E17C6F8CD002457DF /* icon.png in Resources */,
+				CE3FADBA1857827100AC471F /* Default~ipad.png in Resources */,
 				CEF9D84F17C6F8CD002457DF /* icon@2x.png in Resources */,
 				CEF9D86017C6FC73002457DF /* Default-568h.png in Resources */,
 				CEF9D86117C6FC73002457DF /* Default.png in Resources */,
+				CE3FADAE1857801100AC471F /* Default-Portrait@2x~ipad.png in Resources */,
+				CE3FADAF1857801100AC471F /* icon@ipad-retina.png in Resources */,
+				CE3FADAA1857801100AC471F /* Default-Landscape@2x~ipad.png in Resources */,
 				CEF9D86217C6FC73002457DF /* Default@2x.png in Resources */,
 				CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */,
+				CE3FADB21857801100AC471F /* icon@iphone-nonretina.png in Resources */,
 				CE6858ED1856918000D4B4B1 /* icon-splash-iPad-p.png in Resources */,
 				CE3992731805F7DC003AE30B /* divide-small.png in Resources */,
 				CE6858E91856918000D4B4B1 /* icon-iPad.png in Resources */,

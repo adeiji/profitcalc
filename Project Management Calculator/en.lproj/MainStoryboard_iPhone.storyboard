@@ -849,7 +849,7 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
-                        <outlet property="clearButton" destination="Z0e-x9-ssj" id="yCe-Mn-G0W"/>
+                        <outlet property="clearButton" destination="Z0e-x9-ssj" id="8IT-0F-S9j"/>
                         <outlet property="equalsButton" destination="VTL-Ue-PNy" id="Elr-hY-53f"/>
                         <outlet property="functionViews" destination="NYg-84-zLm" id="HOL-Qa-b92"/>
                         <outlet property="helpButton" destination="6aa-sa-Rjs" id="TMW-gH-INl"/>
@@ -894,6 +894,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1lU-H3-rn1"/>
+        <segue reference="0yl-q0-FLE"/>
     </inferredMetricsTieBreakers>
 </document>

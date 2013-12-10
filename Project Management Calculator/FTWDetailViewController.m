@@ -121,16 +121,19 @@
         self.lblNumberType = self.lbliPhoneNumberType;
     }
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont boldSystemFontOfSize:20.0];
-    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.1];
-    label.textAlignment = NSTextAlignmentCenter;
-    // ^-Use UITextAlignmentCenter for older SDKs.
-    label.textColor = [UIColor grayColor]; // change this color
-    self.topNavigationBariPad.titleView = label;
-    label.text = NSLocalizedString(@"Sales Calculator", @"");
-    [label sizeToFit];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {    
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+        label.backgroundColor = [UIColor clearColor];
+        label.font = [UIFont boldSystemFontOfSize:20.0];
+        label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.1];
+        label.textAlignment = NSTextAlignmentCenter;
+        // ^-Use UITextAlignmentCenter for older SDKs.
+        label.textColor = [UIColor grayColor]; // change this color
+        self.topNavigationBariPad.titleView = label;
+        label.text = NSLocalizedString(@"Sales Calculator", @"");
+        [label sizeToFit];
+    }
 }
 
 - (void) editMainFunctionConstraints
