@@ -608,16 +608,16 @@
                                 <rect key="frame" x="262" y="319" width="50" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-JZ-18k" userLabel="plusButton">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-JZ-18k" userLabel="plusButton">
                                         <rect key="frame" x="0.0" y="129" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="W0d-LB-4He"/>
                                             <constraint firstAttribute="height" constant="50" id="kwZ-no-uo1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <state key="normal" image="subtract.png">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="110"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="ukQ-8h-VLj"/>
@@ -629,6 +629,7 @@
                                             <constraint firstAttribute="height" constant="50" id="ZcY-MQ-gzQ"/>
                                             <constraint firstAttribute="width" constant="50" id="eh3-Wd-hZ4"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
                                         <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="X">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -644,7 +645,8 @@
                                             <constraint firstAttribute="height" constant="50" id="vZX-zP-5FT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="4" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="divide-small.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -658,8 +660,8 @@
                                             <constraint firstAttribute="height" constant="50" id="Ps9-2n-a7d"/>
                                             <constraint firstAttribute="width" constant="50" id="kXJ-2L-89E"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="-4" maxX="-1" maxY="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-9" maxX="-1" maxY="0.0"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -882,11 +884,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="divide-small.png" width="42" height="42"/>
+        <image name="divide-small.png" width="160" height="160"/>
         <image name="negativepositive.png" width="50" height="50"/>
         <image name="save-icon.png" width="200" height="200"/>
         <image name="sqrt.png" width="55" height="55"/>
-        <image name="subtract.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -894,6 +895,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0yl-q0-FLE"/>
+        <segue reference="1lU-H3-rn1"/>
     </inferredMetricsTieBreakers>
 </document>

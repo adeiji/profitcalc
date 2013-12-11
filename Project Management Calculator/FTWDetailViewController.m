@@ -138,6 +138,7 @@
 
 - (void) editMainFunctionConstraints
 {
+    [self.mainOperandViews layoutIfNeeded];
     //Remove all the height and width constraints so that we can set them to make sure that the height and the width are equal.
     for (UIButton *button in self.mainFunctionButtons)
     {
@@ -150,14 +151,23 @@
             }
                 
         }
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        CGFloat height = 0;
         
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            if (screenSize.height > 480.0f) {
+                height = 58;
+            } else {
+                height = 48;
+            }
+        }
         NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:button
                                                                             attribute:NSLayoutAttributeHeight
                                                                             relatedBy:0
-                                                                               toItem:self.equalsButton
+                                                                               toItem:nil
                                                                             attribute:NSLayoutAttributeHeight
                                                                            multiplier:1.0
-                                                                             constant:0.0];
+                                                                             constant:height];
         
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:button
                                                                            attribute:NSLayoutAttributeWidth
@@ -207,7 +217,7 @@
             [self setButtonBorders];
             
         }
-        else
+        else if (UIInterfaceOrientationIsPortrait(deviceOrientation))
         {
             //Set the view to the correct view for the landscape view
             self.view = self.portraitView;
@@ -273,12 +283,13 @@
         //if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         view.layer.cornerRadius = view.layer.frame.size.width / 2;
         view.backgroundColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0];
+        
     }
     for (UIView *view in __mainOperandViews.subviews)
     {
         [view layoutIfNeeded];
         view.layer.cornerRadius = view.layer.frame.size.width / 2;
-
+        
         view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
     }
     

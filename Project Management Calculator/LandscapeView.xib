@@ -26,11 +26,15 @@
         <view contentMode="scaleToFill" id="Slf-09-Xje">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userGuides>
+                <userLayoutGuide location="359" affinity="minY"/>
+                <userLayoutGuide location="182" affinity="minY"/>
+            </userGuides>
             <subviews>
                 <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4ZF-7a-0Rq" customClass="NumberButtons">
-                    <rect key="frame" x="898" y="180" width="96" height="179"/>
+                    <rect key="frame" x="898" y="181" width="96" height="178"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="44"/>
                     <state key="normal" title="c/ce">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.60455101659999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,7 +50,7 @@
                         <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tLt-93-fAS" customClass="NumberButtons">
                             <rect key="frame" x="127" y="7" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="8">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -58,7 +62,7 @@
                         <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oDj-dr-iLt" customClass="NumberButtons">
                             <rect key="frame" x="9" y="7" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="7">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -70,7 +74,7 @@
                         <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GKL-3A-cAN" customClass="NumberButtons">
                             <rect key="frame" x="245" y="7" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="9">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -82,7 +86,7 @@
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="407-Do-aL7" customClass="NumberButtons">
                             <rect key="frame" x="127" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="5">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -94,7 +98,7 @@
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PsA-hD-ULH" customClass="NumberButtons">
                             <rect key="frame" x="9" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="4">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -106,7 +110,7 @@
                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tek-yZ-MQN" customClass="NumberButtons">
                             <rect key="frame" x="245" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="6">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -118,7 +122,7 @@
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cyc-N2-O2a" customClass="NumberButtons">
                             <rect key="frame" x="127" y="195" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="2">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -130,7 +134,7 @@
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lEn-FF-3nz" customClass="NumberButtons">
                             <rect key="frame" x="9" y="195" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="1">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -142,7 +146,7 @@
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XWL-un-LgR" customClass="NumberButtons">
                             <rect key="frame" x="245" y="197" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="3">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -154,7 +158,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CMo-SQ-fMj" customClass="NumberButtons">
                             <rect key="frame" x="9" y="288" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
                             <state key="normal" title="0">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -166,7 +170,7 @@
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4pb-Gt-iyh" customClass="NumberButtons">
                             <rect key="frame" x="127" y="288" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="42"/>
                             <state key="normal" title=".">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -178,7 +182,8 @@
                         <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nr2-q4-BKP" customClass="NumberButtons">
                             <rect key="frame" x="245" y="288" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="=">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.34509803919999998" green="0.3803921569" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,11 +198,12 @@
                     <rect key="frame" x="897" y="381" width="106" height="406"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Bt-V6-o1k" customClass="NumberButtons">
-                            <rect key="frame" x="10" y="99" width="85" height="85"/>
+                        <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Bt-V6-o1k" customClass="NumberButtons">
+                            <rect key="frame" x="10" y="100" width="85" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                            <state key="normal" title="X">
+                            <inset key="contentEdgeInsets" minX="-3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="X" image="multiplication-ipad.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.34509803919999998" green="0.3803921569" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -205,12 +211,12 @@
                                 <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="qOF-T3-e27"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wmo-wq-F00" customClass="NumberButtons">
-                            <rect key="frame" x="10" y="192" width="85" height="85"/>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wmo-wq-F00" customClass="NumberButtons">
+                            <rect key="frame" x="10" y="193" width="85" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="-">
+                            <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="-" image="subtract-ipad.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.34509803919999998" green="0.3803921569" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -218,12 +224,12 @@
                                 <action selector="numberButtonPressed:" destination="-1" eventType="touchUpInside" id="NKb-5s-bsz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PNA-Ye-bGP" customClass="NumberButtons">
-                            <rect key="frame" x="10" y="285" width="85" height="85"/>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PNA-Ye-bGP" customClass="NumberButtons">
+                            <rect key="frame" x="10" y="287" width="85" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="+">
+                            <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="+" image="addition-ipad.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.34509803919999998" green="0.3803921569" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -236,8 +242,8 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" image="divide-small-ipad.png">
+                            <inset key="contentEdgeInsets" minX="-2" minY="5" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="divide-small-ipad-large.png">
                                 <color key="titleColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -331,7 +337,7 @@
                         <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yjQ-ck-BtI" customClass="NumberButtons">
                             <rect key="frame" x="6" y="9" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="SEL">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -343,7 +349,7 @@
                         <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="THx-W6-K3f" customClass="NumberButtons">
                             <rect key="frame" x="124" y="9" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="CST">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,7 +361,7 @@
                         <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lBh-Zv-1wB" customClass="NumberButtons">
                             <rect key="frame" x="242" y="9" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="CST">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -367,7 +373,7 @@
                         <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l9v-63-MXP" customClass="NumberButtons">
                             <rect key="frame" x="6" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="MAR">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -379,7 +385,7 @@
                         <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XN9-MW-jDz" customClass="NumberButtons">
                             <rect key="frame" x="124" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="MAR">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,7 +397,7 @@
                         <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mKs-3y-FS2" customClass="NumberButtons">
                             <rect key="frame" x="242" y="102" width="110" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <state key="normal" title="SEL">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -486,8 +492,11 @@
         </view>
     </objects>
     <resources>
-        <image name="divide-small-ipad.png" width="70" height="70"/>
+        <image name="addition-ipad.png" width="160" height="160"/>
+        <image name="divide-small-ipad-large.png" width="160" height="160"/>
+        <image name="multiplication-ipad.png" width="160" height="160"/>
         <image name="negativepositive.png" width="50" height="50"/>
         <image name="sqrt.png" width="55" height="55"/>
+        <image name="subtract-ipad.png" width="160" height="160"/>
     </resources>
 </document>
