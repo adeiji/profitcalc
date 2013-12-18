@@ -134,6 +134,7 @@
         label.text = NSLocalizedString(@"Sales Calculator", @"");
         [label sizeToFit];
     }
+    
 }
 
 - (void) editMainFunctionConstraints
@@ -1035,12 +1036,12 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSDate *myDate = [NSDate date];
-    NSString *dateString = [dateFormatter stringFromDate:myDate];
+
     
     FTWDataLayer *dataLayer = [[FTWDataLayer alloc] init:self.managedObjectContext];
     dataLayer.fetchedResultsController = self.fetchedResultsController;
     
-    [dataLayer SaveContext:[NSString stringWithFormat:@"SEL = %g\nCST = %g\nMAR = %g", sellToSave, costToSave, marginToSave] dateString:dateString];
+    [dataLayer SaveContext:[NSString stringWithFormat:@"SEL = %g\nCST = %g\nMAR = %g", sellToSave, costToSave, marginToSave] date:myDate];
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
@@ -1173,7 +1174,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"calculation" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -1260,7 +1261,14 @@
     if ([self.fetchedResultsController.fetchedObjects count] > 0)
     {
         NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        cell.textLabel.text = [[object valueForKey:@"calculation"] description];
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm"];
+        NSDate *date = [object valueForKey:@"date"];
+
+        NSString *stringFromDate = [dateFormat stringFromDate:date];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@",  stringFromDate, [[object valueForKey:@"calculation"] description]];
     }
 }
 

@@ -13,8 +13,8 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-- (NSObject*) init : (NSManagedObjectContext *) managedObjectContext;
+- (NSObject*)   init : (NSManagedObjectContext *) managedObjectContext;
 - (void) SaveContext : (NSString *) calculationString
-          dateString : (NSString *) dateString;
+                date : (NSDate *) date;
 
 @end

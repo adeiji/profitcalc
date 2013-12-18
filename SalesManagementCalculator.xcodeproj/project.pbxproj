@@ -909,7 +909,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
@@ -931,7 +931,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",

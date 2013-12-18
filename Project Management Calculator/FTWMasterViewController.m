@@ -224,7 +224,13 @@ static const NSInteger xCoord = 50;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"calculation"] description];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy h:mm"];
+    NSDate *date = [dateFormat dateFromString:[[object valueForKey:@"date"] description]];
+    
+    NSString *stringFromDate = [dateFormat stringFromDate:date];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[object valueForKey:@"calculation"] description], stringFromDate];
 }
 
 - (void)viewDidUnload {

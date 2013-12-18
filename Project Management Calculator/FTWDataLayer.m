@@ -17,16 +17,17 @@
 }
 
 - (void) SaveContext : (NSString *) calculationString
-          dateString : (NSString *) dateString
+                date : (NSDate *) date
 {
     NSManagedObjectContext *context = self.managedObjectContext;
     NSManagedObject *calculation;
     calculation = [NSEntityDescription insertNewObjectForEntityForName:@"Calculations" inManagedObjectContext:context];
     
-    calculationString = [NSString stringWithFormat:@"%@\n%@", dateString, calculationString];
+    calculationString = [NSString stringWithFormat:@"%@", calculationString];
     
     //Save the tag in the database
     [calculation setValue:calculationString forKey:@"calculation"];
+    [calculation setValue:date forKey:@"date"];
     
     NSError *error;
     
