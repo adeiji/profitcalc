@@ -68,9 +68,14 @@
 		CE9DDA0617662B280073C460 /* NumberButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DDA0517662B280073C460 /* NumberButtons.m */; };
 		CE9DDA0917663F650073C460 /* FTWLeftButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DDA0817663F650073C460 /* FTWLeftButtons.m */; };
 		CE9DDA0B1766439F0073C460 /* actext.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0A1766439F0073C460 /* actext.png */; };
-		CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA0E17664C5E0073C460 /* sqrt.png */; };
 		CE9DDA1117664ECB0073C460 /* ce.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9DDA1017664ECB0073C460 /* ce.png */; };
-		CEE966EB18208681000BF0D3 /* negativepositive.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE966E918208681000BF0D3 /* negativepositive.png */; };
+		CEB84178186189110020523A /* addition.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84171186189110020523A /* addition.png */; };
+		CEB84179186189110020523A /* decimal.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84172186189110020523A /* decimal.png */; };
+		CEB8417A186189110020523A /* divide.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84173186189110020523A /* divide.png */; };
+		CEB8417B186189110020523A /* multiply.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84174186189110020523A /* multiply.png */; };
+		CEB8417C186189110020523A /* negative.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84175186189110020523A /* negative.png */; };
+		CEB8417D186189110020523A /* sqrt.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84176186189110020523A /* sqrt.png */; };
+		CEB8417E186189110020523A /* subtraction.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB84177186189110020523A /* subtraction.png */; };
 		CEE966EC18208681000BF0D3 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE966EA18208681000BF0D3 /* title.png */; };
 		CEE966EE18208D97000BF0D3 /* infobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE966ED18208D97000BF0D3 /* infobutton.png */; };
 		CEE966F118208F18000BF0D3 /* save-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE966EF18208F18000BF0D3 /* save-icon.png */; };
@@ -191,9 +196,14 @@
 		CE9DDA0717663F650073C460 /* FTWLeftButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWLeftButtons.h; sourceTree = "<group>"; };
 		CE9DDA0817663F650073C460 /* FTWLeftButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWLeftButtons.m; sourceTree = "<group>"; };
 		CE9DDA0A1766439F0073C460 /* actext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actext.png; sourceTree = "<group>"; };
-		CE9DDA0E17664C5E0073C460 /* sqrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sqrt.png; path = ../sqrt.png; sourceTree = "<group>"; };
 		CE9DDA1017664ECB0073C460 /* ce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ce.png; sourceTree = "<group>"; };
-		CEE966E918208681000BF0D3 /* negativepositive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negativepositive.png; sourceTree = "<group>"; };
+		CEB84171186189110020523A /* addition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addition.png; sourceTree = "<group>"; };
+		CEB84172186189110020523A /* decimal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decimal.png; sourceTree = "<group>"; };
+		CEB84173186189110020523A /* divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divide.png; sourceTree = "<group>"; };
+		CEB84174186189110020523A /* multiply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multiply.png; sourceTree = "<group>"; };
+		CEB84175186189110020523A /* negative.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negative.png; sourceTree = "<group>"; };
+		CEB84176186189110020523A /* sqrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sqrt.png; sourceTree = "<group>"; };
+		CEB84177186189110020523A /* subtraction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtraction.png; sourceTree = "<group>"; };
 		CEE966EA18208681000BF0D3 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		CEE966ED18208D97000BF0D3 /* infobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infobutton.png; sourceTree = "<group>"; };
 		CEE966EF18208F18000BF0D3 /* save-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "save-icon.png"; path = "../save-icon.png"; sourceTree = "<group>"; };
@@ -316,6 +326,7 @@
 		CE9DD9C217661EF20073C460 /* Project Management Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CEB8416F186189020020523A /* Final Images */,
 				CE014AF217D646D10032B9FF /* Core Data */,
 				CEF9D85917C6F982002457DF /* App Delegate */,
 				CEF9D85A17C6F99E002457DF /* Storyboards */,
@@ -340,6 +351,28 @@
 				CE9DD9CA17661EF20073C460 /* SalesManagementCalculator-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEB8416F186189020020523A /* Final Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEB84170186189110020523A /* images */,
+			);
+			name = "Final Images";
+			sourceTree = "<group>";
+		};
+		CEB84170186189110020523A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CEB84171186189110020523A /* addition.png */,
+				CEB84172186189110020523A /* decimal.png */,
+				CEB84173186189110020523A /* divide.png */,
+				CEB84174186189110020523A /* multiply.png */,
+				CEB84175186189110020523A /* negative.png */,
+				CEB84176186189110020523A /* sqrt.png */,
+				CEB84177186189110020523A /* subtraction.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		CEE966FC18209395000BF0D3 /* Profit Management Calculator Tests */ = {
@@ -422,14 +455,12 @@
 				CEE966F018208F18000BF0D3 /* Settings-outline.png */,
 				CEE966ED18208D97000BF0D3 /* infobutton.png */,
 				CEF9D83017C6B618002457DF /* operandCircle.png */,
-				CE9DDA0E17664C5E0073C460 /* sqrt.png */,
 				CEF9D83A17C6BD6D002457DF /* salessquares.png */,
 				CE9DDA0A1766439F0073C460 /* actext.png */,
 				CEF9D83817C6BCAE002457DF /* numbersquares.png */,
 				CEF9D83617C6B9B1002457DF /* suboperandcircle.png */,
 				CEF9D83E17C6BFA2002457DF /* savecircle.png */,
 				CEF9D83C17C6BEB1002457DF /* cesquare.png */,
-				CEE966E918208681000BF0D3 /* negativepositive.png */,
 				CEE966EA18208681000BF0D3 /* title.png */,
 				CE9DDA1017664ECB0073C460 /* ce.png */,
 			);
@@ -625,12 +656,13 @@
 				CE3FADB11857801100AC471F /* icon@iphone-nonretina-launch.png in Resources */,
 				CE3FADB01857801100AC471F /* Default.png in Resources */,
 				CE3FADB31857801100AC471F /* icon@pad-spotlight-nonretina.png in Resources */,
+				CEB84179186189110020523A /* decimal.png in Resources */,
 				CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */,
 				CE9DDA0B1766439F0073C460 /* actext.png in Resources */,
 				CE3FADAD1857801100AC471F /* icon@ipad-portrait-nonretina-launch.png in Resources */,
-				CE9DDA0F17664C5E0073C460 /* sqrt.png in Resources */,
 				CE6858EB1856918000D4B4B1 /* icon-iphone4.png in Resources */,
 				CEE966F218208F18000BF0D3 /* Settings-outline.png in Resources */,
+				CEB8417D186189110020523A /* sqrt.png in Resources */,
 				CE6858EA1856918000D4B4B1 /* icon-iPad@2x.png in Resources */,
 				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
 				CE492A2118319D86002A6197 /* subtract.png in Resources */,
@@ -645,10 +677,10 @@
 				CE3FADA91857801100AC471F /* icon@ipad-landscape-nonretina-launch.png in Resources */,
 				CE6858EF1856CD1500D4B4B1 /* divide-small-ipad.png in Resources */,
 				CE3FADC01857F39000AC471F /* addition-ipad.png in Resources */,
+				CEB8417C186189110020523A /* negative.png in Resources */,
 				CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */,
 				CEF9D83D17C6BEB1002457DF /* cesquare.png in Resources */,
 				CEF9D83F17C6BFA2002457DF /* savecircle.png in Resources */,
-				CEE966EB18208681000BF0D3 /* negativepositive.png in Resources */,
 				CEF9D84817C6F8CD002457DF /* icon-72.png in Resources */,
 				CEF9D84917C6F8CD002457DF /* icon-72@2x.png in Resources */,
 				CEF9D84A17C6F8CD002457DF /* icon-small-50.png in Resources */,
@@ -661,14 +693,18 @@
 				CEF9D84E17C6F8CD002457DF /* icon.png in Resources */,
 				CE3FADBA1857827100AC471F /* Default~ipad.png in Resources */,
 				CEF9D84F17C6F8CD002457DF /* icon@2x.png in Resources */,
+				CEB8417E186189110020523A /* subtraction.png in Resources */,
 				CEF9D86017C6FC73002457DF /* Default-568h.png in Resources */,
+				CEB8417B186189110020523A /* multiply.png in Resources */,
 				CEF9D86117C6FC73002457DF /* Default.png in Resources */,
 				CE3FADC11857F39000AC471F /* multiplication-ipad.png in Resources */,
 				CE3FADAE1857801100AC471F /* Default-Portrait@2x~ipad.png in Resources */,
+				CEB8417A186189110020523A /* divide.png in Resources */,
 				CE3FADAF1857801100AC471F /* icon@ipad-retina.png in Resources */,
 				CE3FADC21857F39000AC471F /* subtract-ipad.png in Resources */,
 				CE3FADAA1857801100AC471F /* Default-Landscape@2x~ipad.png in Resources */,
 				CEF9D86217C6FC73002457DF /* Default@2x.png in Resources */,
+				CEB84178186189110020523A /* addition.png in Resources */,
 				CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */,
 				CE3FADB21857801100AC471F /* icon@iphone-nonretina.png in Resources */,
 				CE6858ED1856918000D4B4B1 /* icon-splash-iPad-p.png in Resources */,
