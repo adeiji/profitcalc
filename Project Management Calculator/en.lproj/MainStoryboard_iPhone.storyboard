@@ -684,7 +684,7 @@
                                             <constraint firstAttribute="height" constant="50" id="vZX-zP-5FT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <inset key="contentEdgeInsets" minX="2" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="divide.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -724,6 +724,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-P0-qOe" userLabel="subOperandViews">
                                 <rect key="frame" x="7" y="260" width="306" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userGuides>
+                                    <userLayoutGuide location="26" affinity="minX"/>
+                                    <userLayoutGuide location="27" affinity="minY"/>
+                                    <userLayoutGuide location="77" affinity="minX"/>
+                                    <userLayoutGuide location="128" affinity="minX"/>
+                                    <userLayoutGuide location="179" affinity="minX"/>
+                                    <userLayoutGuide location="229" affinity="minX"/>
+                                    <userLayoutGuide location="280" affinity="minX"/>
+                                </userGuides>
                                 <subviews>
                                     <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEh-BX-ie8" userLabel="sqrt">
                                         <rect key="frame" x="56" y="7" width="42" height="42"/>
@@ -760,7 +769,8 @@
                                             <constraint firstAttribute="width" constant="42" id="45S-pt-oor"/>
                                             <constraint firstAttribute="height" constant="42" id="LX7-zM-Xd3"/>
                                         </constraints>
-                                        <state key="normal" title="M-">
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                        <state key="normal" title="M -">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -774,7 +784,9 @@
                                             <constraint firstAttribute="width" constant="42" id="b7a-lb-a1j"/>
                                             <constraint firstAttribute="height" constant="42" id="tHs-qL-Y8r"/>
                                         </constraints>
-                                        <state key="normal" title="M+">
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="M +">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -803,7 +815,7 @@
                                             <constraint firstAttribute="width" constant="42" id="1rc-G4-nnE"/>
                                             <constraint firstAttribute="height" constant="42" id="y0d-M8-Dj8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                         <state key="normal" title="MRC">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
