@@ -96,9 +96,8 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UITableView *landscapeTableView;
 @property (strong, nonatomic) IBOutlet UITableView *portraitTableView;
 
-
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *clearButtons;
 @property (strong, nonatomic) IBOutlet UIButton *helpButton;
-@property (strong, nonatomic) IBOutlet UIButton *clearButton;
 @property (strong, nonatomic) IBOutlet UIView *subOperandViews;
 @property (strong, nonatomic) IBOutlet UIView *mainOperandViews;
 @property (strong, nonatomic) IBOutlet UIView *functionViews;

@@ -51,7 +51,7 @@
 @synthesize numberViews = __numberViews;
 @synthesize mainOperandViews = __mainOperandViews;
 @synthesize subOperandViews = __subOperandViews;
-@synthesize clearButton = __clearButton;
+@synthesize clearButtons = __clearButtons;
 @synthesize lblMemory = __lblMemory;
 @synthesize helpButton = __helpButton;
 
@@ -134,19 +134,21 @@
         label.text = NSLocalizedString(@"Sales Calculator", @"");
         [label sizeToFit];
     }
-    
-    //Create new instances of these objects so that we can use them in the view dictionary
-    UILabel *header = self.lblHeader;
-    NSObject *topLayoutGuideline = self.topLayoutGuideline;
-    NSDictionary *views = NSDictionaryOfVariableBindings(header, topLayoutGuideline);
-    
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
-        [self.view removeConstraint:self.headerTopConstraint];
+    else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
+        //Create new instances of these objects so that we can use them in the view dictionary
+        UILabel *header = self.lblHeader;
+        NSObject *topLayoutGuideline = self.topLayoutGuideline;
+        NSDictionary *views = NSDictionaryOfVariableBindings(header, topLayoutGuideline);
         
-        self.headerTopConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-37-[header]" options:0 metrics:nil views:views] objectAtIndex:0];
-        
-        [self.view addConstraint:self.headerTopConstraint];
+        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+            //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+            [self.view removeConstraint:self.headerTopConstraint];
+            
+            self.headerTopConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-37-[header]" options:0 metrics:nil views:views] objectAtIndex:0];
+            
+            [self.view addConstraint:self.headerTopConstraint];
+        }
     }
 }
 
@@ -307,9 +309,12 @@
         view.backgroundColor = [UIColor colorWithRed:0.498 green:0.549 blue:0.553 alpha:1.0];
     }
     
-    __clearButton.layer.cornerRadius = 7.0f;
-    __clearButton.layer.borderWidth = 2.0f;
-    __clearButton.layer.borderColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0].CGColor;
+    for (UIButton *clearButton in __clearButtons)
+    {
+        clearButton.layer.cornerRadius = 7.0f;
+        clearButton.layer.borderWidth = 2.0f;
+        clearButton.layer.borderColor = [UIColor colorWithRed:0.204 green:0.553 blue:0.733 alpha:1.0].CGColor;
+    }
     
     
     __helpButton.layer.cornerRadius = __helpButton.layer.frame.size.width / 2.0;
@@ -1096,6 +1101,13 @@
 - (void)viewDidUnload {
     [self setLblNumberType:nil];
     [super viewDidUnload];
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 #pragma mark - Table View

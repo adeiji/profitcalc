@@ -43,7 +43,13 @@
     self.scrollView.contentSize = helpView.frame.size;
     [self.scrollView addSubview:helpView];
     self.scrollView.scrollEnabled = YES;
+}
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:NO];
+    
+    //[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,4 +65,5 @@
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 @end
