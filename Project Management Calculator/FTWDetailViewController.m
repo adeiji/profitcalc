@@ -135,6 +135,19 @@
         [label sizeToFit];
     }
     
+    //Create new instances of these objects so that we can use them in the view dictionary
+    UILabel *header = self.lblHeader;
+    NSObject *topLayoutGuideline = self.topLayoutGuideline;
+    NSDictionary *views = NSDictionaryOfVariableBindings(header, topLayoutGuideline);
+    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+        [self.view removeConstraint:self.headerTopConstraint];
+        
+        self.headerTopConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-37-[header]" options:0 metrics:nil views:views] objectAtIndex:0];
+        
+        [self.view addConstraint:self.headerTopConstraint];
+    }
 }
 
 - (void) editMainFunctionConstraints

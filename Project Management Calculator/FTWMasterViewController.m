@@ -227,7 +227,7 @@ static const NSInteger xCoord = 50;
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM/dd/yyyy h:mm"];
-    NSDate *date = [dateFormat dateFromString:[[object valueForKey:@"date"] description]];
+    NSDate *date = [object valueForKey:@"date"];
     
     NSString *stringFromDate = [dateFormat stringFromDate:date];
     cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[object valueForKey:@"calculation"] description], stringFromDate];

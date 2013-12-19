@@ -106,6 +106,7 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UIButton *equalsButton;
 @property (strong, nonatomic) IBOutlet UILabel *lblPortraitDetailDescription;
 @property (strong, nonatomic) IBOutlet UILabel *lblLandscapeDetailDescription;
+@property (strong, nonatomic) IBOutlet UILabel *lblHeader;
 
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *heightWidthConstraints;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *mainFunctionButtons;
@@ -115,5 +116,9 @@ typedef enum
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *headerTopConstraint;
+@property (strong, nonatomic) IBOutlet NSObject *topLayoutGuideline;
+
 
 @end
