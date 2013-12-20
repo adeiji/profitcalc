@@ -10,6 +10,11 @@
 		CE014AF717D64FBA0032B9FF /* swipeCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CE014AF617D64FBA0032B9FF /* swipeCircle.png */; };
 		CE014AFA17D66ACA0032B9FF /* FTWDataLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE014AF917D66ACA0032B9FF /* FTWDataLayer.m */; };
 		CE014AFD17D6719B0032B9FF /* FTWDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE014AFB17D6719B0032B9FF /* FTWDataModel.xcdatamodeld */; };
+		CE057A401863AB5D00AB3040 /* HelpViewiPadLandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE057A3F1863AB5D00AB3040 /* HelpViewiPadLandscape.xib */; };
+		CE057A421863B0E500AB3040 /* sqrtipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE057A411863B0E500AB3040 /* sqrtipad.png */; };
+		CE057A441863B4F800AB3040 /* plusminusipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE057A431863B4F800AB3040 /* plusminusipad.png */; };
+		CE057A461863BDB400AB3040 /* sqrtipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE057A451863BDB400AB3040 /* sqrtipad@2x.png */; };
+		CE057A481863BEF000AB3040 /* plusminusipadportrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CE057A471863BEF000AB3040 /* plusminusipadportrait.png */; };
 		CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2D17975EFE0061201F /* libTestFlight.a */; };
 		CE08DD3017975F430061201F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE08DD2F17975F430061201F /* libz.dylib */; };
 		CE3992711805CF9B003AE30B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3992701805CF9B003AE30B /* libTestFlight.a */; };
@@ -127,6 +132,11 @@
 		CE014AF817D66ACA0032B9FF /* FTWDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWDataLayer.h; sourceTree = "<group>"; };
 		CE014AF917D66ACA0032B9FF /* FTWDataLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWDataLayer.m; sourceTree = "<group>"; };
 		CE014AFC17D6719B0032B9FF /* FTWDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FTWDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CE057A3F1863AB5D00AB3040 /* HelpViewiPadLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewiPadLandscape.xib; sourceTree = "<group>"; };
+		CE057A411863B0E500AB3040 /* sqrtipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sqrtipad.png; sourceTree = "<group>"; };
+		CE057A431863B4F800AB3040 /* plusminusipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusminusipad.png; sourceTree = "<group>"; };
+		CE057A451863BDB400AB3040 /* sqrtipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sqrtipad@2x.png"; sourceTree = "<group>"; };
+		CE057A471863BEF000AB3040 /* plusminusipadportrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusminusipadportrait.png; sourceTree = "<group>"; };
 		CE08DD2C17975EDB0061201F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		CE08DD2D17975EFE0061201F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../../../Downloads/TestFlightSDK1.2.6/libTestFlight.a; sourceTree = "<group>"; };
 		CE08DD2F17975F430061201F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -364,6 +374,10 @@
 		CEB84170186189110020523A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CE057A471863BEF000AB3040 /* plusminusipadportrait.png */,
+				CE057A451863BDB400AB3040 /* sqrtipad@2x.png */,
+				CE057A431863B4F800AB3040 /* plusminusipad.png */,
+				CE057A411863B0E500AB3040 /* sqrtipad.png */,
 				CEB84171186189110020523A /* addition.png */,
 				CEB84172186189110020523A /* decimal.png */,
 				CEB84173186189110020523A /* divide.png */,
@@ -525,6 +539,7 @@
 				CE3992721805F7DC003AE30B /* divide-small.png */,
 				CE9DD9D717661EF20073C460 /* MainStoryboard_iPad.storyboard */,
 				CE6858DE1851868400D4B4B1 /* LandscapeView.xib */,
+				CE057A3F1863AB5D00AB3040 /* HelpViewiPadLandscape.xib */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -651,6 +666,7 @@
 				CE6858DF1851868400D4B4B1 /* LandscapeView.xib in Resources */,
 				CE3FADBC185782AC00AC471F /* Default-Landscape~ipad.png in Resources */,
 				CE9DD9C717661EF20073C460 /* InfoPlist.strings in Resources */,
+				CE057A401863AB5D00AB3040 /* HelpViewiPadLandscape.xib in Resources */,
 				CE3FADB51857801100AC471F /* icon@phone-retina.png in Resources */,
 				CE9DD9D617661EF20073C460 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE3FADB11857801100AC471F /* icon@iphone-nonretina-launch.png in Resources */,
@@ -659,9 +675,11 @@
 				CEB84179186189110020523A /* decimal.png in Resources */,
 				CE9DD9D917661EF20073C460 /* MainStoryboard_iPad.storyboard in Resources */,
 				CE9DDA0B1766439F0073C460 /* actext.png in Resources */,
+				CE057A481863BEF000AB3040 /* plusminusipadportrait.png in Resources */,
 				CE3FADAD1857801100AC471F /* icon@ipad-portrait-nonretina-launch.png in Resources */,
 				CE6858EB1856918000D4B4B1 /* icon-iphone4.png in Resources */,
 				CEE966F218208F18000BF0D3 /* Settings-outline.png in Resources */,
+				CE057A461863BDB400AB3040 /* sqrtipad@2x.png in Resources */,
 				CEB8417D186189110020523A /* sqrt.png in Resources */,
 				CE6858EA1856918000D4B4B1 /* icon-iPad@2x.png in Resources */,
 				CE9DDA1117664ECB0073C460 /* ce.png in Resources */,
@@ -681,6 +699,7 @@
 				CEF9D83B17C6BD6D002457DF /* salessquares.png in Resources */,
 				CEF9D83D17C6BEB1002457DF /* cesquare.png in Resources */,
 				CEF9D83F17C6BFA2002457DF /* savecircle.png in Resources */,
+				CE057A421863B0E500AB3040 /* sqrtipad.png in Resources */,
 				CEF9D84817C6F8CD002457DF /* icon-72.png in Resources */,
 				CEF9D84917C6F8CD002457DF /* icon-72@2x.png in Resources */,
 				CEF9D84A17C6F8CD002457DF /* icon-small-50.png in Resources */,
@@ -689,6 +708,7 @@
 				CEF9D84C17C6F8CD002457DF /* icon-small.png in Resources */,
 				CE75F0EA1846C79600E14DCB /* save-icon-small.png in Resources */,
 				CEF9D84D17C6F8CD002457DF /* icon-small@2x.png in Resources */,
+				CE057A441863B4F800AB3040 /* plusminusipad.png in Resources */,
 				CE6858EC1856918000D4B4B1 /* icon-splash-iPad-l.png in Resources */,
 				CEF9D84E17C6F8CD002457DF /* icon.png in Resources */,
 				CE3FADBA1857827100AC471F /* Default~ipad.png in Resources */,

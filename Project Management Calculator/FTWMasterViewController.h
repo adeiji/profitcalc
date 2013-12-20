@@ -25,5 +25,9 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *swipeButton;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet NSObject *topLayoutGuideline;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *topLayoutConstraint;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBarOutlet;
 
 @end

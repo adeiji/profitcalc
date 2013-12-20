@@ -39,16 +39,32 @@ static const NSInteger xCoord = 50;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+	// Do any additional setup after loading the view, typically from a nib.
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+
+   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (FTWDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
-    [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
+//    [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+//    [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+    //Create new instances of these objects so that we can use them in the view dictionary
+
+    UINavigationBar *topBar = self.navigationBarOutlet;
+    NSObject *topLayoutGuideline = self.topLayoutGuideline;
+    NSDictionary *views = NSDictionaryOfVariableBindings(topBar, topLayoutGuideline);
+    
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+        [self.view removeConstraint:self.topLayoutConstraint];
+        
+        self.topLayoutConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-(0)-[topBar]" options:0 metrics:nil views:views] objectAtIndex:0];
+        
+        [self.view addConstraint:self.topLayoutConstraint];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -230,7 +246,7 @@ static const NSInteger xCoord = 50;
     NSDate *date = [object valueForKey:@"date"];
     
     NSString *stringFromDate = [dateFormat stringFromDate:date];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[object valueForKey:@"calculation"] description], stringFromDate];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", stringFromDate, [[object valueForKey:@"calculation"] description] ];
 }
 
 - (void)viewDidUnload {

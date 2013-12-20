@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Z7k-jv-1pW"/>
@@ -90,17 +90,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xGE-QE-buo" firstAttribute="top" secondItem="j5D-z1-XlW" secondAttribute="bottom" constant="-43" id="9rK-2E-fqK"/>
+                            <constraint firstItem="xGE-QE-buo" firstAttribute="top" secondItem="j5D-z1-XlW" secondAttribute="bottom" constant="-43" id="EkF-0B-I10"/>
                             <constraint firstItem="sd0-U5-2oH" firstAttribute="top" secondItem="13" secondAttribute="bottom" id="Lnt-1l-Qm2"/>
-                            <constraint firstItem="13" firstAttribute="top" secondItem="xGE-QE-buo" secondAttribute="bottom" constant="44" id="NO1-ff-ul9"/>
                             <constraint firstItem="j5D-z1-XlW" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" id="OYs-eK-70K"/>
                             <constraint firstItem="13" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" id="o98-05-FfA"/>
+                            <constraint firstItem="13" firstAttribute="top" secondItem="j5D-z1-XlW" secondAttribute="bottom" constant="1" id="ufA-NY-W2l"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
+                        <outlet property="navigationBarOutlet" destination="j5D-z1-XlW" id="4ON-OU-7XR"/>
                         <outlet property="tableView" destination="13" id="kMv-iT-E2x"/>
+                        <outlet property="topLayoutConstraint" destination="EkF-0B-I10" id="cgu-wx-lEY"/>
+                        <outlet property="topLayoutGuideline" destination="xGE-QE-buo" id="Kao-d1-toj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hc6-Of-0Ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +227,6 @@
                     <navigationItem key="navigationItem" title="Help" id="MeJ-ts-AuY">
                         <barButtonItem key="backBarButtonItem" title="Calculator" id="7Wj-RX-M0J"/>
                     </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
                         <outlet property="scrollView" destination="rR0-NS-bPB" id="zpE-yc-vdQ"/>
                     </connections>
@@ -236,7 +238,7 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
-                <viewController title="Detail" wantsFullScreenLayout="YES" id="21" customClass="FTWDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="21" customClass="FTWDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Or-5b-6Q9"/>
                         <viewControllerLayoutGuide type="bottom" id="lVn-ux-07N"/>
@@ -448,7 +450,7 @@
                                     <userLayoutGuide location="187" affinity="minY"/>
                                 </userGuides>
                                 <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Qr-GAp">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Qr-GAp">
                                         <rect key="frame" x="2" y="63" width="80" height="57"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
@@ -460,7 +462,7 @@
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="vY9-h3-fhM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-uQ-7WY">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-uQ-7WY">
                                         <rect key="frame" x="2" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
@@ -511,7 +513,7 @@
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="w8u-t5-yFZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-lP-aTJ">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-lP-aTJ">
                                         <rect key="frame" x="86" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -535,7 +537,7 @@
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="5YM-Qo-fQC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-ae-7cu">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-ae-7cu">
                                         <rect key="frame" x="170" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
@@ -662,7 +664,7 @@
                                     <userLayoutGuide location="215" affinity="minY"/>
                                 </userGuides>
                                 <subviews>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-JZ-18k" userLabel="plusButton">
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-JZ-18k" userLabel="plusButton">
                                         <rect key="frame" x="0.0" y="128" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="W0d-LB-4He"/>
@@ -756,7 +758,7 @@
                                             <constraint firstAttribute="width" constant="42" id="wLV-jA-nYe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                        <state key="normal" image="sqrt.png">
+                                        <state key="normal" image="sqrtipad.png">
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <connections>
@@ -770,8 +772,7 @@
                                             <constraint firstAttribute="height" constant="43" id="Yr8-SJ-Iig"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <inset key="contentEdgeInsets" minX="-2" minY="-1" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="negative.png">
+                                        <state key="normal" image="plusminusipad.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -930,7 +931,7 @@
                             <constraint firstItem="pem-1V-AmD" firstAttribute="centerX" secondItem="mbH-Z9-kLl" secondAttribute="centerX" id="z1A-lH-cJT"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Project Management Calculator" id="26">
                         <barButtonItem key="rightBarButtonItem" title="Copy" id="q1Y-8R-3pi">
                             <connections>
@@ -940,7 +941,6 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <connections>
-                        <outlet property="clearButton" destination="Z0e-x9-ssj" id="8IT-0F-S9j"/>
                         <outlet property="equalsButton" destination="VTL-Ue-PNy" id="Elr-hY-53f"/>
                         <outlet property="functionViews" destination="NYg-84-zLm" id="HOL-Qa-b92"/>
                         <outlet property="headerTopConstraint" destination="0Du-AU-LfO" id="4YZ-g6-Vpq"/>
@@ -968,6 +968,7 @@
                         <outletCollection property="mainFunctionButtons" destination="0Ju-v7-3fd" id="1wu-GV-QRs"/>
                         <outletCollection property="mainFunctionButtons" destination="B3U-JZ-18k" id="WFq-qM-Z8Y"/>
                         <outletCollection property="mainFunctionButtons" destination="wjQ-AX-7KH" id="kDp-Jg-zur"/>
+                        <outletCollection property="clearButtons" destination="Z0e-x9-ssj" id="5nF-YQ-Ira"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -980,9 +981,9 @@
         <image name="decimal.png" width="6" height="6"/>
         <image name="divide.png" width="35" height="26"/>
         <image name="multiplication-ipad.png" width="160" height="160"/>
-        <image name="negative.png" width="70" height="70"/>
+        <image name="plusminusipad.png" width="170" height="170"/>
         <image name="save-icon.png" width="200" height="200"/>
-        <image name="sqrt.png" width="50" height="48"/>
+        <image name="sqrtipad.png" width="110" height="103"/>
         <image name="subtraction.png" width="70" height="15"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -991,6 +992,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1lU-H3-rn1"/>
+        <segue reference="0yl-q0-FLE"/>
     </inferredMetricsTieBreakers>
 </document>

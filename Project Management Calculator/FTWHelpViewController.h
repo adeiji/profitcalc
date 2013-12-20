@@ -11,6 +11,7 @@
 @interface FTWHelpViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (IBAction)backButtonPressed:(id)sender;
 
 @end

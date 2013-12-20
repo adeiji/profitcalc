@@ -319,7 +319,7 @@
     
     __helpButton.layer.cornerRadius = __helpButton.layer.frame.size.width / 2.0;
     __helpButton.layer.borderWidth = 1;
-    __helpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    __helpButton.layer.borderColor = [UIColor clearColor].CGColor;
     __helpButton.backgroundColor = [UIColor colorWithRed:0.71 green:0.71 blue:0.71 alpha:1.0];
     
     //Set the equals button background color to the same as the main operand function buttons background.

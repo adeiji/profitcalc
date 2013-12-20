@@ -9,6 +9,9 @@
 #import "FTWHelpViewController.h"
 
 @interface FTWHelpViewController ()
+{
+    UIView *helpView;
+}
 
 @end
 
@@ -29,11 +32,33 @@
 	// Do any additional setup after loading the view.
     
     //If device is iPad
-    UIView *helpView = nil;
+    helpView = nil;
+    
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:NO];
+    
+    
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if ([self.scrollView.subviews containsObject:helpView])
+    {
+        [helpView removeFromSuperview];
+    }
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
     {
-        helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPad" owner:self options:nil] objectAtIndex:0];
+        if (UIInterfaceOrientationIsLandscape(interfaceOrientation))
+        {
+            helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPadLandscape" owner:self options:nil] objectAtIndex:0];
+        }
+        else if (UIInterfaceOrientationIsPortrait(interfaceOrientation))
+        {
+            helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPad" owner:self options:nil] objectAtIndex:0];
+        }
     }
     else
     {
@@ -43,14 +68,38 @@
     self.scrollView.contentSize = helpView.frame.size;
     [self.scrollView addSubview:helpView];
     self.scrollView.scrollEnabled = YES;
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:NO];
-    
     //[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    UIView *viewToRemove = nil;
+    //Get the helpview from the scrollview subviews and remove it from the subviews
+    for (UIView *view in self.scrollView.subviews)
+    {
+        if ([view isEqual:helpView])
+        {
+            viewToRemove = helpView;
+        }
+    }
+    
+    //Remove the view (helpview) from subview
+    [viewToRemove removeFromSuperview];
+    //Get the orientation and change the view accordingly
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {
+        helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPadLandscape" owner:self options:nil] objectAtIndex:0];
+    }
+    else
+    {
+        helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPad" owner:self options:nil] objectAtIndex:0];
+    }
+    //Readd the helpView to the scrollView
+    [self.scrollView addSubview:helpView];
+    self.scrollView.contentSize = helpView.frame.size;
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
