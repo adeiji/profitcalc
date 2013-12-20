@@ -21,16 +21,6 @@
             continueAfterRunningActions = "No"
             symbolName = "[NSException raise]"
             moduleName = "">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSException raise]"
-                  moduleName = "CoreFoundation"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

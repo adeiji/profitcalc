@@ -282,11 +282,16 @@
 
 - (void) setButtonBorders
 {
-    for (UIView *view in __functionViews.subviews)
+    for (UIButton *view in __functionViews.subviews)
     {
+        if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+            view.contentEdgeInsets = UIEdgeInsetsMake(2, 0, 0, 0);
+        }
+        
         view.layer.cornerRadius = 7;
         view.layer.borderWidth = 2.0f;
         view.layer.borderColor = [UIColor blackColor].CGColor;
+    
     }
     for (UIView *view in __numberViews.subviews)
     {

@@ -238,7 +238,7 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
-                <viewController title="Detail" id="21" customClass="FTWDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" wantsFullScreenLayout="YES" id="21" customClass="FTWDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Or-5b-6Q9"/>
                         <viewControllerLayoutGuide type="bottom" id="lVn-ux-07N"/>
@@ -333,6 +333,7 @@
                                             <constraint firstAttribute="width" constant="80" id="vEu-VB-0au"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="SEL">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -347,6 +348,7 @@
                                             <constraint firstAttribute="width" constant="80" id="gbN-CZ-NAB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="CST">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -361,6 +363,7 @@
                                             <constraint firstAttribute="width" constant="80" id="Spn-Oc-azS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="CST">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -375,6 +378,7 @@
                                             <constraint firstAttribute="width" constant="80" id="h0d-Lf-deX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="MAR">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,6 +393,7 @@
                                             <constraint firstAttribute="width" constant="80" id="f9D-Vq-I6U"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="MAR">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,6 +408,7 @@
                                             <constraint firstAttribute="width" constant="80" id="IJQ-XF-eZh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="SEL">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
@@ -453,7 +459,7 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Qr-GAp">
                                         <rect key="frame" x="2" y="63" width="80" height="57"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="4">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -465,7 +471,7 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-uQ-7WY">
                                         <rect key="frame" x="2" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="1">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -477,7 +483,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-4s-qmD">
                                         <rect key="frame" x="2" y="186" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -516,7 +522,7 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-lP-aTJ">
                                         <rect key="frame" x="86" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="2">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -528,7 +534,7 @@
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAc-mh-1md">
                                         <rect key="frame" x="86" y="63" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="5">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -540,7 +546,7 @@
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-ae-7cu">
                                         <rect key="frame" x="170" y="124" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="3">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -552,7 +558,7 @@
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5v-fC-A2I">
                                         <rect key="frame" x="170" y="63" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="6">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -564,7 +570,7 @@
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-oi-gZv">
                                         <rect key="frame" x="2" y="1" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="7">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -576,7 +582,7 @@
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOJ-5k-ezq">
                                         <rect key="frame" x="86" y="1" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="8">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -588,7 +594,7 @@
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-vY-HEl">
                                         <rect key="frame" x="170" y="1" width="80" height="58"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
-                                        <inset key="contentEdgeInsets" minX="1" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="9">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
@@ -671,7 +677,7 @@
                                             <constraint firstAttribute="height" constant="50" id="kwZ-no-uo1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="110"/>
-                                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="2" minY="3" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="-" image="subtraction.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -701,7 +707,7 @@
                                             <constraint firstAttribute="height" constant="50" id="vZX-zP-5FT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="divide.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -758,7 +764,7 @@
                                             <constraint firstAttribute="width" constant="42" id="wLV-jA-nYe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                        <state key="normal" image="sqrtipad.png">
+                                        <state key="normal" backgroundImage="sqrtipad.png">
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <connections>
@@ -772,7 +778,7 @@
                                             <constraint firstAttribute="height" constant="43" id="Yr8-SJ-Iig"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" image="plusminusipad.png">
+                                        <state key="normal" backgroundImage="plusminusipad.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -816,7 +822,7 @@
                                             <constraint firstAttribute="height" constant="42" id="Qrd-v8-rj0"/>
                                             <constraint firstAttribute="width" constant="42" id="eGT-4a-NIC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="28"/>
                                         <state key="normal" title="%">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -931,7 +937,7 @@
                             <constraint firstItem="pem-1V-AmD" firstAttribute="centerX" secondItem="mbH-Z9-kLl" secondAttribute="centerX" id="z1A-lH-cJT"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Project Management Calculator" id="26">
                         <barButtonItem key="rightBarButtonItem" title="Copy" id="q1Y-8R-3pi">
                             <connections>
@@ -992,6 +998,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0yl-q0-FLE"/>
+        <segue reference="1lU-H3-rn1"/>
     </inferredMetricsTieBreakers>
 </document>
