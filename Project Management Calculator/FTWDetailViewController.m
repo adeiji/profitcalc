@@ -1163,10 +1163,9 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" message:@"There was a problem saving the calculation.  It wasn't your fault.  Restart the application, and try again please.  If the problem persists, please email salescalculator@gmail.com and explain the problem." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            
+            [alert show];
         }
     }
 }
@@ -1217,10 +1216,9 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        //    abort();
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" message:@"There was a problem saving the calculation.  It wasn't your fault.  Restart the application, and try again please.  If the problem persists, please email salescalculator@gmail.com and explain the problem." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        
+        [alert show];
 	}
     
     return _fetchedResultsController;
@@ -1313,21 +1311,26 @@
     
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSFetchRequest * fetch = [[NSFetchRequest alloc] init];
+    NSError *error = nil;
     [fetch setEntity:[NSEntityDescription entityForName:@"Calculations" inManagedObjectContext:context]];
     
-    NSArray * result = [context executeFetchRequest:fetch error:nil];
-    
+    NSArray * result = [context executeFetchRequest:fetch error:&error];
+    if (error)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error Deleting" message:@"There was a problem deleting all the calculations.  It wasn't your fault.  Restart the application, and try again please.  If the problem persists, please email salescalculator@gmail.com and explain the problem." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        
+        [alert show];
+    }
     for (id calculation in result)
     {
         [context deleteObject:calculation];
     }
     
-    NSError *error = nil;
+    error = nil;
     if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" message:@"There was a problem saving the calculation.  It wasn't your fault.  Restart the application, and try again please.  If the problem persists, please email salescalculator@gmail.com and explain the problem." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        
+        [alert show];
     }
 }
 
