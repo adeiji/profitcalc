@@ -36,6 +36,9 @@
     double sellToSave;
     FTWHelpViewController *helpViewController;
     NSString *newNumber;
+    BOOL costButtonPressed;
+    BOOL marginButtonPressed;
+    BOOL saleButtonPressed;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -251,33 +254,6 @@
             [self setButtonBorders];
         }
     }
-    
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-//        {
-//            if (UIInterfaceOrientationIsLandscape(deviceOrientation))
-//            {
-//                [self.navigationController presentModalViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerLandscape"]  animated:YES];
-//                
-//                
-//                [self setButtonBorders];
-//                
-//            }
-//            else
-//            {
-//                [self.navigationController presentModalViewController:[[UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"MainViewControllerPortrait"]  animated:YES];
-//                
-//                [self setButtonBorders];
-//            }
-//        }
-//    }];
-    
-    
-}
-
-- (void) setViewToLandscape
-{
-
 }
 
 - (void) setButtonBorders
@@ -336,8 +312,6 @@
 - (void) didSwipeLeft:(UIGestureRecognizer *) recognizer
 {
     [self.navigationController pushViewController:self.calculationsTable animated:YES];
-    
-    NSLog(@"Left swipe detected");
 }
 
 //This handles all the unique operands that are possible of creating through various operand selections available on this calculator.
@@ -466,11 +440,12 @@
 - (void) operandPressedOnce : (UIButton *) button
 {
     operands.currentOperand = [self getOperand : button];
+    operands.previousOperand = operands.currentOperand;
     
     [self setNumbersToBeCalculated];        //Every time we press an operand button, we add that number to the number list
     
     if (state != EQUALSPRESSEDLAST)         /*If the equals button was pressed last, we don't want to perform the operation
-                                             immediately, but wait until the next operand is press*/
+                                             immediately, but wait until the next operand is pressed*/
     {
         if (equalPressed == FALSE)
         {
@@ -480,7 +455,7 @@
     }
     else
     {
-        operands.previousOperand = operands.currentOperand;
+      //  operands.previousOperand = operands.currentOperand;
     }
     
     state = OPERANDPRESSEDLAST;
@@ -521,6 +496,7 @@
     }
     
     state = EQUALSPRESSEDLAST;
+    operands.previousOperand = NOOPERAND;
     equalPressed = TRUE;
 }
 
@@ -912,7 +888,7 @@
     previousNumber = NAN;
     currentNumber = NAN;
     operands.currentOperand = NOOPERAND;
-    operands.previousOperand = NOOPERAND;
+    //operands.previousOperand = NOOPERAND;
     numberList = [[NSMutableArray alloc] init];
     operatorList = [[NSMutableArray alloc] init];
     numTimesClearPressed = 0;
@@ -932,9 +908,12 @@
         {
             salesPrice = [lblDetailDescription.text doubleValue];
             lblNumberType.text = @"SEL";
+            costButtonPressed = YES;
+            marginButtonPressed = NO;
+            saleButtonPressed = NO;
         }
     }
-    else if (button.tag == COSTMARBUTTON)  //MAR pressed
+    else if (button.tag == COSTMARBUTTON && costButtonPressed)  //MAR pressed
     {
         if (salesPrice != 0)
         {
@@ -947,6 +926,7 @@
             
             costToSave = cost;
             sellToSave = salesPrice;
+            costButtonPressed = NO;
         }
     }
 }
@@ -964,9 +944,12 @@
         {
             cost = [lblDetailDescription.text doubleValue];
             lblNumberType.text = @"CST";
+            costButtonPressed = NO;
+            marginButtonPressed = NO;
+            saleButtonPressed = YES;
         }
     }
-    else if (button.tag == SELMARBUTTON)  //MAR pressed
+    else if (button.tag == SELMARBUTTON && saleButtonPressed)  //MAR pressed
     {
         if (cost != 0)
         {
@@ -980,6 +963,7 @@
             
             sellToSave = salesPrice;
             costToSave = cost;
+            saleButtonPressed = NO;
         }
     }
 }
@@ -995,8 +979,11 @@
     {
         cost = [lblDetailDescription.text doubleValue];
         lblNumberType.text = @"CST";
+        costButtonPressed = NO;
+        marginButtonPressed = YES;
+        saleButtonPressed = NO;
     }
-    else if (button.tag == MARSELBUTTON)  //MAR pressed
+    else if (button.tag == MARSELBUTTON && marginButtonPressed)  //MAR pressed
     {
         sellToSave = [lblDetailDescription.text doubleValue];
         margin = (1 - (cost / ([lblDetailDescription.text doubleValue]))) * 100;
@@ -1008,6 +995,7 @@
         
         marginToSave = margin;
         costToSave = cost;
+        marginButtonPressed = NO;
     }
 }
 //Handle adding and removing, and manipulating the values that are stored in memory
@@ -1274,15 +1262,6 @@
     [self.tableView endUpdates];
 }
 
-/*
- // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
- {
- // In the simplest, most efficient, case, reload the table view.
- [self.tableView reloadData];
- }
- */
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {

@@ -29,27 +29,14 @@ static const NSInteger xCoord = 50;
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    UIControl *control = self.swipeButton;
-    CGPoint controlPoint = control.center;
-    controlPoint.x = xCoord;
-    control.center = controlPoint;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (FTWDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-//    [self.swipeButton addTarget:self action:@selector(buttonTouched:withEvent:) forControlEvents:UIControlEventTouchDown];
-//    [self.swipeButton addTarget:self action:@selector(buttonMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-//    [self.swipeButton addTarget:self action:@selector(buttonReleased:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     //Create new instances of these objects so that we can use them in the view dictionary
 
     UINavigationBar *topBar = self.navigationBarOutlet;
@@ -230,16 +217,6 @@ static const NSInteger xCoord = 50;
     [self.tableView endUpdates];
 }
 
-/*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
- */
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -253,8 +230,6 @@ static const NSInteger xCoord = 50;
 }
 
 - (void)viewDidUnload {
-    [self setTableView:nil];
-    [self setSwipeButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)buttonTouched:(id)sender withEvent:(UIEvent *) event {

@@ -31,10 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //If device is iPad
     helpView = nil;
-    
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated

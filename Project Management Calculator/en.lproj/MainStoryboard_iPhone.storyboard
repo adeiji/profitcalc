@@ -299,11 +299,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-sa-Rjs">
-                                <rect key="frame" x="7" y="34" width="29" height="29"/>
+                                <rect key="frame" x="7" y="33" width="31" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="ZRy-j3-ScO"/>
-                                    <constraint firstAttribute="height" constant="29" id="u2v-c7-5iN"/>
+                                    <constraint firstAttribute="width" constant="31" id="ZRy-j3-ScO"/>
+                                    <constraint firstAttribute="height" constant="31" id="u2v-c7-5iN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
