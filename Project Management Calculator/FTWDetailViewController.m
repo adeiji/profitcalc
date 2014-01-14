@@ -321,14 +321,14 @@
     {
         return SQUARE;
     }
-    else if (operands.previousOperand == PERCENTAGE && button.tag == ADDITIONBUTTON)    // %+
-    {
-        return PERCENTPLUS;
-    }
-    else if (operands.previousOperand == PERCENTAGE && button.tag == MINUSBUTTON)       //%-
-    {
-        return PERCENTMINUS;
-    }
+//    else if (operands.currentOperand == PERCENTAGE && button.tag == ADDITIONBUTTON)    // %+
+//    {
+//        return PERCENTPLUS;
+//    }
+//    else if (operands.previousOperand == PERCENTAGE && button.tag == MINUSBUTTON)       //%-
+//    {
+//        return PERCENTMINUS;
+//    }
     else if (operands.previousOperand == PERCENTPLUS && button.tag == EQUALSBUTTON)     //%+=   is  (250 X 5%) + 250
     {
         return PERCENTPLUSEQUALS;
@@ -585,6 +585,7 @@
 }
 - (double) oppositeValue
 {
+    newNumber = [NSString stringWithFormat:@"%.12g", [lblDetailDescription.text doubleValue] * -1];
     return [lblDetailDescription.text doubleValue] * -1;
 }
 -(double) multiply:(double) num1 : (double) num2
@@ -656,6 +657,11 @@
             reservedNumberForPercentPlusEqualsOperator = (reservedNumber / (num2 / 100));
         }
         else if (operand == NOOPERAND)
+        {
+            [numberList addObject:@"%"];
+            reservedNumberForPercentPlusEqualsOperator = [lblDetailDescription.text doubleValue] / 100;
+        }
+        else if (operand == PERCENTAGE)
         {
             [numberList addObject:@"%"];
             reservedNumberForPercentPlusEqualsOperator = [lblDetailDescription.text doubleValue] / 100;
@@ -764,15 +770,15 @@
         previousNumber = currentNumber;
         currentNumber = num;
     }
-    else if (operand == PERCENTPLUSNUM)
-    {
-        [numberList addObject:@"%+"];
-        num = reservedNumberForPercentPlusEqualsOperator + (reservedNumber * ([lblDetailDescription.text doubleValue] / 100));
-        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num];
-        
-        previousNumber = currentNumber;
-        currentNumber = num;
-    }
+  //  else if (operand == PERCENTPLUSNUM)
+   // {
+//        [numberList addObject:@"%+"];
+//        num = reservedNumberForPercentPlusEqualsOperator + (reservedNumber * ([lblDetailDescription.text doubleValue] / 100));
+//        lblDetailDescription.text = [NSString stringWithFormat:@"%.12g", num];
+//        
+//        previousNumber = currentNumber;
+//        currentNumber = num;
+   // }
     operands.previousOperand = operands.currentOperand;
     [numberList addObject:[[NSNumber alloc] initWithDouble:num] ];
     
@@ -827,6 +833,10 @@
                 previousNumber = currentNumber;
                 currentNumber = num;
                 [numberList addObject:[[NSNumber alloc] initWithDouble:num]];
+            }
+            else if (operands.previousOperand == NOOPERAND)
+            {
+                num = [lblDetailDescription.text doubleValue] / 100.0f;
             }
             else                            /*if the user has entered a different operand this time then the last operand entered, then we perform
                                              the first operand that was pressed.*/

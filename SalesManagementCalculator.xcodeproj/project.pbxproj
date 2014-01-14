@@ -936,7 +936,7 @@
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3C25E082-A35C-4523-8E19-4D7C4D8636CB";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -958,7 +958,7 @@
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3C25E082-A35C-4523-8E19-4D7C4D8636CB";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
