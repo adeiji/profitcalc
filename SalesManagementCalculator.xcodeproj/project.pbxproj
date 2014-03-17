@@ -107,6 +107,7 @@
 		CEF9D86017C6FC73002457DF /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85D17C6FC73002457DF /* Default-568h.png */; };
 		CEF9D86117C6FC73002457DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85E17C6FC73002457DF /* Default.png */; };
 		CEF9D86217C6FC73002457DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9D85F17C6FC73002457DF /* Default@2x.png */; };
+		F40DD4EE18D290340082353F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F40DD4ED18D290340082353F /* libTestFlight.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,7 @@
 		CEF9D85D17C6FC73002457DF /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h.png"; path = "../Default-568h.png"; sourceTree = "<group>"; };
 		CEF9D85E17C6FC73002457DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		CEF9D85F17C6FC73002457DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		F40DD4ED18D290340082353F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../testflightsdk/TestFlightSDK3.0.0/libTestFlight.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40DD4EE18D290340082353F /* libTestFlight.a in Frameworks */,
 				CE3992711805CF9B003AE30B /* libTestFlight.a in Frameworks */,
 				CE08DD3017975F430061201F /* libz.dylib in Frameworks */,
 				CE08DD2E17975EFE0061201F /* libTestFlight.a in Frameworks */,
@@ -322,6 +325,7 @@
 		CE9DD9B917661EF10073C460 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F40DD4ED18D290340082353F /* libTestFlight.a */,
 				CE3992701805CF9B003AE30B /* libTestFlight.a */,
 				CE9DD9BA17661EF10073C460 /* UIKit.framework */,
 				CE9DD9BC17661EF10073C460 /* Foundation.framework */,
@@ -924,19 +928,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
+					"\\\\\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\\\\\"",
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
+					/Users/adeiji/Documents/Dephyned/apps/testflightsdk/TestFlightSDK3.0.0,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
-				PROVISIONING_PROFILE = "3C25E082-A35C-4523-8E19-4D7C4D8636CB";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -946,19 +951,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Profit Management Calculator.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project Management Calculator/SalesManagementCalculator-Prefix.pch";
 				INFOPLIST_FILE = "Project Management Calculator/SalesManagementCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\"",
+					"\\\\\\\"$(SRCROOT)/../../../Downloads/TestFlightSDK1.2.6\\\\\\\"",
 					/Users/user/Documents/Programming/Frameworks/TestFlightSDK1.2.6,
+					/Users/adeiji/Documents/Dephyned/apps/testflightsdk/TestFlightSDK3.0.0,
 				);
 				PRODUCT_NAME = SalesManagementCalculator;
-				PROVISIONING_PROFILE = "3C25E082-A35C-4523-8E19-4D7C4D8636CB";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

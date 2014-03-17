@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="42">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="42">
     <dependencies>
         <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -188,7 +188,7 @@
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="1wX-Ih-yak"/>
+                                            <action selector="equalButtonPressed:" destination="4" eventType="touchUpInside" id="dV3-fk-5aJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -216,7 +216,7 @@
                                         <inset key="contentEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="multiplication-ipad.png"/>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="N9P-ph-0UZ"/>
+                                            <action selector="multiplyButtonPressed:" destination="4" eventType="touchUpInside" id="aLx-uE-Bwy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="nU8-Dz-QCg">
@@ -229,7 +229,7 @@
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="LKu-RY-b87"/>
+                                            <action selector="subtractButtonPressed:" destination="4" eventType="touchUpInside" id="Lna-nU-ULB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="vDu-4I-bdK">
@@ -242,7 +242,7 @@
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="EbG-ER-WWu"/>
+                                            <action selector="plusButtonPressed:" destination="4" eventType="touchUpInside" id="Zbp-zJ-zku"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="oCL-fJ-ToG">
@@ -257,7 +257,7 @@
                                             <color key="titleShadowColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="BnT-CG-7L5"/>
+                                            <action selector="divideButtonPressed:" destination="4" eventType="touchUpInside" id="ppN-9p-TuT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -286,7 +286,7 @@
                                             <color key="titleShadowColor" red="0.69019607839999997" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="z4h-kQ-sOB"/>
+                                            <action selector="oppositeButtonPressed:" destination="4" eventType="touchUpInside" id="VBS-GM-ExV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hAd-SR-pTf">
@@ -337,7 +337,7 @@
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="04v-UU-tc5"/>
+                                            <action selector="squareRootButtonPressed:" destination="4" eventType="touchUpInside" id="sHK-w6-ZRq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tql-Qm-E6M">
@@ -350,7 +350,7 @@
                                             <color key="titleShadowColor" red="0.34509803921568627" green="0.38039215686274508" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="4" eventType="touchUpInside" id="dfd-nD-WZB"/>
+                                            <action selector="percentButtonPressed:" destination="4" eventType="touchUpInside" id="u0K-4v-RXo"/>
                                         </connections>
                                     </button>
                                 </subviews>

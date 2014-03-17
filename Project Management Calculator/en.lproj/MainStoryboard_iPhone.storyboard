@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
         <deployment version="1552" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -274,8 +274,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MAR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Yr-e5U">
-                                <rect key="frame" x="266" y="75" width="38" height="25"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Yr-e5U">
+                                <rect key="frame" x="270" y="75" width="38" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="3ZT-06-AL1"/>
                                     <constraint firstAttribute="height" constant="25" id="fay-Nc-hy3"/>
@@ -518,7 +518,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="w8u-t5-yFZ"/>
+                                            <action selector="equalButtonPressed:" destination="21" eventType="touchUpInside" id="pLb-3U-gY2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-lP-aTJ">
@@ -684,7 +684,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="ukQ-8h-VLj"/>
+                                            <action selector="subtractButtonPressed:" destination="21" eventType="touchUpInside" id="mdV-sD-vM2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ju-v7-3fd" userLabel="minusButton">
@@ -699,7 +699,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="KcN-SU-AuZ"/>
+                                            <action selector="multiplyButtonPressed:" destination="21" eventType="touchUpInside" id="IuG-tS-5Fx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-Ib-7wt" userLabel="multiplyButton">
@@ -715,7 +715,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="zeD-oK-h8G"/>
+                                            <action selector="divideButtonPressed:" destination="21" eventType="touchUpInside" id="rPV-ol-KYd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjQ-AX-7KH" userLabel="subtractButton">
@@ -731,7 +731,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="Xhy-ZA-Awi"/>
+                                            <action selector="plusButtonPressed:" destination="21" eventType="touchUpInside" id="4Ki-0z-LU1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -770,7 +770,7 @@
                                             <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="VC8-dG-Tim"/>
+                                            <action selector="squareRootButtonPressed:" destination="21" eventType="touchUpInside" id="i6s-tl-LKF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGi-B3-VfG" userLabel="+/-">
@@ -784,7 +784,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="Vjg-hL-1GS"/>
+                                            <action selector="oppositeButtonPressed:" destination="21" eventType="touchUpInside" id="g83-jy-7pR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oug-7K-hpG">
@@ -830,7 +830,7 @@
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="48R-bE-QUy"/>
+                                            <action selector="percentButtonPressed:" destination="21" eventType="touchUpInside" id="Rqs-xJ-vGS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvv-Vt-AGf">
@@ -921,7 +921,7 @@
                             <constraint firstItem="LKt-uK-fyL" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="7" id="VSD-41-15h"/>
                             <constraint firstItem="Pv1-fM-KsB" firstAttribute="top" secondItem="xHc-P0-qOe" secondAttribute="bottom" constant="-2" id="WKa-Bi-M57"/>
                             <constraint firstItem="lVn-ux-07N" firstAttribute="top" secondItem="Pv1-fM-KsB" secondAttribute="bottom" constant="3" id="Wqy-12-mO4"/>
-                            <constraint firstItem="cZX-Yr-e5U" firstAttribute="leading" secondItem="XTj-QX-4Uo" secondAttribute="trailing" constant="2" id="X2I-ic-05Q"/>
+                            <constraint firstItem="cZX-Yr-e5U" firstAttribute="leading" secondItem="XTj-QX-4Uo" secondAttribute="trailing" constant="6" id="X2I-ic-05Q"/>
                             <constraint firstItem="6aa-sa-Rjs" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="7" id="ZfE-du-q4X"/>
                             <constraint firstItem="lVn-ux-07N" firstAttribute="top" secondItem="Pv1-fM-KsB" secondAttribute="bottom" constant="3" id="bKI-X9-7qD"/>
                             <constraint firstItem="Pv1-fM-KsB" firstAttribute="top" secondItem="pem-1V-AmD" secondAttribute="top" id="bMi-f2-I56"/>

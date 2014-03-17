@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9314730D-49F1-404C-AD7A-A499B75AE66C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SalesManagementCalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBAF9300-12F6-40DC-877E-EA040E62EEEF</key>
+		<string>https://github.com/adeiji/profitcalc.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SalesManagementCalculator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBAF9300-12F6-40DC-877E-EA040E62EEEF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adeiji/profitcalc.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBAF9300-12F6-40DC-877E-EA040E62EEEF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBAF9300-12F6-40DC-877E-EA040E62EEEF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>profitcalc</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -16,6 +16,7 @@
 
 typedef enum
 {
+    NOOPERAND,
     MULTIPLICATION,
     ADDITION,
     SUBTRACTION,
@@ -25,7 +26,6 @@ typedef enum
     EQUALS,
     OPPOSITE,
     PERCENTAGE,
-    NOOPERAND,
     PERCENTPLUS,
     PERCENTMINUS,
     PERCENTPLUSEQUALS,
@@ -36,6 +36,7 @@ typedef enum
 
 typedef enum
 {
+    JUSTLAUNCHED,
     OPERANDPRESSEDLAST,
     EQUALSPRESSEDLAST,
     NEWOPERATION,
@@ -80,6 +81,15 @@ typedef enum
 @property (strong, nonatomic) IBOutlet UILabel *lblLandscapeMemory;
 @property (strong, nonatomic) IBOutlet UINavigationItem *topNavigationBariPad;
 
+- (IBAction)divideButtonPressed:(id)sender;
+- (IBAction)multiplyButtonPressed:(id)sender;
+- (IBAction)subtractButtonPressed:(id)sender;
+- (IBAction)plusButtonPressed:(id)sender;
+- (IBAction)percentButtonPressed:(id)sender;
+- (IBAction)squareRootButtonPressed:(id)sender;
+- (IBAction)oppositeButtonPressed:(id)sender;
+- (IBAction)equalButtonPressed:(id)sender;
+
 - (IBAction)numberButtonPressed:(UIButton *)button;
 - (IBAction)copyToClipboard:(id)sender;
 - (IBAction)btnClearPressed:(id)sender;
@@ -118,6 +128,7 @@ typedef enum
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *headerTopConstraint;
 @property (strong, nonatomic) IBOutlet NSObject *topLayoutGuideline;
+
 
 
 @end

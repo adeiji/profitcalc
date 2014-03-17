@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight takeOff:@"6d7efa7c-5a99-45c8-a345-88b84f22be60"];
+    [TestFlight takeOff:@"6d8a197c-9b93-4554-bbf4-cdace42289ce"];
     
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
