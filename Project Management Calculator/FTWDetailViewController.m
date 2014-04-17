@@ -47,6 +47,7 @@
     BOOL costButtonPressed;
     BOOL marginButtonPressed;
     BOOL saleButtonPressed;
+    BOOL memoryButtonPressed;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -779,7 +780,10 @@
 }
 //Handle adding and removing, and manipulating the values that are stored in memory
 - (IBAction)memoryButtonPressed:(UIButton *)button {
-    lblNumberType.text = @"";
+
+    memoryButtonPressed = true;
+    state = OPERANDPRESSEDLAST;
+    
     if (button.tag == MEMORYCLEARBUTTON)
     {
         //IF they've pressed the MRC button twice, we clear the memory
@@ -795,7 +799,7 @@
         else
         {
             //If they press the MRC button only once then we pull up the stored value onto the screen
-            lblDetailDescription.text = [[NSString alloc] initWithFormat:@"%Lg", storedValue];
+            lblDetailDescription.text = [[NSString alloc] initWithFormat:@"%.12Lg", storedValue];
             mrcPressed = true;
             
             [numberList addObject:[[NSNumber alloc]initWithDouble:storedValue]];
@@ -808,7 +812,7 @@
         //[--self performOperation: (bool) performOperation: (bool) equals
         //[self performOperation:true:true];
         storedValue = storedValue - [lblDetailDescription.text doubleValue];
-        lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12Lg", storedValue];
         __lblMemory.text = @"M";
     }
     else if (button.tag == MEMORYADDBUTTON)
@@ -817,7 +821,7 @@
         //[--self performOperation: (bool) performOperation: (bool) equals
        // [self performOperation:true:true];
         storedValue = storedValue + [lblDetailDescription.text doubleValue];
-        lblDetailDescription.text = [NSString stringWithFormat:@"%Lg", storedValue];
+        lblDetailDescription.text = [NSString stringWithFormat:@"%.12Lg", storedValue];
         __lblMemory.text = @"M";
     }
     
