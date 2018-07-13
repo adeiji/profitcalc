@@ -56,15 +56,20 @@
         {
             helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpViewiPad" owner:self options:nil] objectAtIndex:0];
         }
+        
+        self.scrollView.contentSize = helpView.frame.size;
     }
     else
     {
         helpView = [[[NSBundle mainBundle] loadNibNamed:@"HelpView" owner:self options:nil] objectAtIndex:0];
+        helpView.frame = CGRectMake(helpView.frame.origin.x, helpView.frame.origin.y, self.scrollView.frame.size.width, helpView.frame.size.height);
+        self.scrollView.contentSize = CGSizeMake( [[[UIApplication sharedApplication] keyWindow] frame].size.width, helpView.frame.size.height);
     }
     
-    self.scrollView.contentSize = helpView.frame.size;
     [self.scrollView addSubview:helpView];
     self.scrollView.scrollEnabled = YES;
+    self.scrollView.alwaysBounceHorizontal = false;
+    self.scrollView.showsHorizontalScrollIndicator = false;
     //[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

@@ -40,17 +40,17 @@ static const NSInteger xCoord = 50;
     //Create new instances of these objects so that we can use them in the view dictionary
 
     UINavigationBar *topBar = self.navigationBarOutlet;
-    NSObject *topLayoutGuideline = self.topLayoutGuideline;
-    NSDictionary *views = NSDictionaryOfVariableBindings(topBar, topLayoutGuideline);
+//    NSObject *topLayoutGuideline = self.topLayoutGuideline;
+//    NSDictionary *views = NSDictionaryOfVariableBindings(topBar, topLayoutGuideline);
     
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
-        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
-        [self.view removeConstraint:self.topLayoutConstraint];
-        
-        self.topLayoutConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-(0)-[topBar]" options:0 metrics:nil views:views] objectAtIndex:0];
-        
-        [self.view addConstraint:self.topLayoutConstraint];
-    }
+//    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+//        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+//        [self.view removeConstraint:self.topLayoutConstraint];
+//
+//        self.topLayoutConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-(0)-[topBar]" options:0 metrics:nil views:views] objectAtIndex:0];
+//
+//        [self.view addConstraint:self.topLayoutConstraint];
+//    }
 
 }
 

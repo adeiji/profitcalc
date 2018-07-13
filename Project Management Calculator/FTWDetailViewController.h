@@ -127,7 +127,6 @@ typedef enum
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *headerTopConstraint;
-@property (strong, nonatomic) IBOutlet NSObject *topLayoutGuideline;
 
 
 

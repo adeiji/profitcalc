@@ -22,7 +22,6 @@
 - (IBAction)clearAll:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet NSObject *topLayoutGuideline;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *topLayoutConstraint;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBarOutlet;

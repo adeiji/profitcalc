@@ -7,7 +7,6 @@
 //
 
 #import "FTWAppDelegate.h"
-#import "TestFlight.h"
 #import "FTWMasterViewController.h"
 #import "FTWDetailViewController.h"
 

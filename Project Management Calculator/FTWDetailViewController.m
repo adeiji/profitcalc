@@ -111,7 +111,7 @@
     
     helpViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"HelpViewController"];
     
-    [self editMainFunctionConstraints];
+//    [self editMainFunctionConstraints];
     [self setButtonBorders];
     FTWAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
@@ -150,20 +150,22 @@
     }
     else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        //Create new instances of these objects so that we can use them in the view dictionary
-        UILabel *header = self.lblHeader;
-        NSObject *topLayoutGuideline = self.topLayoutGuideline;
-        NSDictionary *views = NSDictionaryOfVariableBindings(header, topLayoutGuideline);
-        
-        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-            //[[UIApplication sharedApplication] setStatusBarHidden:YES];
-            [self.view removeConstraint:self.headerTopConstraint];
-            
-            self.headerTopConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-37-[header]" options:0 metrics:nil views:views] objectAtIndex:0];
-            
-            [self.view addConstraint:self.headerTopConstraint];
-        }
+//        //Create new instances of these objects so that we can use them in the view dictionary
+//        UILabel *header = self.lblHeader;
+//        NSObject *topLayoutGuideline = self.topLayoutGuideline;
+//        NSDictionary *views = NSDictionaryOfVariableBindings(header, topLayoutGuideline);
+//
+//        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+//            //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+//            [self.view removeConstraint:self.headerTopConstraint];
+//
+//            self.headerTopConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuideline]-37-[header]" options:0 metrics:nil views:views] objectAtIndex:0];
+//
+//            [self.view addConstraint:self.headerTopConstraint];
+//        }
     }
+    
+    [self orientationChanged:nil];
 }
 
 - (void) editMainFunctionConstraints
@@ -212,6 +214,47 @@
     }
 }
 
+- (void) changeOrientation : (BOOL) isLandscape {
+    
+    /*We first need to get the correct view and set it
+     up as the main view.  Then we get the current information
+     in the labels displayed currently, and display that on the
+     labels that will be stored next.*/
+    
+    if (isLandscape) {
+        //Set the view to the correct view for the landscape view
+        self.view = self.landscapeView;
+        //Get the current number
+        self.lblLandscapeDetailDescription.text = self.lblDetailDescription.text;
+        self.lblDetailDescription = self.lblLandscapeDetailDescription;
+        //Get the current memory setting being displayed.
+        self.lblLandscapeMemory.text = self.lblMemory.text;
+        self.lblMemory = self.lblLandscapeMemory;
+        //Get the current number type being displayed right now.
+        self.lblLandscapeNumberType.text = self.lblNumberType.text;
+        self.lblNumberType = self.lblLandscapeNumberType;
+        
+        self.tableView = self.landscapeTableView;
+        [self.tableView reloadData];
+        [self setButtonBorders];
+    } else {
+        //Set the view to the correct view for the landscape view
+        self.view = self.portraitView;
+        self.lblPortraitDetailDescription.text = self.lblDetailDescription.text;
+        self.lblDetailDescription = self.lblPortraitDetailDescription;
+        //Get the current memory setting being displayed.
+        self.lblPortraitMemory.text = self.lblMemory.text;
+        self.lblMemory = self.lblPortraitMemory;
+        //Get the current number type being displayed right now.
+        self.lblPortraitNumberType.text = self.lblNumberType.text;
+        self.lblNumberType = self.lblPortraitNumberType;
+        
+        self.tableView = self.portraitTableView;
+        [self.tableView reloadData];
+        [self setButtonBorders];
+    }
+}
+
 - (void) orientationChanged : (NSNotification *) notification
 {
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
@@ -224,45 +267,13 @@
          {
              //DO NOTHING
          }
-        else if (UIInterfaceOrientationIsLandscape(deviceOrientation)) /*We first need to get the correct view and set it 
-                                                                        up as the main view.  Then we get the current information 
-                                                                        in the labels displayed currently, and display that on the 
-                                                                        labels that will be stored next.*/
+        else if (UIInterfaceOrientationIsLandscape(deviceOrientation))
         {
-            //Set the view to the correct view for the landscape view
-
-            self.view = self.landscapeView;
-            //Get the current number
-            self.lblLandscapeDetailDescription.text = self.lblDetailDescription.text;
-            self.lblDetailDescription = self.lblLandscapeDetailDescription;
-            //Get the current memory setting being displayed.
-            self.lblLandscapeMemory.text = self.lblMemory.text;
-            self.lblMemory = self.lblLandscapeMemory;
-            //Get the current number type being displayed right now.
-            self.lblLandscapeNumberType.text = self.lblNumberType.text;
-            self.lblNumberType = self.lblLandscapeNumberType;
-            
-            self.tableView = self.landscapeTableView;
-            [self.tableView reloadData];
-            [self setButtonBorders];
-            
+            [self changeOrientation:true];
         }
         else if (UIInterfaceOrientationIsPortrait(deviceOrientation))
         {
-            //Set the view to the correct view for the landscape view
-            self.view = self.portraitView;
-            self.lblPortraitDetailDescription.text = self.lblDetailDescription.text;
-            self.lblDetailDescription = self.lblPortraitDetailDescription;
-            //Get the current memory setting being displayed.
-            self.lblPortraitMemory.text = self.lblMemory.text;
-            self.lblMemory = self.lblPortraitMemory;
-            //Get the current number type being displayed right now.
-            self.lblPortraitNumberType.text = self.lblNumberType.text;
-            self.lblNumberType = self.lblPortraitNumberType;
-            
-            self.tableView = self.portraitTableView;
-            [self.tableView reloadData];
-            [self setButtonBorders];
+            [self changeOrientation:false];
         }
     }
 }

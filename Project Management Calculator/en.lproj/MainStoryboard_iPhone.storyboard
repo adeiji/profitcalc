@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment version="1552" defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -12,7 +16,6 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="4">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -24,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Master View Controller - Saved Calcs-->
+        <!--Saved Calcs-->
         <scene sceneID="WPX-yK-a6Q">
             <objects>
                 <viewController storyboardIdentifier="CalculationsTable" title="Saved Calcs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rx3-zm-haE" customClass="FTWMasterViewController" sceneMemberID="viewController">
@@ -33,45 +36,11 @@
                         <viewControllerLayoutGuide type="bottom" id="sd0-U5-2oH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e6y-Gv-wK9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="13">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Z7k-jv-1pW"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" rowHeight="112" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="112"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJ0-d7-vTF" id="f64-Zb-eDK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="phq-AM-6qj">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="111"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="rx3-zm-haE" id="vHC-KV-Tex"/>
-                                    <outlet property="delegate" destination="rx3-zm-haE" id="yT5-Kd-7Ic"/>
-                                </connections>
-                            </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5D-z1-XlW">
-                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="cxs-TF-aQO"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Saves" id="FrM-CN-jqo">
                                         <barButtonItem key="leftBarButtonItem" title="Calculator" id="rBH-mI-Van">
@@ -87,12 +56,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" rowHeight="112" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJ0-d7-vTF" id="f64-Zb-eDK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="phq-AM-6qj">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="111.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rx3-zm-haE" id="vHC-KV-Tex"/>
+                                    <outlet property="delegate" destination="rx3-zm-haE" id="yT5-Kd-7Ic"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xGE-QE-buo" firstAttribute="top" secondItem="j5D-z1-XlW" secondAttribute="bottom" constant="-43" id="EkF-0B-I10"/>
+                            <constraint firstItem="j5D-z1-XlW" firstAttribute="top" secondItem="xGE-QE-buo" secondAttribute="bottom" constant="-1" id="CdS-bu-9Xn"/>
                             <constraint firstItem="sd0-U5-2oH" firstAttribute="top" secondItem="13" secondAttribute="bottom" id="Lnt-1l-Qm2"/>
                             <constraint firstItem="j5D-z1-XlW" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" id="OYs-eK-70K"/>
+                            <constraint firstAttribute="trailing" secondItem="j5D-z1-XlW" secondAttribute="trailing" id="gpK-Mx-Vm3"/>
+                            <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="khT-ig-uQ4"/>
                             <constraint firstItem="13" firstAttribute="leading" secondItem="e6y-Gv-wK9" secondAttribute="leading" id="o98-05-FfA"/>
                             <constraint firstItem="13" firstAttribute="top" secondItem="j5D-z1-XlW" secondAttribute="bottom" constant="1" id="ufA-NY-W2l"/>
                         </constraints>
@@ -102,28 +100,26 @@
                     <connections>
                         <outlet property="navigationBarOutlet" destination="j5D-z1-XlW" id="4ON-OU-7XR"/>
                         <outlet property="tableView" destination="13" id="kMv-iT-E2x"/>
-                        <outlet property="topLayoutConstraint" destination="EkF-0B-I10" id="cgu-wx-lEY"/>
-                        <outlet property="topLayoutGuideline" destination="xGE-QE-buo" id="Kao-d1-toj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hc6-Of-0Ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="64"/>
+            <point key="canvasLocation" x="851.5" y="63.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="emk-XF-dwF">
             <objects>
                 <tableViewController id="EGb-hr-jLD" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ahu-5H-tNM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="k8k-4H-OjV">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k8k-4H-OjV" id="a0g-SY-czK">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eka-gL-yAe">
@@ -132,8 +128,8 @@
                                                 <constraint firstAttribute="width" constant="107" id="FH0-sy-UQz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -143,10 +139,10 @@
                                 </constraints>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="cbL-fn-VGh">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cbL-fn-VGh" id="dZy-51-YSl">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Help" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdg-fM-JgF">
@@ -156,7 +152,7 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -166,10 +162,10 @@
                                 </constraints>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="uzU-Mi-tMj">
-                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uzU-Mi-tMj" id="eeZ-4S-6D4">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -182,9 +178,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDl-hT-f6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="65"/>
+            <point key="canvasLocation" x="1261" y="64"/>
         </scene>
-        <!--Help View Controller - Help-->
+        <!--Help-->
         <scene sceneID="w9n-JH-DUE">
             <objects>
                 <viewController storyboardIdentifier="HelpViewController" title="Help" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LCg-Na-eZc" customClass="FTWHelpViewController" sceneMemberID="viewController">
@@ -193,14 +189,11 @@
                         <viewControllerLayoutGuide type="bottom" id="VRo-Or-2Mj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="81S-Rc-Fe6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rR0-NS-bPB">
-                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
-                            </scrollView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxS-tD-mWs">
-                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Help" id="YC6-XI-lYJ">
                                         <barButtonItem key="leftBarButtonItem" title="Calculator" id="jZM-WC-qcH">
@@ -211,9 +204,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rR0-NS-bPB">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VRo-Or-2Mj" firstAttribute="top" secondItem="rR0-NS-bPB" secondAttribute="bottom" id="3C7-Qe-tSH"/>
                             <constraint firstItem="zxS-tD-mWs" firstAttribute="leading" secondItem="81S-Rc-Fe6" secondAttribute="leading" id="E8L-sg-e3d"/>
                             <constraint firstItem="rR0-NS-bPB" firstAttribute="trailing" secondItem="81S-Rc-Fe6" secondAttribute="trailing" id="HKr-fX-Nv8"/>
                             <constraint firstItem="rR0-NS-bPB" firstAttribute="bottom" secondItem="81S-Rc-Fe6" secondAttribute="bottom" id="L4w-iw-Ztv"/>
@@ -233,9 +230,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8x-fR-vFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495" y="65"/>
+            <point key="canvasLocation" x="1694" y="64"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="24">
             <objects>
                 <viewController title="Detail" wantsFullScreenLayout="YES" id="21" customClass="FTWDetailViewController" sceneMemberID="viewController">
@@ -244,7 +241,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lVn-ux-07N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="83" affinity="minY"/>
@@ -255,11 +252,11 @@
                         </userGuides>
                         <subviews>
                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0e-x9-ssj">
-                                <rect key="frame" x="259" y="136" width="54" height="116"/>
+                                <rect key="frame" x="259" y="136" width="109" height="116"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="C/CE">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="btnClearPressed:" destination="21" eventType="touchUpInside" id="183-Y4-1bg"/>
@@ -284,15 +281,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-px-hof">
-                                <rect key="frame" x="276" y="31" width="30" height="34"/>
+                                <rect key="frame" x="331" y="31" width="30" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="ahx-VK-3Oi"/>
                                     <constraint firstAttribute="width" constant="30" id="bZJ-Q0-N78"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="save-icon.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="21" eventType="touchUpInside" id="yuD-hQ-kNb"/>
@@ -300,7 +297,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-sa-Rjs">
                                 <rect key="frame" x="7" y="33" width="31" height="31"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="ZRy-j3-ScO"/>
                                     <constraint firstAttribute="height" constant="31" id="u2v-c7-5iN"/>
@@ -308,10 +305,10 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="LCg-Na-eZc" kind="push" id="1lU-H3-rn1"/>
@@ -319,7 +316,6 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-84-zLm" userLabel="functionViews">
                                 <rect key="frame" x="5" y="128" width="260" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userGuides>
                                     <userLayoutGuide location="130" affinity="minX"/>
                                     <userLayoutGuide location="65" affinity="minY"/>
@@ -337,8 +333,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="SEL">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="costButtonPressed:" destination="21" eventType="touchUpInside" id="SU6-vM-7au"/>
@@ -352,8 +348,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="CST">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="salebuttonPressed:" destination="21" eventType="touchUpInside" id="H5q-th-Zw1"/>
@@ -367,8 +363,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="CST">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="marginButtonPressed:" destination="21" eventType="touchUpInside" id="fo2-62-ssO"/>
@@ -382,8 +378,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="MAR">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="salebuttonPressed:" destination="21" eventType="touchUpInside" id="nJW-nu-QOv"/>
@@ -397,8 +393,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="MAR">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="costButtonPressed:" destination="21" eventType="touchUpInside" id="uY9-2s-ZK0"/>
@@ -412,8 +408,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="SEL">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529411763" green="0.43137254901960786" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="marginButtonPressed:" destination="21" eventType="touchUpInside" id="uBe-ET-hgL"/>
@@ -445,8 +441,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-fM-KsB">
-                                <rect key="frame" x="5" y="319" width="257" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="5" y="401" width="257" height="263"/>
                                 <userGuides>
                                     <userLayoutGuide location="210" affinity="minX"/>
                                     <userLayoutGuide location="245" affinity="minY"/>
@@ -459,147 +454,147 @@
                                 </userGuides>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-Qr-GAp">
-                                        <rect key="frame" x="2" y="63" width="80" height="57"/>
+                                        <rect key="frame" x="2" y="67" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="vY9-h3-fhM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-uQ-7WY">
-                                        <rect key="frame" x="2" y="124" width="80" height="58"/>
+                                        <rect key="frame" x="2" y="133" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="aUA-Pt-2bT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-4s-qmD">
-                                        <rect key="frame" x="2" y="186" width="80" height="58"/>
+                                        <rect key="frame" x="2" y="199" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="0">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="2iL-ja-Xtz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKd-wK-67k">
-                                        <rect key="frame" x="86" y="186" width="80" height="58"/>
+                                        <rect key="frame" x="86" y="199" width="80" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="j2N-T5-Wli"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="23" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="decimal.png">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="iSi-aA-fnq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTL-Ue-PNy" customClass="NumberButtons">
-                                        <rect key="frame" x="170" y="186" width="80" height="58"/>
+                                        <rect key="frame" x="170" y="199" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="=">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="equalButtonPressed:" destination="21" eventType="touchUpInside" id="pLb-3U-gY2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-lP-aTJ">
-                                        <rect key="frame" x="86" y="124" width="80" height="58"/>
+                                        <rect key="frame" x="86" y="133" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="rqe-qn-fJ4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAc-mh-1md">
-                                        <rect key="frame" x="86" y="63" width="80" height="58"/>
+                                        <rect key="frame" x="86" y="67" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="5YM-Qo-fQC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-ae-7cu">
-                                        <rect key="frame" x="170" y="124" width="80" height="58"/>
+                                        <rect key="frame" x="170" y="133" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="C2P-tR-n9o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5v-fC-A2I">
-                                        <rect key="frame" x="170" y="63" width="80" height="58"/>
+                                        <rect key="frame" x="170" y="67" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="MjI-ba-13a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cob-oi-gZv">
-                                        <rect key="frame" x="2" y="1" width="80" height="58"/>
+                                        <rect key="frame" x="2" y="1" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="UTv-DB-MV9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOJ-5k-ezq">
-                                        <rect key="frame" x="86" y="1" width="80" height="58"/>
+                                        <rect key="frame" x="86" y="1" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="hA7-pw-XZl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-vY-HEl">
-                                        <rect key="frame" x="170" y="1" width="80" height="58"/>
+                                        <rect key="frame" x="170" y="1" width="80" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="21" eventType="touchUpInside" id="4qO-NN-t6t"/>
@@ -662,8 +657,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pem-1V-AmD" userLabel="mainOperandViews">
-                                <rect key="frame" x="262" y="319" width="50" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="262" y="401" width="50" height="263"/>
                                 <userGuides>
                                     <userLayoutGuide location="25" affinity="minX"/>
                                     <userLayoutGuide location="30" affinity="minY"/>
@@ -673,7 +667,7 @@
                                 </userGuides>
                                 <subviews>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-JZ-18k" userLabel="plusButton">
-                                        <rect key="frame" x="0.0" y="128" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="139" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="W0d-LB-4He"/>
                                             <constraint firstAttribute="height" constant="50" id="kwZ-no-uo1"/>
@@ -681,14 +675,14 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="110"/>
                                         <inset key="contentEdgeInsets" minX="2" minY="3" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="-" image="subtraction.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="subtractButtonPressed:" destination="21" eventType="touchUpInside" id="mdV-sD-vM2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ju-v7-3fd" userLabel="minusButton">
-                                        <rect key="frame" x="0.0" y="67" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="73" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ZcY-MQ-gzQ"/>
                                             <constraint firstAttribute="width" constant="50" id="eh3-Wd-hZ4"/>
@@ -696,14 +690,14 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
                                         <inset key="contentEdgeInsets" minX="-2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="multiplication-ipad.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="multiplyButtonPressed:" destination="21" eventType="touchUpInside" id="IuG-tS-5Fx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-Ib-7wt" userLabel="multiplyButton">
-                                        <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="7" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="NUd-VM-Iia"/>
                                             <constraint firstAttribute="height" constant="50" id="vZX-zP-5FT"/>
@@ -712,14 +706,14 @@
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="divide.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="divideButtonPressed:" destination="21" eventType="touchUpInside" id="rPV-ol-KYd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjQ-AX-7KH" userLabel="subtractButton">
-                                        <rect key="frame" x="0.0" y="190" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="205" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ps9-2n-a7d"/>
                                             <constraint firstAttribute="width" constant="50" id="kXJ-2L-89E"/>
@@ -727,8 +721,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-1" maxY="0.0"/>
                                         <state key="normal" image="addition.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="plusButtonPressed:" destination="21" eventType="touchUpInside" id="4Ki-0z-LU1"/>
@@ -747,8 +741,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-P0-qOe" userLabel="subOperandViews">
-                                <rect key="frame" x="7" y="260" width="306" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="7" y="260" width="306" height="143"/>
                                 <userGuides>
                                     <userLayoutGuide location="26" affinity="minX"/>
                                     <userLayoutGuide location="27" affinity="minY"/>
@@ -767,7 +760,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <state key="normal" backgroundImage="sqrtipad.png">
-                                            <color key="titleShadowColor" red="0.81568627449999997" green="0.85882352939999995" blue="0.87450980389999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" red="0.77541780471801758" green="0.82601296901702881" blue="0.84448277950286865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="squareRootButtonPressed:" destination="21" eventType="touchUpInside" id="i6s-tl-LKF"/>
@@ -781,7 +774,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" backgroundImage="plusminusipad.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="oppositeButtonPressed:" destination="21" eventType="touchUpInside" id="g83-jy-7pR"/>
@@ -795,8 +788,8 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                         <state key="normal" title="M -">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="memoryButtonPressed:" destination="21" eventType="touchUpInside" id="1Vv-au-N4i"/>
@@ -811,8 +804,8 @@
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="M +">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="memoryButtonPressed:" destination="21" eventType="touchUpInside" id="4oX-Wf-l9l"/>
@@ -826,8 +819,8 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="28"/>
                                         <state key="normal" title="%">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="percentButtonPressed:" destination="21" eventType="touchUpInside" id="Rqs-xJ-vGS"/>
@@ -841,8 +834,8 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
                                         <state key="normal" title="MRC">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="memoryButtonPressed:" destination="21" eventType="touchUpInside" id="WRE-Kh-I1w"/>
@@ -871,8 +864,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKt-uK-fyL">
                                 <rect key="frame" x="7" y="126" width="302" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="C6O-XD-pa6"/>
                                     <constraint firstAttribute="width" constant="302" id="MOF-ur-v7F"/>
@@ -880,7 +872,6 @@
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a25-cp-03s">
                                 <rect key="frame" x="270" y="98" width="32" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="5lc-5Y-AjT"/>
                                     <constraint firstAttribute="height" constant="21" id="Dic-mg-sZw"/>
@@ -890,8 +881,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardrail Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5C-xP-vaW">
-                                <rect key="frame" x="50" y="37" width="220" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="77.5" y="37" width="220" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="D2J-G4-DY4"/>
                                     <constraint firstAttribute="width" constant="220" id="RlI-Kc-E65"/>
@@ -901,7 +891,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Z5C-xP-vaW" firstAttribute="top" secondItem="5Or-5b-6Q9" secondAttribute="bottom" constant="17" id="0Du-AU-LfO"/>
@@ -963,7 +953,6 @@
                         <outlet property="mainOperandViews" destination="pem-1V-AmD" id="IYm-kR-lAj"/>
                         <outlet property="numberViews" destination="Pv1-fM-KsB" id="Khh-Cn-lZ7"/>
                         <outlet property="subOperandViews" destination="xHc-P0-qOe" id="ogz-3U-aq2"/>
-                        <outlet property="topLayoutGuideline" destination="5Or-5b-6Q9" id="o6r-iO-Vew"/>
                         <outletCollection property="heightWidthConstraints" destination="Ps9-2n-a7d" id="oE9-Mh-W8i"/>
                         <outletCollection property="heightWidthConstraints" destination="kXJ-2L-89E" id="EQL-7W-UpB"/>
                         <outletCollection property="heightWidthConstraints" destination="kwZ-no-uo1" id="2GM-AU-ATO"/>
@@ -991,14 +980,9 @@
         <image name="multiplication-ipad.png" width="160" height="160"/>
         <image name="plusminusipad.png" width="170" height="170"/>
         <image name="save-icon.png" width="200" height="200"/>
-        <image name="sqrtipad.png" width="110" height="103"/>
+        <image name="sqrtipad.png" width="275" height="256"/>
         <image name="subtraction.png" width="70" height="15"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="1lU-H3-rn1"/>
     </inferredMetricsTieBreakers>
